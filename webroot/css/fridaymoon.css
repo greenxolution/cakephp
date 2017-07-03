@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+.navbar-default {
+    background-color: none !important;
+    border-color: #e7e7e7;
+}
+
+.Unshipped   {
+	background-color: #fdd  !important;
+}
+
+.Onshipping   {
+	background-color: #dff  !important;
+}
+
+.Shipped {
+	background-color: #dfd !important;
+}
+
+.Canceled {
+	background-color: #ffd !important;
+}

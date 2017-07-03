@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+	<Header>
+		<DocumentVersion>1.02</DocumentVersion>
+		<MerchantIdentifier>A2YTJTKX618X90</MerchantIdentifier>
+	</Header>
+	<MessageType>ProcessingReport</MessageType>
+	<Message>
+		<MessageID>1</MessageID>
+		<ProcessingReport>
+			<DocumentTransactionID>50128016766</DocumentTransactionID>
+			<StatusCode>Complete</StatusCode>
+			<ProcessingSummary>
+				<MessagesProcessed>287</MessagesProcessed>
+				<MessagesSuccessful>285</MessagesSuccessful>
+				<MessagesWithError>2</MessagesWithError>
+				<MessagesWithWarning>0</MessagesWithWarning>
+			</ProcessingSummary>
+			<Result>
+				<MessageID>285</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>The value '14618325' for 'SKU' in this message was the same as previous message(s) '13', which is not allowed. This message was skipped.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>286</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>The value '44731214Hong Kong' for 'SKU' in this message was the same as previous message(s) '80', which is not allowed. This message was skipped.</ResultDescription>
+			</Result>
+		</ProcessingReport>
+	</Message>
+</AmazonEnvelope>

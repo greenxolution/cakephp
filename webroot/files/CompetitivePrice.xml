@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<GetCompetitivePricingForSKUResponse xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01">
+<GetCompetitivePricingForSKUResult SellerSKU="13517602" status="Success">
+  <Product xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+    <Identifiers>
+      <MarketplaceASIN>
+        <MarketplaceId>ATVPDKIKX0DER</MarketplaceId>
+        <ASIN>0937609692</ASIN>
+      </MarketplaceASIN>
+      <SKUIdentifier>
+        <MarketplaceId>ATVPDKIKX0DER</MarketplaceId>
+        <SellerId>A2YTJTKX618X90</SellerId>
+        <SellerSKU>13517602</SellerSKU>
+      </SKUIdentifier>
+    </Identifiers>
+    <CompetitivePricing>
+      <CompetitivePrices>
+        <CompetitivePrice belongsToRequester="false" condition="New" subcondition="New">
+          <CompetitivePriceId>1</CompetitivePriceId>
+          <Price>
+            <LandedPrice>
+              <CurrencyCode>USD</CurrencyCode>
+              <Amount>9.99</Amount>
+            </LandedPrice>
+            <ListingPrice>
+              <CurrencyCode>USD</CurrencyCode>
+              <Amount>9.99</Amount>
+            </ListingPrice>
+            <Shipping>
+              <CurrencyCode>USD</CurrencyCode>
+              <Amount>0.00</Amount>
+            </Shipping>
+          </Price>
+        </CompetitivePrice>
+        <CompetitivePrice belongsToRequester="false" condition="Used" subcondition="Good">
+          <CompetitivePriceId>2</CompetitivePriceId>
+          <Price>
+            <LandedPrice>
+              <CurrencyCode>USD</CurrencyCode>
+              <Amount>9.55</Amount>
+            </LandedPrice>
+            <ListingPrice>
+              <CurrencyCode>USD</CurrencyCode>
+              <Amount>5.56</Amount>
+            </ListingPrice>
+            <Shipping>
+              <CurrencyCode>USD</CurrencyCode>
+              <Amount>3.99</Amount>
+            </Shipping>
+          </Price>
+        </CompetitivePrice>
+      </CompetitivePrices>
+      <NumberOfOfferListings>
+        <OfferListingCount condition="New">19</OfferListingCount>
+        <OfferListingCount condition="Used">7</OfferListingCount>
+        <OfferListingCount condition="Any">26</OfferListingCount>
+      </NumberOfOfferListings>
+    </CompetitivePricing>
+    <SalesRankings>
+      <SalesRank>
+        <ProductCategoryId>book_display_on_website</ProductCategoryId>
+        <Rank>8040</Rank>
+      </SalesRank>
+      <SalesRank>
+        <ProductCategoryId>4472</ProductCategoryId>
+        <Rank>50</Rank>
+      </SalesRank>
+      <SalesRank>
+        <ProductCategoryId>4556</ProductCategoryId>
+        <Rank>50</Rank>
+      </SalesRank>
+      <SalesRank>
+        <ProductCategoryId>4477</ProductCategoryId>
+        <Rank>163</Rank>
+      </SalesRank>
+    </SalesRankings>
+  </Product>
+</GetCompetitivePricingForSKUResult>
+<ResponseMetadata>
+  <RequestId>d7808921-8b36-4929-9775-3498d845a301</RequestId>
+</ResponseMetadata>
+</GetCompetitivePricingForSKUResponse>

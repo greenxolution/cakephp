@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+			<ErrorResponse xmlns="http://mws.amazonaws.com/doc/2009-01-01/">
+			<Error>
+			  <Type>Sender</Type>
+			  <Code>FeedProcessingResultNotReady</Code>
+			  <Message>Feed Submission Result is not ready for Feed 50150016767</Message>
+			  <Detail/>
+			</Error>
+			<RequestID>0f6b62f8-f464-434f-9f1c-b15c5cc46be0</RequestID>
+			</ErrorResponse> 

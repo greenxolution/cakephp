@@ -1,0 +1,3465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+	<Header>
+		<DocumentVersion>1.02</DocumentVersion>
+		<MerchantIdentifier>A2YTJTKX618X90</MerchantIdentifier>
+	</Header>
+	<MessageType>ProcessingReport</MessageType>
+	<Message>
+		<MessageID>1</MessageID>
+		<ProcessingReport>
+			<DocumentTransactionID>50134016766</DocumentTransactionID>
+			<StatusCode>Complete</StatusCode>
+			<ProcessingSummary>
+				<MessagesProcessed>287</MessagesProcessed>
+				<MessagesSuccessful>0</MessagesSuccessful>
+				<MessagesWithError>287</MessagesWithError>
+				<MessagesWithWarning>0</MessagesWithWarning>
+			</ProcessingSummary>
+			<Result>
+				<MessageID>1</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 53: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>1</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 53: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>10</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 909: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>10</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 909: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>100</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9533: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>100</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9533: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>101</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9630: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>101</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9630: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>102</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9726: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>102</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9726: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>103</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9824: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>103</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9824: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>104</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9920: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>104</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9920: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>105</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10017: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>105</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10017: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>106</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10114: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>106</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10114: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>107</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10211: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>107</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10211: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>108</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10307: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>108</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10307: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>109</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10404: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>109</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10404: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>11</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1005: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>11</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1005: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>110</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10501: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>110</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10501: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>111</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10598: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>111</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10598: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>112</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10695: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>112</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10695: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>113</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10791: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>113</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10791: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>114</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10888: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>114</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10888: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>115</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10985: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>115</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 10985: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>116</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11082: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>116</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11082: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>117</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11178: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>117</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11178: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>118</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11275: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>118</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11275: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>119</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11372: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>119</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11372: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>12</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1100: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>12</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1100: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>120</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11469: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>120</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11469: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>121</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11566: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>121</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11566: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>122</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11663: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>122</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11663: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>123</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11760: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>123</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11760: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>124</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11857: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>124</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11857: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>125</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11954: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>125</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 11954: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>126</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12051: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>126</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12051: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>127</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12148: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>127</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12148: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>128</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12245: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>128</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12245: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>129</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12341: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>129</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12341: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>13</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1195: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>13</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1195: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>130</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12438: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>130</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12438: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>131</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12534: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>131</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12534: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>132</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12630: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>132</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12630: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>133</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12727: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>133</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12727: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>134</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12823: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>134</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12823: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>135</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12920: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>135</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 12920: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>136</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13017: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>136</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13017: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>137</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13114: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>137</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13114: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>138</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13211: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>138</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13211: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>139</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13308: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>139</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13308: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>14</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1290: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>14</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1290: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>140</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13405: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>140</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13405: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>141</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13502: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>141</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13502: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>142</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13599: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>142</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13599: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>143</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13696: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>143</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13696: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>144</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13793: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>144</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13793: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>145</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13890: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>145</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13890: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>146</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13987: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>146</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 13987: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>147</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14084: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>147</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14084: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>148</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14180: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>148</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14180: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>149</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14277: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>149</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14277: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>15</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1386: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>15</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1386: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>150</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14374: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>150</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14374: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>151</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14471: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>151</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14471: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>152</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14568: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>152</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14568: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>153</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14665: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>153</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14665: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>154</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14762: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>154</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14762: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>155</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14859: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>155</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14859: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>156</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14956: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>156</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 14956: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>157</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15053: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>157</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15053: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>158</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15150: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>158</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15150: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>159</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15246: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>159</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15246: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>16</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1482: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>16</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1482: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>160</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15343: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>160</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15343: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>161</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15440: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>161</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15440: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>162</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15536: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>162</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15536: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>163</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15633: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>163</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15633: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>164</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15730: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>164</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15730: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>165</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15827: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>165</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15827: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>166</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15924: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>166</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 15924: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>167</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16021: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>167</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16021: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>168</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16118: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>168</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16118: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>169</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16215: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>169</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16215: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>17</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1578: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>17</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1578: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>170</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16312: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>170</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16312: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>171</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16409: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>171</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16409: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>172</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16506: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>172</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16506: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>173</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16603: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>173</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16603: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>174</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16700: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>174</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16700: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>175</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16797: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>175</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16797: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>176</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16893: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>176</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16893: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>177</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16991: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>177</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 16991: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>178</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17088: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>178</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17088: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>179</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17185: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>179</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17185: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>18</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1674: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>18</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1674: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>180</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17282: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>180</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17282: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>181</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17379: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>181</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17379: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>182</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17476: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>182</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17476: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>183</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17573: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>183</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17573: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>184</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17670: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>184</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17670: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>185</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17767: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>185</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17767: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>186</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17864: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>186</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17864: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>187</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17961: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>187</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 17961: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>188</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18058: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>188</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18058: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>189</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18155: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>189</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18155: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>19</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1769: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>19</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1769: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>190</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18252: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>190</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18252: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>191</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18349: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>191</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18349: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>192</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18446: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>192</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18446: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>193</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18543: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>193</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18543: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>194</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18640: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>194</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18640: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>195</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18737: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>195</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18737: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>196</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18834: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>196</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18834: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>197</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18931: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>197</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 18931: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>198</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19027: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>198</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19027: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>199</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19124: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>199</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19124: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>2</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 148: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>2</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 148: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>20</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1865: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>20</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1865: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>200</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19221: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>200</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19221: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>201</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19317: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>201</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19317: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>202</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19414: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>202</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19414: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>203</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19510: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>203</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19510: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>204</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19607: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>204</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19607: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>205</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19704: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>205</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19704: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>206</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19801: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>206</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19801: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>207</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19898: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>207</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19898: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>208</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19995: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>208</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 19995: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>209</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20092: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>209</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20092: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>21</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1960: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>21</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 1960: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>210</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20189: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>210</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20189: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>211</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20286: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>211</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20286: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>212</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20383: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>212</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20383: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>213</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20480: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>213</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20480: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>214</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20577: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>214</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20577: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>215</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20674: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>215</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20674: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>216</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20771: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>216</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20771: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>217</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20868: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>217</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20868: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>218</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20965: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>218</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 20965: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>219</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21062: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>219</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21062: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>22</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2056: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>22</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2056: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>220</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21159: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>220</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21159: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>221</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21256: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>221</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21256: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>222</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21353: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>222</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21353: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>223</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21450: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>223</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21450: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>224</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21547: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>224</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21547: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>225</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21644: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>225</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21644: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>226</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21741: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>226</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21741: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>227</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21838: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>227</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21838: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>228</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21936: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>228</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 21936: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>229</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22033: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>229</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22033: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>23</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2152: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>23</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2152: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>230</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22130: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>230</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22130: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>231</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22226: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>231</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22226: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>232</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22323: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>232</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22323: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>233</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22420: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>233</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22420: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>234</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22517: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>234</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22517: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>235</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22615: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>235</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22615: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>236</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22712: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>236</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22712: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>237</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22808: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>237</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22808: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>238</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22904: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>238</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 22904: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>239</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23001: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>239</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23001: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>24</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2248: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>24</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2248: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>240</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23098: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>240</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23098: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>241</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23194: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>241</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23194: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>242</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23291: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>242</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23291: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>243</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23387: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>243</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23387: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>244</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23485: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>244</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23485: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>245</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23581: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>245</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23581: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>246</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23678: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>246</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23678: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>247</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23775: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>247</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23775: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>248</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23872: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>248</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23872: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>249</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23970: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>249</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 23970: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>25</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2344: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>25</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2344: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>250</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24068: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>250</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24068: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>251</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24165: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>251</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24165: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>252</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24261: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>252</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24261: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>253</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24358: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>253</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24358: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>254</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24455: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>254</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24455: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>255</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24552: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>255</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24552: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>256</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24649: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>256</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24649: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>257</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24746: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>257</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24746: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>258</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24843: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>258</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24843: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>259</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24940: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>259</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 24940: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>26</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2440: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>26</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2440: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>260</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25037: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>260</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25037: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>261</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25134: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>261</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25134: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>262</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25231: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>262</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25231: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>263</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25328: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>263</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25328: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>264</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25425: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>264</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25425: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>265</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25521: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>265</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25521: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>266</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25618: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>266</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25618: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>267</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25715: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>267</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25715: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>268</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25812: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>268</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25812: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>269</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25909: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>269</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 25909: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>27</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2535: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>27</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2535: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>270</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26005: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>270</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26005: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>271</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26102: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>271</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26102: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>272</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26199: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>272</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26199: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>273</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26296: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>273</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26296: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>274</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26392: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>274</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26392: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>275</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26489: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>275</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26489: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>276</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26586: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>276</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26586: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>277</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26683: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>277</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26683: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>278</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26780: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>278</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26780: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>279</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26877: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>279</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26877: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>28</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2631: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>28</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2631: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>280</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26974: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>280</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 26974: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>281</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27071: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>281</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27071: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>282</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27168: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>282</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27168: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>283</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27265: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>283</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27265: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>284</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27362: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>284</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27362: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>285</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27458: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>285</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27458: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>286</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27554: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>286</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27554: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>287</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27650: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>287</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 27650: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>29</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2727: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>29</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2727: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>3</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 243: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>3</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 243: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>30</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2822: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>30</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2822: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>31</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2918: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>31</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 2918: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>32</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3014: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>32</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3014: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>33</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3110: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>33</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3110: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>34</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3205: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>34</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3205: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>35</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3301: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>35</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3301: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>36</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3396: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>36</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3396: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>37</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3492: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>37</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3492: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>38</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3588: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>38</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3588: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>39</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3684: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>39</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3684: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>4</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 338: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>4</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 338: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>40</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3780: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>40</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3780: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>41</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3876: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>41</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3876: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>42</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3972: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>42</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 3972: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>43</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4068: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>43</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4068: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>44</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4163: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>44</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4163: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>45</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4259: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>45</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4259: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>46</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4355: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>46</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4355: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>47</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4451: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>47</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4451: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>48</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4547: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>48</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4547: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>49</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4643: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>49</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4643: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>5</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 433: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>5</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 433: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>50</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4739: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>50</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4739: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>51</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4835: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>51</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4835: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>52</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4931: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>52</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 4931: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>53</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5027: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>53</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5027: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>54</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5123: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>54</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5123: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>55</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5219: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>55</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5219: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>56</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5315: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>56</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5315: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>57</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5410: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>57</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5410: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>58</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5506: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>58</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5506: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>59</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5602: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>59</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5602: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>6</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 528: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>6</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 528: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>60</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5697: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>60</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5697: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>61</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5793: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>61</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5793: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>62</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5889: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>62</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5889: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>63</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5985: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>63</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 5985: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>64</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6081: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>64</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6081: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>65</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6177: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>65</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6177: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>66</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6273: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>66</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6273: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>67</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6369: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>67</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6369: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>68</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6465: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>68</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6465: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>69</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6561: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>69</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6561: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>7</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 624: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>7</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 624: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>70</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6657: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>70</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6657: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>71</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6753: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>71</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6753: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>72</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6849: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>72</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6849: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>73</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6945: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>73</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 6945: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>74</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7041: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>74</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7041: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>75</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7138: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>75</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7138: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>76</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7234: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>76</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7234: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>77</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7330: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>77</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7330: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>78</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7426: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>78</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7426: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>79</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7522: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>79</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7522: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>8</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 719: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>8</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 719: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>80</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7618: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>80</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7618: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>81</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7713: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>81</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7713: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>82</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7808: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>82</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7808: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>83</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7903: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>83</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7903: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>84</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7999: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>84</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 7999: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>85</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8095: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>85</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8095: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>86</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8191: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>86</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8191: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>87</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8287: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>87</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8287: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>88</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8383: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>88</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8383: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>89</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8479: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>89</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8479: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>9</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 814: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>9</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 814: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>90</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8575: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>90</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8575: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>91</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8671: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>91</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8671: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>92</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8766: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>92</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8766: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>93</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8861: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>93</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8861: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>94</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8957: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>94</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 8957: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>95</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9053: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>95</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9053: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>96</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9149: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>96</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9149: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>97</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9245: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>97</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9245: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>98</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9341: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>98</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9341: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>99</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9437: cvc-minLength-valid: Value '' with length = '0' is not facet-valid with respect to minLength '1' for type 'SKUType'.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>99</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 8, Column 9437: cvc-type.3.1.3: The value '' of element 'SKU' is not valid.</ResultDescription>
+			</Result>
+		</ProcessingReport>
+	</Message>
+</AmazonEnvelope>
