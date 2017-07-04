@@ -385,7 +385,7 @@ class ExecuteShell extends AppShell {
 		
 		$mwsInventory = new MwsInventory();
 		
-		debug($mwsInventory->import('InventoryReport07012017.txt', 'inventory_report'));
+		debug($mwsInventory->import('InventoryReport07042017.txt', 'inventory_report'));
 		
 	}
 	

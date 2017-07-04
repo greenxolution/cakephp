@@ -123,6 +123,12 @@ class MwsInventory extends AppModel {
 		$product = $this->findBySku(key($item));
 
 		$this->id = $product['MwsInventory']['id'];
+		
+		if(!isset($item[key($item)]['RegularPrice']['Amount'])){
+			
+			debug($item);
+			exit;
+		}
 
 		return $this->saveField('price', $item[key($item)]['RegularPrice']['Amount']);
 
@@ -145,7 +151,7 @@ class MwsInventory extends AppModel {
 	 * @param unknown_type $filename
 	 * @param String [inventory_report | open_listings_report_lite
 	 */
-	public function import($filename = '1830151813016931.txt', $file_type = 'inventory_report'){
+	public function import($filename = 'InventoryReport07042017.txt', $file_type = 'inventory_report'){
 		// to avoid having to tweak the contents of
 		// $data you should use your db field name as the heading name
 		// eg: Post.id, Post.title, Post.description
