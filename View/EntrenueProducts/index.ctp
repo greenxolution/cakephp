@@ -77,7 +77,12 @@
 	<tr>
 		<td><?php echo $this->Html->link(h($entrenueProduct['EntrenueProduct']['id']), array('action' => 'view', $entrenueProduct['EntrenueProduct']['id']));; ?>&nbsp;</td>
 		<td><?php echo h($entrenueProduct['EntrenueProduct']['PRODUCT_ID']); ?>&nbsp;</td>
-		<td><?php echo h($entrenueProduct['EntrenueProduct']['MODEL']); ?>&nbsp;</td>
+		<td><?php 
+		
+			echo $this->Html->link($entrenueProduct['EntrenueProduct']['MODEL'], 'https://entrenue.com/index.php?route=product/search&search='.$entrenueProduct['EntrenueProduct']['MODEL'],array('class' => 'button', 'target' => '_blank'));
+			?>&nbsp;
+					
+		</td>		
 		<td><?php echo h($entrenueProduct['EntrenueProduct']['PRODUCT_STYLE_OPTION']); ?>&nbsp;</td>
 		<td><?php echo h($entrenueProduct['EntrenueProduct']['NAME']); ?>&nbsp;</td>
 		
