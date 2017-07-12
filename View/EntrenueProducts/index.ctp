@@ -20,7 +20,7 @@
 			<th><?php echo $this->Paginator->sort('MODEL'); ?></th>
 			<th><?php echo $this->Paginator->sort('PRODUCT_STYLE_OPTION'); ?></th>
 			<th><?php echo $this->Paginator->sort('NAME'); ?></th>
-			<th><?php echo $this->Paginator->sort('DESCRIPTION'); ?></th>
+<!--			<th><?php echo $this->Paginator->sort('DESCRIPTION'); ?></th> -->
 			<th><?php echo $this->Paginator->sort('MANUFACTURER'); ?></th>
 			<th><?php echo $this->Paginator->sort('PRICE'); ?></th>
 			<th><?php echo $this->Paginator->sort('MAP'); ?></th>
@@ -67,8 +67,8 @@
 			<th><?php echo $this->Paginator->sort('CATEGORY_1'); ?></th>
 			<th><?php echo $this->Paginator->sort('CATEGORY_2'); ?></th>
 			<th><?php echo $this->Paginator->sort('CATEGORY_3'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th><?php echo $this->Paginator->sort('updated'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th> -->
+			<th><?php echo $this->Paginator->sort('updated'); ?></th> <!--
 		
 			<th class="actions"><?php echo __('Actions'); ?></th>
 -->				
@@ -81,7 +81,7 @@
 		<td><?php echo h($entrenueProduct['EntrenueProduct']['PRODUCT_STYLE_OPTION']); ?>&nbsp;</td>
 		<td><?php echo h($entrenueProduct['EntrenueProduct']['NAME']); ?>&nbsp;</td>
 		
-		<td><?php echo $this->Text->truncate($entrenueProduct['EntrenueProduct']['DESCRIPTION'], 90); ?></td>
+	<!--	<td><?php echo $this->Text->truncate($entrenueProduct['EntrenueProduct']['DESCRIPTION'], 90); ?></td> -->
 		<td><?php echo h($entrenueProduct['EntrenueProduct']['MANUFACTURER']); ?>&nbsp;</td>
 		<td><?php echo h($entrenueProduct['EntrenueProduct']['PRICE']); ?>&nbsp;</td>
 		<td><?php echo h($entrenueProduct['EntrenueProduct']['MAP']); ?>&nbsp;</td>
@@ -128,8 +128,8 @@
 		<td><?php echo h($entrenueProduct['EntrenueProduct']['CATEGORY_1']); ?>&nbsp;</td>
 		<td><?php echo h($entrenueProduct['EntrenueProduct']['CATEGORY_2']); ?>&nbsp;</td>
 		<td><?php echo h($entrenueProduct['EntrenueProduct']['CATEGORY_3']); ?>&nbsp;</td>
-		<td><?php echo h($entrenueProduct['EntrenueProduct']['created']); ?>&nbsp;</td>
-		<td><?php echo h($entrenueProduct['EntrenueProduct']['updated']); ?>&nbsp;</td>
+		<td><?php echo h($entrenueProduct['EntrenueProduct']['created']); ?>&nbsp;</td> -->
+		<td><?php echo h($entrenueProduct['EntrenueProduct']['updated']); ?>&nbsp;</td> <!--
 		
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $entrenueProduct['EntrenueProduct']['id'])); ?>
