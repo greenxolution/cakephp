@@ -192,6 +192,7 @@ class MwsInventory extends AppModel {
 					$data['MwsInventory']['asin']	=(isset($row[1])) ? $row[1] : '';
 					$data['MwsInventory']['price']	=(isset($row[2])) ? $row[2] : '';
 					$data['MwsInventory']['quantity']	=(isset($row[3])) ? $row[3] : '';
+					$data['MwsInventory']['tier_id']	=	2;
 				
 				}
 				
@@ -201,6 +202,7 @@ class MwsInventory extends AppModel {
 					$data['MwsInventory']['quantity']	=(isset($row[1])) ? $row[1] : '';
 					$data['MwsInventory']['price']	=(isset($row[2])) ? $row[2] : '';
 					$data['MwsInventory']['asin']	=(isset($row[3])) ? $row[3] : '';
+					$data['MwsInventory']['tier_id']	=	2;
 				}
 
 				debug($data);
