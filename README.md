@@ -10,6 +10,7 @@ That store the submitted feed files
 ### MwsInventories
 **Description:**
 That store the real time inventory in MWS
+
 **DB Table**: mws_inventory
 
 ### ViewMatchInvs
