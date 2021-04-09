@@ -1,3 +1,12 @@
+#My Friday Love System
+
+##Features
+###Submitted feed files: 
+**Description:**
+That store the submitted feed files
+**DB Table:** submit_feed
+**Files are store:** app\webroot\files\FEED_LOG\
+
 ###MwsInventories
 **Description:**
 That store the real time inventory in MWS
