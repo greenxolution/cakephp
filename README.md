@@ -3,8 +3,10 @@
 ## Features
 ### Submitted feed files: 
 **Description:**
-That store the submitted feed files
+That store the submitted feed 
+
 **DB Table:** submit_feed
+
 **Files are store:** app\webroot\files\FEED_LOG\
 
 ### MwsInventories
