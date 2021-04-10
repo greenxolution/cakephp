@@ -34,10 +34,10 @@ The repricing is the way to have our product price lower than the competitor.
 ### Marketplaces
 This is a conection with the MWS. It pulls the data from
 
-## ListOrders
+### ListOrders
 List the order and their stages. It pulls the orders from MWS.
 
-## Entrenue Products
+### Entrenue Products
 List the whole inventory of Entrenue
 
 ### Inv-Match
