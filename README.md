@@ -55,12 +55,12 @@ E.g.
 2. I want my price $10 less than the competitor if I've already sold this product 3 times this week.
 The complexity and flexibility of the Automatic tiers make us write a Model class for this purpose.
 
-**Note: The repricing is execute every seconds**
+**Note: The repricing is executed every seconds**
 
 ## MWS Inventory
 
 The MWS inventory must be updated in real-time. The item inventory must be 0 when the supplier inventory is <= 3.
 
-**Note: The update MWS inventory is execute every seconds**
+**Note: The update MWS inventory is executed every seconds**
 
 
