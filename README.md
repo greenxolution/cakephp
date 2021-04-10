@@ -36,6 +36,7 @@ The repricing is the way to have our product price lower than the competitor.
 We're using tiers for this purpose; the tiers have the logic for repricing.
 There are two kinds of tiers Manua or Automatic.
 The Manual set a fixed amount under the competitor price. E.g. $10
+
 The Automatic is a % based on the Tiers class. The Tier class is a Model which supports the logic-based in other parameters. 
 E.g. 
 1. I want my price 2% less than the competitor when the amount of item in the store is less than 10.
