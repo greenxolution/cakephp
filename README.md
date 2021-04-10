@@ -54,6 +54,7 @@ E.g.
 1. I want my price 2% less than the competitor when the amount of item in the store is less than 10.
 2. I want my price $10 less than the competitor if I've already sold this product 3 times this week.
 The complexity and flexibility of the Automatic tiers make us write a Model class for this purpose.
+
 **Note: The repricing is execute every seconds**
 
 ## MWS Inventory
