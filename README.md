@@ -61,4 +61,6 @@ The complexity and flexibility of the Automatic tiers make us write a Model clas
 
 The MWS inventory must be updated in real-time. The item inventory must be 0 when the supplier inventory is <= 3.
 
+**Note: The update MWS inventory is execute every seconds**
+
 
