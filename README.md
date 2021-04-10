@@ -31,7 +31,8 @@ This contains the relation between the
 **Tiers** 
 The repricing is the way to have our product price lower than the competitor.
 
-###Repricing###
+### Repricing
+
 We're using tiers for this purpose; the tiers have the logic for repricing.
 There are two kinds of tiers Manua or Automatic.
 The Manual set a fixed amount under the competitor price. E.g. $10
