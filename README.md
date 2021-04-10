@@ -31,7 +31,7 @@ This contains the relation between the
 **Tiers** 
 The repricing is the way to have our product price lower than the competitor.
 
-## Marketplaces
+### Marketplaces
 This is a conection with the MWS. It pulls the data from
 
 ## ListOrders
@@ -40,7 +40,7 @@ List the order and their stages. It pulls the orders from MWS.
 ## Entrenue Products
 List the whole inventory of Entrenue
 
-## Inv-Match
+### Inv-Match
 Compare the inventory (prices and stock) between suppliers. E.g. Entrenue and El Dorado
 
 ## Repricing
