@@ -31,6 +31,18 @@ This contains the relation between the
 **Tiers** 
 The repricing is the way to have our product price lower than the competitor.
 
+## Marketplaces
+This is a conection with the MWS. It pulls the data from
+
+## ListOrders
+List the order and their stages. It pulls the orders from MWS.
+
+## Entrenue Products
+List the whole inventory of Entrenue
+
+## Inv-Match
+Compare the inventory (prices and stock) between suppliers. E.g. Entrenue and El Dorado
+
 ## Repricing
 
 We're using tiers for this purpose; the tiers have the logic for repricing.
@@ -42,3 +54,10 @@ E.g.
 1. I want my price 2% less than the competitor when the amount of item in the store is less than 10.
 2. I want my price $10 less than the competitor if I've already sold this product 3 times this week.
 The complexity and flexibility of the Automatic tiers make us write a Model class for this purpose.
+**Note: The repricing is execute every seconds**
+
+## MWS Inventory
+
+The MWS inventory must be updated in real-time. The item inventory must be 0 when the supplier inventory is <= 3.
+
+
