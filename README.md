@@ -72,6 +72,7 @@ Upload/Update products from our database to Amazon seller.
 Retrieve/update orders from Amazon to our database and our database to Amazon.
 
 **SP-AP Documentation**
-###Heading 3 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+
+(https://github.com/amzn/selling-partner-api-models "https://github.com/amzn/selling-partner-api-models")
 
 
