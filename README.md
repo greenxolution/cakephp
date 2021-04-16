@@ -60,4 +60,19 @@ The MWS inventory must be updated in real-time. The item inventory must be 0 whe
 
 **Note: The update MWS inventory is executed every seconds**
 
+# Project Name: SP-API plugin in CakePHP 2.10
+
+**Description:**
+We already have a system programmed in CakePHP 2.x which manages our Amazon Seller store. This includes upload/update/repricing products, retrieve/update orders, etc.
+Amazon has updated its API in 2020.
+We want to manage our products and orders through the new SP-API
+
+**Definition Of Done**
+Upload/Update products from our database to Amazon seller.
+Retrieve/update orders from Amazon to our database and our database to Amazon.
+
+**SP-AP Documentation**
+
+(https://github.com/amzn/selling-partner-api-models "SP-API")
+
 
