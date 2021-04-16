@@ -50,8 +50,8 @@ class ListOrdersController extends AppController {
  */
 	public function index() {
 		
-		
-// 		$this->ListOrder->recursive = 0;
+
+		// $this->ListOrder->recursive = 0;
 		$this->set('listOrders', $this->Paginator->paginate());
 		
 		
