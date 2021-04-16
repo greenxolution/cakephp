@@ -37,9 +37,6 @@ This is a conection with the MWS. It pulls the data from
 ### ListOrders
 List the order and their stages. It pulls the orders from MWS.
 
-### Entrenue Products
-List the whole inventory of Entrenue
-
 ### Inv-Match
 Compare the inventory (prices and stock) between suppliers. E.g. Entrenue and El Dorado
 
