@@ -3,7 +3,5 @@
 /Config/database.php
 /webroot/files
 /webroot/files/*
-/Plugin/DebugKit
-/Plugin/DebugKit/*
 /.project
 /Plugin/.DS_Store
