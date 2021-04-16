@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 16, 2021 at 05:27 AM
+-- Generation Time: Apr 16, 2021 at 07:23 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -1238,6 +1238,13 @@ CREATE TABLE `users` (
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `role`, `created`, `modified`) VALUES
+(1, 'pgarcia', '$2y$10$HX5dy1h8NTp4osz.cx.wSeG4.xt2E1sA/0BySwvaGK4ALniqoAmti', 'admin', '2014-10-03 16:59:40', '2015-12-05 14:12:37');
+
 -- --------------------------------------------------------
 
 --
@@ -1836,7 +1843,7 @@ ALTER TABLE `upload`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
