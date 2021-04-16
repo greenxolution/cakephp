@@ -73,6 +73,6 @@ Retrieve/update orders from Amazon to our database and our database to Amazon.
 
 **SP-AP Documentation**
 
-(https://github.com/amzn/selling-partner-api-models "https://github.com/amzn/selling-partner-api-models")
+(https://github.com/amzn/selling-partner-api-models "SP-API")
 
 
