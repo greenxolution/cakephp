@@ -4,6 +4,10 @@
 
 MyCake System: It's a system developed in CakePHP 2.x. It managed the MWS with previous MWS API.
 The developer must create all CakePHP elements (tables, controllers, model, view) to accomplish the requirements.
+#### Requirement
+PHP 7.3
+MySQL 5.3
+CakePHP 2.1
 
 
 ## MWS Product
