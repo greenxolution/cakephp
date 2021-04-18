@@ -36,10 +36,10 @@ Example
 `$config->setHost($options['endpoint']);
 
 `$config->setAccessToken($accessToken);
-`$config->setAccessKey($assumedRole->getAccessKeyId());
-`$config->setSecretKey($assumedRole->getSecretAccessKey());
-`$config->setRegion($options['region']);
-`$config->setSecurityToken($assumedRole->getSessionToken());
+ $config->setAccessKey($assumedRole->getAccessKeyId());
+$config->setSecretKey($assumedRole->getSecretAccessKey());
+$config->setRegion($options['region']);
+$config->setSecurityToken($assumedRole->getSessionToken());`
 
 ### Refresh Token:
 Create the procedure to refresh the token without any manual intervention.
