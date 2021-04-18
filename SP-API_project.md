@@ -33,13 +33,17 @@ https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/develope
 
 All parameters must be read from a hardcode file with the constant for this purpose:
 Example
-``$config->setHost($options['endpoint']);
+`$config->setHost($options['endpoint']);
 
 $config->setAccessToken($accessToken);
+
  $config->setAccessKey($assumedRole->getAccessKeyId());
+ 
 $config->setSecretKey($assumedRole->getSecretAccessKey());
+
 $config->setRegion($options['region']);
-$config->setSecurityToken($assumedRole->getSessionToken());``
+
+$config->setSecurityToken($assumedRole->getSessionToken());`
 
 ### Refresh Token:
 Create the procedure to refresh the token without any manual intervention.
