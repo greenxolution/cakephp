@@ -125,7 +125,6 @@ Configure::write('PETER.MWS', array(
 		'SELLER_ID'				=> 'A2YTJTKX618X90',
 		'MARKETPLACE_ID'		=> 'ATVPDKIKX0DER'));
 
-
 CakePlugin::load('Search');
 
 Configure::write('LowestOfferListingsForSKU.sku-price', array());
@@ -139,4 +138,25 @@ require APP . 'Vendor/vendor/autoload.php';
 // See: http://goo.gl/kKVJO7
 spl_autoload_unregister(array('App', 'load'));
 spl_autoload_register(array('App', 'load'), true, true);
+
+require_once 'credentials.php';
+
+Configure::write('SPAPI', array(	
+	'refresh_token' => $options['refresh_token'], // Aztr|...
+	'client_id' => $options['client_id'], // App ID from Seller Central, amzn1.sellerapps.app.cfbfac4a-......
+	'client_secret' => $options['client_secret'], // The corresponding Client Secret
+	'region' => \ClouSale\AmazonSellingPartnerAPI\SellingPartnerRegion::$NORTH_AMERICA, // or NORTH_AMERICA / FAR_EAST
+	'access_key' => $options['access_key'], // Access Key of AWS IAM User, for example AKIAABCDJKEHFJDS
+	'secret_key' => $options['secret_key'], // Secret Key of AWS IAM User
+	'endpoint' => \ClouSale\AmazonSellingPartnerAPI\SellingPartnerEndpoint::$NORTH_AMERICA, // or NORTH_AMERICA / FAR_EAST
+	'role_arn' => $options['role_arn'], // AWS IAM Role ARN for example: arn:aws:iam::123456789:role/Your-Role-Name
+));
+
+Configure::write('SPAPI.MARKETPLACE', array(	
+	'US' => 'ATVPDKIKX0DER', // Aztr|...
+	'CA' => 'A2EUQ1WTGCTBG2', // App ID from Seller Central, amzn1.sellerapps.app.cfbfac4a-......
+	'MX' => 'A1AM78C64UM0Y8', // The corresponding Client Secret
+	'BR' => 'A2Q3Y263D00KWC'
+));
+
 

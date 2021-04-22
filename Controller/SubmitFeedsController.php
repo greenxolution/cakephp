@@ -31,6 +31,61 @@ class SubmitFeedsController extends AppController {
 		$this->set('feedType', $this->feedType);
 		$this->SubmitFeed->recursive = 0;
 		$this->set('submitFeeds', $this->Paginator->paginate());
+
+		Cache::clear();
+
+		debug(Configure::read('SPAPI.refresh_token'));
+
+		$accessToken = \ClouSale\AmazonSellingPartnerAPI\SellingPartnerOAuth::getAccessTokenFromRefreshToken(
+			Configure::read('SPAPI.refresh_token'),
+			Configure::read('SPAPI.client_id'),
+			Configure::read('SPAPI.client_secret')
+		);
+		$assumedRole = \ClouSale\AmazonSellingPartnerAPI\AssumeRole::assume(
+			Configure::read('SPAPI.region'),
+			Configure::read('SPAPI.access_key'),
+			Configure::read('SPAPI.secret_key'),
+			Configure::read('SPAPI.role_arn')
+		);
+		$config = \ClouSale\AmazonSellingPartnerAPI\Configuration::getDefaultConfiguration();
+		$config->setHost(Configure::read('SPAPI.endpoint') );
+		$config->setAccessToken($accessToken);
+		$config->setAccessKey($assumedRole->getAccessKeyId());
+		$config->setSecretKey($assumedRole->getSecretAccessKey());
+		$config->setRegion(Configure::read('SPAPI.region'));
+		$config->setSecurityToken($assumedRole->getSessionToken());
+		
+		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
+		
+		$marketplace_id = Configure::read('SPAPI.MARKETPLACE.US');
+		$asin = '0446613452';
+		
+		// $result = $apiInstance->getCatalogItem($marketplace_id, $asin);
+
+		// debug($result->getPayload()->getAttributeSets()[0]->getTitle());
+		
+		// debug($result->getPayload()->getAttributeSets());
+
+		$query = "PentHouse"; // string | Keyword(s) to use to search for items in the catalog. Example: 'harry potter books'.
+$query_context_id = ""; // string | An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items.
+$seller_sku = ""; // string | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
+$upc = "9780446583695"; // string | A 12-digit bar code used for retail packaging.
+$ean = "9780446583695"; // string | A European article number that uniquely identifies the catalog item, manufacturer, and its attributes.
+$isbn = "9780446583695"; // string | The unique commercial book identifier used to identify books internationally.
+$jan = ""; // string | A Japanese article number that uniquely identifies the product, manufacturer, and its attributes.
+
+try {
+    $results = $apiInstance->listCatalogItems($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
+    debug($results);
+	debug('algo nuevo');
+} catch (Exception $e) {
+    echo 'Exception when calling CatalogApi->listCatalogItems: ', $e->getMessage(), PHP_EOL;
+}
+
+
+	
+
+		
 	}
 
 	public function execute(){
