@@ -1,0 +1,5 @@
+{
+    "require": {
+        "clousale/amazon-sp-api-php": "^2.1"
+    }
+}
