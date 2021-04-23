@@ -27,6 +27,8 @@ class SubmitFeedsController extends AppController {
  * @return void
  */
 	public function index() {
+
+		$this->response->disableCache();
 		
 		$this->set('feedType', $this->feedType);
 		$this->SubmitFeed->recursive = 0;
@@ -57,8 +59,8 @@ class SubmitFeedsController extends AppController {
 		
 		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
 		
-		$marketplace_id = Configure::read('SPAPI.MARKETPLACE.CA');
-		$asin = '0446613452';
+		$marketplace_id = Configure::read('SPAPI.MARKETPLACE.US');
+
 		
 		// $result = $apiInstance->getCatalogItem($marketplace_id, $asin);
 
@@ -66,17 +68,17 @@ class SubmitFeedsController extends AppController {
 		
 		// debug($result->getPayload()->getAttributeSets());
 
-		$query = "penthouse"; // string | Keyword(s) to use to search for items in the catalog. Example: 'harry potter books'.
-$query_context_id = "345345"; // string | An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items.
+		$query = ""; // string | Keyword(s) to use to search for items in the catalog. Example: 'harry potter books'.
+$query_context_id = ""; // string | An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items.
 $seller_sku = ""; // string | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
 $upc = ""; // string | A 12-digit bar code used for retail packaging.
-$ean = ""; // string | A European article number that uniquely identifies the catalog item, manufacturer, and its attributes.
+$ean = "9780446691277"; // string | A European article number that uniquely identifies the catalog item, manufacturer, and its attributes.
 $isbn = ""; // string | The unique commercial book identifier used to identify books internationally.
 $jan = ""; // string | A Japanese article number that uniquely identifies the product, manufacturer, and its attributes.
 
 try {
-    $results = $apiInstance->listCatalogItems($marketplace_id, $query);
-    debug($results);
+    $results = $apiInstance->listCatalogItems($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
+    debug($results->getPayload()[0]);
 	debug('algo nuevo');
 } catch (Exception $e) {
     echo 'Exception when calling CatalogApi->listCatalogItems: ', $e->getMessage(), PHP_EOL;

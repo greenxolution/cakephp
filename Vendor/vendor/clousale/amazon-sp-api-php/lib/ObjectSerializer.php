@@ -312,7 +312,11 @@ class ObjectSerializer
                 }
             }
 
-            return $instance;
+            if (count($instance::swaggerTypes())>0) {
+                return $instance;
+            } else {
+                return $data;
+            }
         }
     }
 }
