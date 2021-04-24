@@ -14,13 +14,7 @@ class EntrenueProductSource extends DataSource {
 	 * Our default config options. These options will be customized in our
 	 * ``app/Config/database.php`` and will be merged in the ``__construct()``.
 	 */
-	public $config = array(
-			'email' 	=> 'peter.guntin@gmail.com',
-			'apiKey' 	=> 'a6662db9dab863e04aaf1bc7315e7cee',
-			'url'		=> 'https://api.entrenue.com/',
-			'pagination'	=> 1000
-			
-	);
+
 
 	/**
 	 * If we want to create() or update() we need to specify the fields
