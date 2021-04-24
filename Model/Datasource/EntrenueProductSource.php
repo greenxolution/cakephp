@@ -14,9 +14,9 @@ class EntrenueProductSource extends DataSource {
 	 * ``app/Config/database.php`` and will be merged in the ``__construct()``.
 	 */
 	public $config = array(
-			'email' 	=> Configure::read('ENTRENUE.API.email'),
-			'apiKey' 	=> Configure::read('ENTRENUE.API.apiKey'),
-			'url'		=> Configure::read('ENTRENUE.API.url'),
+			'email' 	=> '',
+			'apiKey' 	=> '',
+			'url'		=> '',
 			'pagination'	=> 1000
 			
 	);
@@ -172,7 +172,7 @@ class EntrenueProductSource extends DataSource {
 
 	private function endPoint($action = 'products'){
 
-		return $config['url'].'/'.$action.'?email='.$config['email'].'&apikey='.$config['apiKey'];
+		return $this->config['url'].'/'.$action.'?email='.$this->config['email'].'&apikey='.$this->config['apiKey'];
 	}
 	
 	/**
@@ -202,6 +202,8 @@ class EntrenueProductSource extends DataSource {
 				$this->endPOint(),
 				$queryData['conditions']
 		);
+
+		debug($json,2);
 		
 
 		$res = json_decode($json, true);
@@ -214,10 +216,15 @@ class EntrenueProductSource extends DataSource {
 		
 		return $res;
 	}
+
+	public function create(Model $model, $fields = null, $values = null) {
+
+		return true;
+	}
 	/**
 	 * Implement the C in CRUD. Calls to ``Model::save()`` without $model->id
 	 * set arrive here.
-	 */
+	 *
 	public function create(Model $model, $fields = null, $values = null) {
 		$data = array_combine($fields, $values);
 		

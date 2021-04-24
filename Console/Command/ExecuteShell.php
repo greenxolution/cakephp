@@ -6,7 +6,7 @@ class ExecuteShell extends AppShell {
 	public $action = array();
 	
 	
-	public function main(){
+	public function sub_main(){
 		
 		
 		foreach ($this->args as $key => $value) {
@@ -96,6 +96,19 @@ class ExecuteShell extends AppShell {
 		$eldoradoProduct->import('EldoradoJanuary2016.txt');
 		
 		
+	}
+
+	public function main(){
+
+		App::import('Model','EntrenueAPI');
+		
+		$entrenueProduct = new EntrenueAPI();
+
+		$messages = $entrenueProduct->find('all');
+
+		debug($messages,2);
+
+
 	}
 	
 	public function test(){

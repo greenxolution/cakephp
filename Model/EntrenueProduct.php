@@ -15,6 +15,7 @@ class EntrenueProduct extends AppModel {
 	 */
 	public $displayField = 'id';
 
+
 	public $actsAs = array(
 			'Search.Searchable'
 	);

@@ -8,18 +8,9 @@
  * You should also use this file to include any files that provide global functions/constants
  * that your application uses.
  *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
+ * @link          https://cakephp.org CakePHP(tm) Project
  * @package       app.Config
  * @since         CakePHP(tm) v 0.10.8.2117
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
 // Setup a 'default' cache configuration for use in the application.
@@ -67,16 +58,8 @@ Cache::config('default', array('engine' => 'File'));
  * CakePlugin::load('DebugKit'); // Loads a single plugin named DebugKit
  */
 
-CakePlugin::load('DebugKit'); // Loads a single plugin named DebugKit
-
 /**
- * To prefer app translation over plugin translation, you can set
- *
- * Configure::write('I18n.preferApp', true);
- */
-
-/**
- * You can attach event listeners to the request lifecycle as Dispatcher Filter. By default CakePHP bundles two filters:
+ * You can attach event listeners to the request lifecycle as Dispatcher Filter . By default CakePHP bundles two filters:
  *
  * - AssetDispatcher filter will serve your asset files (css, images, js, etc) from your themes and plugins
  * - CacheDispatcher filter will read the Cache.check configure variable and try to serve cached content generated from controllers
@@ -85,9 +68,8 @@ CakePlugin::load('DebugKit'); // Loads a single plugin named DebugKit
  *
  * Configure::write('Dispatcher.filters', array(
  *		'MyCacheFilter', //  will use MyCacheFilter class from the Routing/Filter package in your app.
- *		'MyCacheFilter' => array('prefix' => 'my_cache_'), //  will use MyCacheFilter class from the Routing/Filter package in your app with settings array.
  *		'MyPlugin.MyFilter', // will use MyFilter class from the Routing/Filter package in MyPlugin plugin.
- *		array('callable' => $aFunction, 'on' => 'before', 'priority' => 9), // A valid PHP callback type to be called on beforeDispatch
+ * 		array('callable' => $aFunction, 'on' => 'before', 'priority' => 9), // A valid PHP callback type to be called on beforeDispatch
  *		array('callable' => $anotherMethod, 'on' => 'after'), // A valid PHP callback type to be called on afterDispatch
  *
  * ));
@@ -111,60 +93,3 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
-
-
-CakePlugin::load('DebugKit');
-
-//peter.guntin@gmail.com USA & CAN
-Configure::write('PETER.MWS', array(	
-		'AWS_ACCESS_KEY_ID'		=> 'AKIAJR7BUYMGKEK3IEHQ',
-		'AWS_SECRET_ACCESS_KEY'	=> '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',
-		'APPLICATION_NAME'		=> 'Product List',
-		'APPLICATION_VERSION'	=> '1.0.0',
-		'MERCHANT_ID'			=> 'A3G8ZVYPBH7BMB',
-		'SELLER_ID'				=> 'A2YTJTKX618X90',
-		'MARKETPLACE_ID'		=> 'ATVPDKIKX0DER'));
-
-CakePlugin::load('Search');
-
-Configure::write('LowestOfferListingsForSKU.sku-price', array());
-Configure::write('LowestOfferListingsForSKU.list', array());
-
-
-require APP . 'Vendor/vendor/autoload.php';
-
-// Remove and re-prepend CakePHP's autoloader as Composer thinks it is the
-// most important.
-// See: http://goo.gl/kKVJO7
-spl_autoload_unregister(array('App', 'load'));
-spl_autoload_register(array('App', 'load'), true, true);
-
-require_once 'credentials.php';
-
-Configure::write('SPAPI', array(	
-	'refresh_token' => $options['refresh_token'], // Aztr|...
-	'client_id' => $options['client_id'], // App ID from Seller Central, amzn1.sellerapps.app.cfbfac4a-......
-	'client_secret' => $options['client_secret'], // The corresponding Client Secret
-	'region' => \ClouSale\AmazonSellingPartnerAPI\SellingPartnerRegion::$NORTH_AMERICA, // or NORTH_AMERICA / FAR_EAST
-	'access_key' => $options['access_key'], // Access Key of AWS IAM User, for example AKIAABCDJKEHFJDS
-	'secret_key' => $options['secret_key'], // Secret Key of AWS IAM User
-	'endpoint' => \ClouSale\AmazonSellingPartnerAPI\SellingPartnerEndpoint::$NORTH_AMERICA, // or NORTH_AMERICA / FAR_EAST
-	'role_arn' => $options['role_arn'], // AWS IAM Role ARN for example: arn:aws:iam::123456789:role/Your-Role-Name
-));
-
-Configure::write('SPAPI.MARKETPLACE', array(	
-	'US' => 'ATVPDKIKX0DER', // Aztr|...
-	'CA' => 'A2EUQ1WTGCTBG2', // App ID from Seller Central, amzn1.sellerapps.app.cfbfac4a-......
-	'MX' => 'A1AM78C64UM0Y8', // The corresponding Client Secret
-	'BR' => 'A2Q3Y263D00KWC'
-));
-
-
-Configure::write('ENTRENUE.API', array(	
-	'email' => $entrenue_credentials['email'],
-	'apiKey' => $entrenue_credentials['apiKey'], 
-	'url' => $entrenue_credentials['url'],
-	'pagination' => 100
-));
-
-
