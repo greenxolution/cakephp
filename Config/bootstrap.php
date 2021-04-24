@@ -160,3 +160,11 @@ Configure::write('SPAPI.MARKETPLACE', array(
 ));
 
 
+Configure::write('ENTRENUE.API', array(	
+	'email' => 'araujo.guntin@gmail.com', // Aztr|...
+	'apiKey' => 'a6662db9dab863e04aaf1bc7315e7cee', // App ID from Seller Central, amzn1.sellerapps.app.cfbfac4a-......
+	'url' => 'https://api.entrenue.com', // The corresponding Client Secret
+	'pagination' => 100
+));
+
+

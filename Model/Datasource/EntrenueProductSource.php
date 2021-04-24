@@ -1,8 +1,7 @@
 <?php
 App::uses('HttpSocket', 'Network/Http');
 
-//curl -X GET "https://api.entrenue.com/products?email=peter.guntin@gmail.com&apikey=a6662db9dab863e04aaf1bc7315e7cee"
-//curl -X GET "https://api.entrenue.com/orders?email=peter.guntin@gmail.com&apikey=a6662db9dab863e04aaf1bc7315e7cee" 
+
 class EntrenueProductSource extends DataSource {
 
 	/**
@@ -14,6 +13,14 @@ class EntrenueProductSource extends DataSource {
 	 * Our default config options. These options will be customized in our
 	 * ``app/Config/database.php`` and will be merged in the ``__construct()``.
 	 */
+	public $config = array(
+			'email' 	=> Configure::read('ENTRENUE.API.email'),
+			'apiKey' 	=> Configure::read('ENTRENUE.API.apiKey'),
+			'url'		=> Configure::read('ENTRENUE.API.url'),
+			'pagination'	=> 1000
+			
+	);
+
 
 
 	/**
@@ -162,6 +169,11 @@ class EntrenueProductSource extends DataSource {
 		
 		return array($model->alias => $data);
 	}
+
+	private function endPoint($action = 'products'){
+
+		return $config['url'].'/'.$action.'?email='.$config['email'].'&apikey='.$config['apiKey'];
+	}
 	
 	/**
 	 * Implement the R in CRUD. Calls to ``Model::find()`` arrive here.
@@ -187,7 +199,7 @@ class EntrenueProductSource extends DataSource {
 		
 		$queryData['conditions']['apiKey'] = $this->config['apiKey'];
 		$json = $this->Http->get(
-				'https://api.entrenue.com/products?email=peter.guntin@gmail.com&apikey=a6662db9dab863e04aaf1bc7315e7cee',
+				$this->endPOint(),
 				$queryData['conditions']
 		);
 		
@@ -213,8 +225,8 @@ class EntrenueProductSource extends DataSource {
 // 		$data['email'] = $this->config['email'];
 
 		$data = array(
-				'email' => 'peter.guntin@gmail.com',
-				'apiKey'	=> 'a6662db9dab863e04aaf1bc7315e7cee',
+				'email' => $config['email'],
+				'apiKey'	=> $config['apiKey'],
 				'name' => 'TEST ORDER',
 				'address_line1' => '64586 Macy Keys',
 				'address_line2' => 'Suite 062',
@@ -228,48 +240,10 @@ class EntrenueProductSource extends DataSource {
 		
 		debug(json_encode($data));
 		
-		$data_json = '{
-		"email": "peter.guntin@gmail.com",
-		"apikey": "a6662db9dab863e04aaf1bc7315e7cee",
-		"po_number": "110-8079493-8644235",
-		"name": "TEST ORDER",
-		"address_line1": "64586 Macy Keys",
-		"address_line2": "Suite 062",
-		"city": "West Willisbury",
-		"state": "Massachusetts",
-		"postcode": "58292-7059",
-		"country": "United States",
-		"shipping_method": "UPSGround",
-		"instructions": "Please email me the invoice",
-		"products": [
-		{
-		"model": "18613",
-		"quantity": 1
-		},
-		{
-		"model": "B00010",
-		"quantity": 2
-		}
-		]
-		}';
-		 
-// 		$url = 'https://api.entrenue.com/orders';
-// 		$ch = curl_init();
-// 		curl_setopt($ch, CURLOPT_URL, $url);
-// 		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-// 		curl_setopt($ch, CURLOPT_POST, 1);
-// 		curl_setopt($ch, CURLOPT_POSTFIELDS,$data_json);
-// 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-// 		$response  = curl_exec($ch);
-				
-		
-		debug($data_json);
-		
-// 		debug($response);
 		
 		curl_close($ch);
 		
-// 		$json = $this->Http->post('https://api.entrenue.com/orders?email=peter.guntin@gmail.com&apikey=a6662db9dab863e04aaf1bc7315e7cee', json_encode($data));
+
 		
 // 		debug($json);
 		
