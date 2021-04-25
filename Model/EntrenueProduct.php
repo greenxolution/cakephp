@@ -97,14 +97,27 @@ class EntrenueProduct extends AppModel {
 	 *
 	 */
 	public function uploadInv(){
+
+		$this->loadModel('EntrenueAPI');
+
+		$data = $this->EntrenueAPIProduct->find('all',  array(
+			'conditions' => array('pagination' => 3),
+		));
+
+		$entrenueProductArray['EntrenueProduct']  = $data['EntrenueAPIProduct'];
+
+		debug($entrenueProductArray);
+
+		$this->save($entrenueProductArray);
+
 	
-		$this->downloadXmlfile();
+		// $this->downloadXmlfile();
 	
-		$this->updateFromXML($this->file);
+		// $this->updateFromXML($this->file);
 	
-		$this->createLoadInventory();
+		// $this->createLoadInventory();
 	
-		$this->file->close();
+		// $this->file->close();
 	
 	}
 	

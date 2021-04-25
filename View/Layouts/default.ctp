@@ -64,7 +64,7 @@ echo $this->fetch('script');
 		echo " | ";
 		echo $this->Html->link('Entrenue Products','/EntrenueProducts') ;
 		echo " | ";
-		echo $this->Html->link('Inv-Match','/ViewInventorySuppliers') ;
+		echo $this->Html->link('EntrenueAPI','/EntrenueAPIProducts') ;
 	}
 	
 	?>

@@ -16,8 +16,7 @@ class EntrenueProductSource extends DataSource {
 	public $config = array(
 			'email' 	=> '',
 			'apiKey' 	=> '',
-			'url'		=> '',
-			'pagination'	=> 1000
+			'url'		=> ''
 			
 	);
 
@@ -150,21 +149,27 @@ class EntrenueProductSource extends DataSource {
 	public function read(Model $model, $queryData = array(), $recursive = null) {
 		
 		$res = $this->readProduct($model, $queryData);
-		
-		$data = Hash::extract($res, 'data.{n}');
-		
-		
-		while ($res['to'] != $res['total']) {
 
-			$queryData['conditions']['page'] = $res['current_page'] + 1;
+
+		$data = Hash::extract($res, 'data.{n}');
+
+
+		debug($queryData,2);
+
+		debug($res,2);
+		
+		
+		// while ($res['to'] != $res['total']) {
+
+		// 	$queryData['conditions']['page'] = $res['current_page'] + 1;
 			
-			$res = $this->readProduct($model, $queryData);
+		// 	$res = $this->readProduct($model, $queryData);
 			
-			$result = Hash::remove($res, 'data');
+		// 	$result = Hash::remove($res, 'data');
 			
-			$data = array_merge($data, Hash::extract($res, 'data.{n}'));
+		// 	$data = array_merge($data, Hash::extract($res, 'data.{n}'));
 			
-		}
+		// }
 				
 		
 		return array($model->alias => $data);
@@ -181,8 +186,9 @@ class EntrenueProductSource extends DataSource {
 	public function readProduct(Model $model, $queryData = array(),
 			$recursive = null) {
 		
-		$queryData['conditions']['pagination'] = $this->config['pagination'];
-		
+		// $queryData['conditions']['pagination'] = $this->config['pagination'];
+
+	
 		
 		/**
 		 * Here we do the actual count as instructed by our calculate()
@@ -198,13 +204,12 @@ class EntrenueProductSource extends DataSource {
 		 */
 		
 		$queryData['conditions']['apiKey'] = $this->config['apiKey'];
+
+		debug($queryData['conditions']);
 		$json = $this->Http->get(
 				$this->endPOint(),
 				$queryData['conditions']
 		);
-
-		debug($json,2);
-		
 
 		$res = json_decode($json, true);
 		
