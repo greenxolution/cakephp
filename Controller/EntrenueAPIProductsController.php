@@ -27,16 +27,16 @@ class EntrenueAPIProductsController extends AppController {
 		
 
 		$data = $this->EntrenueAPIProduct->find('all',  array(
-			'conditions' => array('pagination' => 3),
+			'conditions' => array('pagination' => 2),
 		));
 
 
 
 		$this->set('products', $data);
 
-		$entrenueProduct = ClassRegistry::init('EntrenueProduct');
+		// $this->entrenueProduct = ClassRegistry::init('EntrenueProduct');
 
-		$entrenueProduct->uploadInv();
+		// $this->entrenueProduct->uploadInv();
 
 
 		// $this->EntrenueAPIProduct->insert();

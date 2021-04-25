@@ -100,13 +100,19 @@ class ExecuteShell extends AppShell {
 
 	public function main(){
 
-		App::import('Model','EntrenueAPI');
+		App::import('Model','EntrenueAPIProduct');
 		
-		$entrenueProduct = new EntrenueAPI();
+		$entrenueAPIProduct = new EntrenueAPIProduct();
 
-		$messages = $entrenueProduct->find('all');
+		$messages = $entrenueAPIProduct->find('all',  array(
+			'conditions' => array('pagination' => 2),
+		));
 
-		debug($messages,2);
+		// debug($messages,2);
+
+		$this->out('testting');
+
+
 
 
 	}
@@ -348,7 +354,7 @@ class ExecuteShell extends AppShell {
 		
 		App::import('Model','EntrenueProduct');
 		
-		debug("Entrenue Product Model: FTP");
+		// debug("Entrenue Product Model: FTP");
 		
 		$entrenue = new EntrenueProduct();
 		

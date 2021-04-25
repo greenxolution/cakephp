@@ -154,9 +154,6 @@ class EntrenueProductSource extends DataSource {
 		$data = Hash::extract($res, 'data.{n}');
 
 
-		debug($queryData,2);
-
-		debug($res,2);
 		
 		
 		// while ($res['to'] != $res['total']) {

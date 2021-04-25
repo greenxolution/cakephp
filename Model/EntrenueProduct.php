@@ -8,6 +8,8 @@ class EntrenueProduct extends AppModel {
 
 
 	public $xml = '';
+
+	public $SKU_PREFIX = 'ENTRENUE_';
 	/**
 	 * Display field
 	 *
@@ -90,25 +92,42 @@ class EntrenueProduct extends AppModel {
 	
 	
 	/**
-	 * Invoke the export xml file
-	 * Download the xml file
-	 * Update the entrenue_products table with the xml values
-	 * Create and save the Loader Inv File
+	 * 
+	 * Connect
 	 *
 	 */
 	public function uploadInv(){
 
-		$this->loadModel('EntrenueAPI');
+		App::import('Model','EntrenueAPIProduct');
 
-		$data = $this->EntrenueAPIProduct->find('all',  array(
-			'conditions' => array('pagination' => 3),
+		$entrenueAPIProduct = new EntrenueAPIProduct();
+
+
+		$data = $entrenueAPIProduct->find('all',  array(
+			'conditions' => array('pagination' => 1),
 		));
 
-		$entrenueProductArray['EntrenueProduct']  = $data['EntrenueAPIProduct'];
+		$entrenueProductArray['EntrenueProduct'] = array();
+
+		// debug($data,2);
+
+		foreach($data['EntrenueAPIProduct'] as $item){
+
+			debug('///////////////////////////////////////');
+			debug($item);
+
+			$item['SKU'] = $this->SKU_PREFIX.$item['model'];
+
+			array_push($entrenueProductArray['EntrenueProduct'], $item);
+
+
+		}
 
 		debug($entrenueProductArray);
 
-		$this->save($entrenueProductArray);
+		$this->create();
+
+		$this->save($entrenueProductArray[0]);
 
 	
 		// $this->downloadXmlfile();
