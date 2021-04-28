@@ -348,7 +348,7 @@ class CatalogApi
     {
         $request = $this->listCatalogItemsRequest($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
 
-        debug($request);
+        // debug($request);
 
         return $this->sendRequest($request, ListCatalogItemsResponse::class);
     }

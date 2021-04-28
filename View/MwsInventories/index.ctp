@@ -9,6 +9,8 @@
 			<th><?php echo $this->Paginator->sort('price'); ?></th>
 			<th><?php echo $this->Paginator->sort('quantity'); ?></th>
 			<th><?php echo $this->Paginator->sort('tier_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('image'); ?></th>
+			<th><?php echo $this->Paginator->sort('provider'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('updated'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
@@ -25,6 +27,8 @@
 		<td>
 			<?php echo $this->Html->link($mwsInventory['Tier']['name'], array('controller' => 'tiers', 'action' => 'view', $mwsInventory['Tier']['id'])); ?>
 		</td>
+		<td><?php echo $this->Html->image($mwsInventory['MwsInventory']['image']); ?>&nbsp;</td>
+		<td><?php echo h($mwsInventory['MwsInventory']['provider']); ?>&nbsp;</td>
 		<td><?php echo h($mwsInventory['MwsInventory']['created']); ?>&nbsp;</td>
 		<td><?php echo h($mwsInventory['MwsInventory']['updated']); ?>&nbsp;</td>
 		<td class="actions">

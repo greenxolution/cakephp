@@ -150,23 +150,27 @@ class EntrenueProductSource extends DataSource {
 		
 		$res = $this->readProduct($model, $queryData);
 
+		debug($res);
 
 		$data = Hash::extract($res, 'data.{n}');
 
 
-		
-		
-		// while ($res['to'] != $res['total']) {
+		if($queryData['all'] == true){
 
-		// 	$queryData['conditions']['page'] = $res['current_page'] + 1;
-			
-		// 	$res = $this->readProduct($model, $queryData);
-			
-		// 	$result = Hash::remove($res, 'data');
-			
-		// 	$data = array_merge($data, Hash::extract($res, 'data.{n}'));
-			
-		// }
+			while ($res['to'] != $res['total']) {
+
+				$queryData['conditions']['page'] = $res['current_page'] + 1;
+				
+				$res = $this->readProduct($model, $queryData);
+				
+				$result = Hash::remove($res, 'data');
+				
+				$data = array_merge($data, Hash::extract($res, 'data.{n}'));
+				
+			}
+
+		}
+
 				
 		
 		return array($model->alias => $data);

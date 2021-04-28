@@ -46,6 +46,30 @@ class ExecuteShell extends AppShell {
 		
 
 	}
+
+	public function json(){
+
+		App::import('Model','MwsInventory');
+
+		$mwsinventory = new MwsInventory();
+
+		$mwsinventory->importMatchingSPAPI('spapi.json');
+
+		// debug($mwsinventory->importMatchingSPAPI('spapi.json'));
+
+
+
+	}
+
+	public function pullEntrenueRecords($amount = 10){
+
+		App::import('Model','MwsInventory');
+
+		$eProduct = new MwsInventory();
+
+		debug($eProduct->pullEntrenueRecords(8));
+
+	}
 	
 	public function product(){
 		
@@ -108,7 +132,7 @@ class ExecuteShell extends AppShell {
 			'conditions' => array('pagination' => 2),
 		));
 
-		// debug($messages,2);
+		debug($messages,2);
 
 		$this->out('testting');
 
@@ -359,6 +383,18 @@ class ExecuteShell extends AppShell {
 		$entrenue = new EntrenueProduct();
 		
 		$entrenue->uploadInv();
+		
+	}
+
+	public function entrenueUploadInventory(){
+		
+		App::import('Model','EntrenueProductSource');
+		
+		// debug("Entrenue Product Model: FTP");
+		
+		$entrenue = new EntrenueProductSource();
+		
+		$entrenue->uploadInventory();
 		
 	}
 	

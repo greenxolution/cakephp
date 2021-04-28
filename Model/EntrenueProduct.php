@@ -42,9 +42,9 @@ class EntrenueProduct extends AppModel {
 					'field' => 'manufacturer'
 			),
 
-			'category_1' => array(
+			'categories' => array(
 					'type' => 'like',
-					'field' => 'category_1'
+					'field' => 'categories'
 			),
 			'model' => array(
 					'type' => 'like',
@@ -104,30 +104,47 @@ class EntrenueProduct extends AppModel {
 
 
 		$data = $entrenueAPIProduct->find('all',  array(
-			'conditions' => array('pagination' => 1),
+			'conditions' => array('pagination' => 1000,'all'=>true),
 		));
 
-		$entrenueProductArray['EntrenueProduct'] = array();
 
-		// debug($data,2);
 
 		foreach($data['EntrenueAPIProduct'] as $item){
+
+			$entrenueProductArray['EntrenueProduct'] = array();
 
 			debug('///////////////////////////////////////');
 			debug($item);
 
 			$item['SKU'] = $this->SKU_PREFIX.$item['model'];
 
-			array_push($entrenueProductArray['EntrenueProduct'], $item);
+			$entrenueProductArray['EntrenueProduct'] = $item;
+
+			debug($entrenueProductArray);
+
+			$this->create();
+
+			if(!$this->save($entrenueProductArray)){
+				debug($this->validationErrors);
+			}
+			else{
+				debug('SAVED---***********************************');
+			}
 
 
 		}
 
-		debug($entrenueProductArray);
+		debug(count($data['EntrenueAPIProduct']));
 
-		$this->create();
+		
 
-		$this->save($entrenueProductArray[0]);
+		// $this->create();
+
+		// $a = $this->save($entrenueProductArray);
+
+		// debug($a);
+
+		
 
 	
 		// $this->downloadXmlfile();
@@ -148,7 +165,7 @@ class EntrenueProduct extends AppModel {
 	 */
 	public function listAll($format = 'array'){
 	
-		$list =  $this->find('all', array('conditions' => array('EntrenueProduct.CATEGORY_1 LIKE' => "%Novelties%",
+		$list =  $this->find('all', array('conditions' => array('EntrenueProduct.categories LIKE' => "%Novelties%",
 				'EntrenueProduct.ASIN' => NULL)));
 	
 		if($format == 'array') return $list;

@@ -27,7 +27,7 @@ class EntrenueAPIProductsController extends AppController {
 		
 
 		$data = $this->EntrenueAPIProduct->find('all',  array(
-			'conditions' => array('pagination' => 2),
+			'conditions' => array('pagination' => 100,'all'=>false),
 		));
 
 
