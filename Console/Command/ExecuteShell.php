@@ -4,6 +4,42 @@ class ExecuteShell extends AppShell {
 	
 	
 	public $action = array();
+
+	public function abc(){
+
+		$a = 12345;
+
+		debug(gettype($a));
+	}
+
+		
+	/**
+	 * 
+	 * This is invocked for initial upload
+	 * 
+	 */
+	public function initUploadEntrenue(){
+		
+		App::import('Model','EntrenueProduct');
+		
+		// debug("Entrenue Product Model: FTP");
+		
+		$entrenue = new EntrenueProduct();
+		
+		$entrenue->initUploadEntrenue();
+		
+	}
+
+
+	public function initMWSCatalog(){
+
+		App::import('Model','MwsInventory');
+
+		$mwsinventory = new MwsInventory();
+
+		$mwsinventory->importMatchingSPAPI(500);
+
+	}
 	
 	
 	public function sub_main(){
@@ -47,19 +83,6 @@ class ExecuteShell extends AppShell {
 
 	}
 
-	public function json(){
-
-		App::import('Model','MwsInventory');
-
-		$mwsinventory = new MwsInventory();
-
-		$mwsinventory->importMatchingSPAPI('spapi.json');
-
-		// debug($mwsinventory->importMatchingSPAPI('spapi.json'));
-
-
-
-	}
 
 	public function pullEntrenueRecords($amount = 10){
 
@@ -365,26 +388,7 @@ class ExecuteShell extends AppShell {
 	}
 	
 
-	/**
-	 * Invoke the export xml file from Entrenue
-	 * Down load the xml file
-	 * Update the entrenue_products table with values 
-	 * Create and save the Loader Inv File
-	 * 
-	 * Step 1: Run twice per day
-	 * 
-	 */
-	public function invfile(){
-		
-		App::import('Model','EntrenueProduct');
-		
-		// debug("Entrenue Product Model: FTP");
-		
-		$entrenue = new EntrenueProduct();
-		
-		$entrenue->uploadInv();
-		
-	}
+
 
 	public function entrenueUploadInventory(){
 		

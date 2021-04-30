@@ -1,0 +1,1 @@
+cake -app C:\Users\pgunt\php\cakephp\app Execute initMWSCatalog > C:\Users\pgunt\Documents\MyFridayLove\initMWSCatalog.log

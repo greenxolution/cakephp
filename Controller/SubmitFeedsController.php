@@ -57,7 +57,7 @@ class SubmitFeedsController extends AppController {
 		$config->setRegion(Configure::read('SPAPI.region'));
 		$config->setSecurityToken($assumedRole->getSessionToken());
 		
-		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
+		// $apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
 		
 		$marketplace_id = Configure::read('SPAPI.MARKETPLACE.US');
 
@@ -68,36 +68,56 @@ class SubmitFeedsController extends AppController {
 		
 		// debug($result->getPayload()->getAttributeSets());
 
-		$query = ""; // string | Keyword(s) to use to search for items in the catalog. Example: 'harry potter books'.
-$query_context_id = ""; // string | An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items.
-$seller_sku = ""; // string | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
-$upc = ""; // string | A 12-digit bar code used for retail packaging.
-$ean = ""; // string | A European article number that uniquely identifies the catalog item, manufacturer, and its attributes.
-$isbn = "9781623260842"; // string | The unique commercial book identifier used to identify books internationally.
-$jan = ""; // string | A Japanese article number that uniquely identifies the product, manufacturer, and its attributes.
+		// $query = ""; // string | Keyword(s) to use to search for items in the catalog. Example: 'harry potter books'.
+		// $query_context_id = ""; // string | An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items.
+		// $seller_sku = ""; // string | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
+		// $upc = ""; // string | A 12-digit bar code used for retail packaging.
+		// $ean = ""; // string | A European article number that uniquely identifies the catalog item, manufacturer, and its attributes.
+		// $isbn = "9781934429952"; // string | The unique commercial book identifier used to identify books internationally.
+		// $jan = ""; // string | A Japanese article number that uniquely identifies the product, manufacturer, and its attributes.
 
-try {
-    $results = $apiInstance->listCatalogItems($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
-    debug($results,2);
+		// try {
+		// 	$results = $apiInstance->listCatalogItems($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
+		// 	debug($results,2);
 
-	foreach ($results->getPayload()->getItems() as $value) {
+		// 	foreach ($results->getPayload()->getItems() as $value) {
 
-		debug($value);
+		// 		// debug($value);
 
-		debug($value->AttributeSets[0]->Identifiers->MarketplaceASIN->MarketplaceId  );
-		debug($value->AttributeSets[0]->Identifiers->MarketplaceASIN->MarketplaceId->ASIN  );
+		// 		// debug($value->Identifiers->MarketplaceASIN->MarketplaceId  );
+		// 		// debug($value->Identifiers->MarketplaceASIN->MarketplaceId->ASIN  );
 
-		debug($value->AttributeSets[0]->Title );
-		debug($value->AttributeSets[0]->ListPrice->Amount );
-		debug($value->AttributeSets[0]->NumberOfPages );
-		debug($value->AttributeSets[0]->PublicationDate  );
-		# code...
-	}
-	debug('algo nuevo');
-} catch (Exception $e) {
-    echo 'Exception when calling CatalogApi->listCatalogItems: ', $e->getMessage(), PHP_EOL;
-}
+		// 		// debug($value->AttributeSets[0]->Title );
+		// 		// debug($value->AttributeSets[0]->ListPrice->Amount );
+		// 		// debug($value->AttributeSets[0]->NumberOfPages );
+		// 		// debug($value->AttributeSets[0]->PublicationDate  );
+		// 		# code...
+		// 	}
+		// 	debug('algo nuevo');
+		// } catch (Exception $e) {
+		// 	echo 'Exception when calling CatalogApi->listCatalogItems: ', $e->getMessage(), PHP_EOL;
+		// }
 
+
+		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\ProductPricingApi($config);
+
+
+		$marketplace_id = $marketplace_id; // string | A marketplace identifier. Specifies the marketplace for which prices are returned.
+		$item_condition = "New"; // string | Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
+		$asin = "1934429953"; // string | The Amazon Standard Identification Number (ASIN) of the item.
+		
+		try {
+			$result = $apiInstance->getItemOffers($marketplace_id, $item_condition, $asin);
+			// debug($result);
+
+			// debug($result->getPayload());
+
+			debug($result->getPayload()->getOffers());
+
+			debug($result->getPayload()->getOffers()[0]->getListingPrice()->getAmount());
+		} catch (Exception $e) {
+			echo 'Exception when calling ProductPricingApi->getItemOffers: ', $e->getMessage(), PHP_EOL;
+		}
 
 	
 

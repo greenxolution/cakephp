@@ -9,7 +9,15 @@ class EntrenueProduct extends AppModel {
 
 	public $xml = '';
 
-	public $SKU_PREFIX = 'ENTRENUE_';
+	public $history_fields = array('quantity');
+
+	public $hasMany = array(
+        'EntrenueProductsHistory' => array(
+            'className' => 'EntrenueProductsHistory'
+        )
+    );
+
+	public $SKU_PREFIX = 'ENT';
 	/**
 	 * Display field
 	 *
@@ -89,72 +97,101 @@ class EntrenueProduct extends AppModel {
 	
 	public $file;
 	
-	
-	
+
 	/**
 	 * 
-	 * Connect
-	 *
+	 * Pull all data from Entrenue API
+	 * 
 	 */
-	public function uploadInv(){
+	public function pullAllProductEntrenue(){
 
 		App::import('Model','EntrenueAPIProduct');
 
 		$entrenueAPIProduct = new EntrenueAPIProduct();
 
+		$data = array();
 
-		$data = $entrenueAPIProduct->find('all',  array(
-			'conditions' => array('pagination' => 1000,'all'=>true),
-		));
+		try {
 
+			$data = $entrenueAPIProduct->find('all',  array(
+				'conditions' => array('pagination' => 1000,'all'=>1),
+			));
+		}  
+		catch (Exception $e) {
+			echo 'Caught EntrenueAPIProduct exception: '.$e->getFile().  $e->getMessage(). "\n";
+
+
+		}
+		finally {
+
+			echo 'EntrenueAPIProduct Amount of oldRecords '.count($data['EntrenueAPIProduct']);
+		}
+
+		return $data;
+
+	}
+
+
+
+	
+	/**
+	 * 
+	 * Initialize loading data from Entrenue
+	 * Save data at EntrenueProduct model
+	 *
+	 */
+	public function initUploadEntrenue(){
+
+		$data = $this->pullAllProductEntrenue();
 
 
 		foreach($data['EntrenueAPIProduct'] as $item){
 
 			$entrenueProductArray['EntrenueProduct'] = array();
 
-			debug('///////////////////////////////////////');
-			debug($item);
-
 			$item['SKU'] = $this->SKU_PREFIX.$item['model'];
 
 			$entrenueProductArray['EntrenueProduct'] = $item;
 
-			debug($entrenueProductArray);
 
-			$this->create();
+			try {
 
-			if(!$this->save($entrenueProductArray)){
-				debug($this->validationErrors);
+				$this->create();
+
+				if(!$this->save($entrenueProductArray)){
+					debug($this->validationErrors);
+				}
+
+				debug('created.: '.$entrenueProductArray['EntrenueProduct']['model']);
+				
+			} 
+			catch (Exception $e) {
+
+				$oldRecord = $this->findByModel($entrenueProductArray['EntrenueProduct']['model']);
+
+
+				if(count($oldRecord)>0){
+
+					$entrenueProductArray['EntrenueProduct']['id'] = $oldRecord['EntrenueProduct']['id'];
+				
+					$this->clear();
+
+					if($this->save($entrenueProductArray)){
+						
+						$this->EntrenueProductsHistory->insertRecord($entrenueProductArray, $oldRecord );
+					}
+
+					debug('updated.: '.$entrenueProductArray['EntrenueProduct']['model']);
+
+				}
+				else{
+
+					echo 'Caught EntrenueAPIProduct exception: '.$e->getFile().  $e->getMessage(). "\n";
+				}
 			}
-			else{
-				debug('SAVED---***********************************');
-			}
-
 
 		}
 
-		debug(count($data['EntrenueAPIProduct']));
-
-		
-
-		// $this->create();
-
-		// $a = $this->save($entrenueProductArray);
-
-		// debug($a);
-
-		
-
-	
-		// $this->downloadXmlfile();
-	
-		// $this->updateFromXML($this->file);
-	
-		// $this->createLoadInventory();
-	
-		// $this->file->close();
-	
 	}
 	
 	

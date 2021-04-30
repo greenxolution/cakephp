@@ -150,12 +150,9 @@ class EntrenueProductSource extends DataSource {
 		
 		$res = $this->readProduct($model, $queryData);
 
-		debug($res);
-
 		$data = Hash::extract($res, 'data.{n}');
 
-
-		if($queryData['all'] == true){
+		if($queryData['conditions']['all']){
 
 			while ($res['to'] != $res['total']) {
 

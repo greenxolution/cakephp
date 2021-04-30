@@ -42,12 +42,9 @@
 			<th><?php echo $this->Paginator->sort('PACKAGE_WEIGHT'); ?></th>
 			<th><?php echo $this->Paginator->sort('CATEGORY_1'); ?></th>
 			<th><?php echo $this->Paginator->sort('CATEGORY_2'); ?></th>
-			<th><?php echo $this->Paginator->sort('CATEGORY_3'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th> -->
-			<th><?php echo $this->Paginator->sort('updated'); ?></th> <!--
-		
-			
--->				
+			<th><?php echo $this->Paginator->sort('CATEGORY_3'); ?></th>-->
+			<th><?php echo $this->Paginator->sort('created'); ?></th> 
+			<th><?php echo $this->Paginator->sort('updated'); ?></th>
 	</tr>
 	<?php foreach ($entrenueProducts as $entrenueProduct): ?>
 	<tr>
@@ -67,6 +64,8 @@
 		<td><?php echo h($entrenueProduct['EntrenueProduct']['quantity']); ?>&nbsp;</td>
 		<td><?php echo $this->Html->image($entrenueProduct['EntrenueProduct']['image'], array('width'=>'110px')); ?>&nbsp;</td>
 		<td><?php echo h($entrenueProduct['EntrenueProduct']['country_of_origin']); ?>&nbsp;</td>
+		<td><?php echo h($entrenueProduct['EntrenueProduct']['created']); ?>&nbsp;</td>
+		<td><?php echo h($entrenueProduct['EntrenueProduct']['updated']); ?>&nbsp;</td>
 	
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $entrenueProduct['EntrenueProduct']['id'])); ?>

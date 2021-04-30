@@ -80,6 +80,8 @@ class ProductPricingApi
     {
         list($response) = $this->getCompetitivePricingWithHttpInfo($marketplace_id, $item_type, $asins, $skus);
 
+        // debug($response); pedrop
+
         return $response;
     }
 

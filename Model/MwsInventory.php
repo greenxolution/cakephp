@@ -156,14 +156,14 @@ class MwsInventory extends AppModel {
 
 		return $eProduct->find('all',array(
 			'limit' => $amount, // int
-			'fields' => array('id','upc','SKU'),
-			'conditions' => array("EntrenueProduct.categories LIKE" => "%book%")
+			'fields' => array('id','upc','SKU','pages'),
+			'conditions' => array("EntrenueProduct.categories LIKE" => "%book%", 'quantity >'=>0 )
 		));
 
 
 	}
 
-	public function importMatchingSPAPI(){
+	public function importMatchingSPAPI($limit = 10){
 
 
 		$accessToken = \ClouSale\AmazonSellingPartnerAPI\SellingPartnerOAuth::getAccessTokenFromRefreshToken(
@@ -198,12 +198,20 @@ class MwsInventory extends AppModel {
 		
 		// debug($result->getPayload()->getAttributeSets());
 
-		$pulledEntrenue = $this->pullEntrenueRecords(10);
+		$pulledEntrenue = $this->pullEntrenueRecords($limit);
 
 		debug($pulledEntrenue);
-		
+		$count=0;
+
 
 		foreach ($pulledEntrenue as $key => $entrenueProduct) {
+
+			$count++;
+		
+			if(($count%10)==0)
+			{
+				sleep(5);
+			}
 
 			$query = ""; // string | Keyword(s) to use to search for items in the catalog. Example: 'harry potter books'.
 			$query_context_id = ""; // string | An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items.
@@ -225,41 +233,38 @@ class MwsInventory extends AppModel {
 
 				
 			foreach ($results->getPayload()->getItems() as $value) {
-	
-					// debug($value);
-				try{
-					// debug($value->Identifiers->MarketplaceASIN->MarketplaceId  );
-					// debug($value->Identifiers->MarketplaceASIN->ASIN  );
-	
-					// debug($value->AttributeSets[0]->Title );
-					// debug($value->AttributeSets[0]->ListPrice->Amount );
-					// debug($value->AttributeSets[0]->NumberOfPages );
-					// debug($value->AttributeSets[0]->PublicationDate  );
-					# code...
 
-					$this->create();
-					$this->save(array('MwsInventory'=>array('MarketplaceId'=>$value->Identifiers->MarketplaceASIN->MarketplaceId,
-															'asin'=>$value->Identifiers->MarketplaceASIN->ASIN,
-															'Title'=>$value->AttributeSets[0]->Title,
-															'NumberOfPages'=>$value->AttributeSets[0]->NumberOfPages,
-															'price'=>$value->AttributeSets[0]->ListPrice->Amount,
-															'image'=>$value->AttributeSets[0]->SmallImage->URL,
-															'provider'=>$entrenueProduct['EntrenueProduct']['SKU'],
-															'entrenue_products_id'=>$entrenueProduct['EntrenueProduct']['id'] )));
+				try{
+
+					if($value->AttributeSets[0]->NumberOfPages == $entrenueProduct['EntrenueProduct']['pages']){
+
+						$this->create();
+						$this->save(array('MwsInventory'=>array('MarketplaceId'=>$value->Identifiers->MarketplaceASIN->MarketplaceId,
+																'asin'=>$value->Identifiers->MarketplaceASIN->ASIN,
+																'Title'=>$value->AttributeSets[0]->Title,
+																'NumberOfPages'=>$value->AttributeSets[0]->NumberOfPages,
+																'price'=>$value->AttributeSets[0]->ListPrice->Amount,
+																'image'=>$value->AttributeSets[0]->SmallImage->URL,
+																'provider'=>$entrenueProduct['EntrenueProduct']['SKU'],
+																'entrenue_products_id'=>$entrenueProduct['EntrenueProduct']['id'] )));
+
+					}
+
+
 				}
 				catch (\Exception $emysql) {
 					print  'ERROR MYSQL-'.$emysql->getMessage();
-					$this->save(array('MwsInventory'=>array('MarketplaceId'=>$value->Identifiers->MarketplaceASIN->MarketplaceId,
-					'asin'=>$value->Identifiers->MarketplaceASIN->ASIN,
-					'Title'=>$value->AttributeSets[0]->Title,
-					'NumberOfPages'=>0,
-					'price'=>0,
-					'image'=>$value->AttributeSets[0]->SmallImage->URL,
-					'provider'=>$entrenueProduct['EntrenueProduct']['SKU'],
-					'entrenue_products_id'=>$entrenueProduct['EntrenueProduct']['id'])));
+					// $this->save(array('MwsInventory'=>array('MarketplaceId'=>$value->Identifiers->MarketplaceASIN->MarketplaceId,
+					// 'asin'=>$value->Identifiers->MarketplaceASIN->ASIN,
+					// 'Title'=>$value->AttributeSets[0]->Title,
+					// 'NumberOfPages'=>0,
+					// 'price'=>0,
+					// 'image'=>$value->AttributeSets[0]->SmallImage->URL,
+					// 'provider'=>$entrenueProduct['EntrenueProduct']['SKU'],
+					// 'entrenue_products_id'=>$entrenueProduct['EntrenueProduct']['id'])));
 				}
 				finally{
-					print  'ERROR MYSQL-'.$emysql->getMessage();
+					// print  'ERROR MYSQL-'.$emysql->getMessage();
 
 
 

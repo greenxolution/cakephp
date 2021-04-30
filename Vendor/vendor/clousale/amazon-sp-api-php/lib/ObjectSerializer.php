@@ -312,11 +312,16 @@ class ObjectSerializer
                 }
             }
 
+            // debug($instance); pedrop
+            // // debug($data);
+
             if (count($instance::swaggerTypes())>0) {
                 return $instance;
             } else {
                 return $data;
             }
+
+            // return $instance;
         }
     }
 }

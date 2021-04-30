@@ -1,0 +1,1 @@
+cake -app C:\Users\pgunt\php\cakephp\app Execute initUploadEntrenue > C:\Users\pgunt\Documents\MyFridayLove\initUploadEntrenue.log
