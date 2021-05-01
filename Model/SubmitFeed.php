@@ -310,12 +310,13 @@ class SubmitFeed extends Submit {
 	 */
 	public function creating_POST_INVENTORY_AVAILABILITY_DATA($items = array()){
 
+
 		if($items == null) return null;
 
 		$myXmlOriginal = '<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
 		<Header>
 		<DocumentVersion>1.01</DocumentVersion>
-		<MerchantIdentifier>A3G8ZVYPBH7BMB</MerchantIdentifier>
+		<MerchantIdentifier>'.$items['MerchantIdentifier'].'</MerchantIdentifier>
 		</Header>
 		<MessageType>Inventory</MessageType>
 		</AmazonEnvelope>';
@@ -323,15 +324,15 @@ class SubmitFeed extends Submit {
 		$xml = Xml::build($myXmlOriginal);
 
 		$i = 1;
-		foreach ($items as $item) {
-
-			// 			$quantity = ($item['quantity'] == NULL)? 0 : $item['quantity'];
+		foreach ($items['Messages'] as $item) {
 
 			$message = $xml->addChild('Message');
 			$message->addChild('MessageID',$i);
+			$message->addChild('OperationType',$item['OperationType']);
 			$inventory = $message->addChild('Inventory');
 			$inventory->addChild('SKU',$item['ViewMatchInv']['SKU']);
 			$inventory->addChild('Quantity',$item['ViewMatchInv']['Quantity']);
+			$inventory->addChild('FulfillmentLatency',$item['ViewMatchInv']['FulfillmentLatency']);
 
 			++$i;
 

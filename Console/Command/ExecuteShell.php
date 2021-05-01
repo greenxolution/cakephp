@@ -40,6 +40,27 @@ class ExecuteShell extends AppShell {
 		$mwsinventory->importMatchingSPAPI(500);
 
 	}
+
+	public function inventoryFeed(){
+
+		debug(base64_decode('N3lIWCKhZbOrSqRlPgjAbmwMLIIExZQ+If2fa9kjfs0='));
+
+		// App::import('Model','SubmitFeed');
+
+		// $submitFeed = new SubmitFeed();
+
+		
+
+		// $items = array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => array(
+		// 	array('OperationType'=>'Update', 'ViewMatchInv'=>array('SKU'=>'45-87DE-NQ23', 'Quantity'=>'9','FulfillmentLatency'=>'1'))
+		// ));
+	
+		// debug($items);
+
+		// debug($submitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items));
+
+
+	}
 	
 	
 	public function sub_main(){

@@ -34,7 +34,7 @@
 		</dd>
 		<dt><?php echo __('Image'); ?></dt>
 		<dd>
-			<?php echo $this->Html->image($entrenueProduct['EntrenueProduct']['image']); h($entrenueProduct['EntrenueProduct']['image']); ?>
+			<?php echo $this->Html->image($entrenueProduct['EntrenueProduct']['image'], array('width'=>'320px')); h($entrenueProduct['EntrenueProduct']['image']); ?>
 			&nbsp;
 		</dd>
 
@@ -49,6 +49,8 @@
 			&nbsp;
 		</dd>
 	</dl>
+
+	<?php debug($entrenueProduct['EntrenueProductsHistory']); ?>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

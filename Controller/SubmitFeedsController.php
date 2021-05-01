@@ -21,6 +21,57 @@ class SubmitFeedsController extends AppController {
 	public $feedType = array(	'_POST_PRODUCT_PRICING_DATA_' => 'PRICING',
 								'_POST_INVENTORY_AVAILABILITY_DATA_' => 'AVAILABILITY');
 
+
+	public function feed(){
+
+		$feedApi = new \ClouSale\AmazonSellingPartnerAPI\Api\FeedsApi($config);
+
+    $contentType = 'text/xml; charset=UTF-8'; // please pay attention here, the content_type will be used many time
+
+    $feedDocument = $feedApi->createFeedDocument(new \ClouSale\AmazonSellingPartnerAPI\Models\Feeds\CreateFeedDocumentSpecification([
+        'content_type' => $contentType,
+    ]));
+
+    $feedDocumentId = $feedDocument->getPayload()->getFeedDocumentId();
+    $url = $feedDocument->getPayload()->getUrl();
+    $key = $feedDocument->getPayload()->getEncryptionDetails()->getKey();
+    $key = base64_decode($key, true);
+    $initializationVector = base64_decode($feedDocument->getPayload()->getEncryptionDetails()->getInitializationVector(), true);
+    $encryptedFeedData = openssl_encrypt(utf8_encode(array2xml([ // array2xml is my private function, you can write your own function
+        'data' => 'test',
+    ])), 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $initializationVector);
+
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => $url,
+        CURLOPT_SSL_VERIFYHOST => 0,
+        CURLOPT_SSL_VERIFYPEER => 0,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 90,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_CUSTOMREQUEST => 'PUT',
+        CURLOPT_POSTFIELDS => $encryptedFeedData,
+        CURLOPT_HTTPHEADER => [
+            'Accept: application/xml',
+            'Content-Type: ' . $contentType,
+        ],
+    ));
+
+    $response = curl_exec($curl);
+
+    $error = curl_error($curl);
+    $httpcode = (int)curl_getinfo($curl, CURLINFO_HTTP_CODE);
+
+    if ($httpcode >= 200 && $httpcode <= 299) {
+        // success
+    } else {
+        // error
+    }
+	}
+
 /**
  * index method
  *
@@ -99,26 +150,110 @@ class SubmitFeedsController extends AppController {
 		// }
 
 
-		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\ProductPricingApi($config);
+		// $apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\ProductPricingApi($config);
 
 
-		$marketplace_id = $marketplace_id; // string | A marketplace identifier. Specifies the marketplace for which prices are returned.
-		$item_condition = "New"; // string | Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
-		$asin = "1934429953"; // string | The Amazon Standard Identification Number (ASIN) of the item.
+		// $marketplace_id = $marketplace_id; // string | A marketplace identifier. Specifies the marketplace for which prices are returned.
+		// $item_condition = "New"; // string | Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
+		// $asin = "1934429953"; // string | The Amazon Standard Identification Number (ASIN) of the item.
 		
-		try {
-			$result = $apiInstance->getItemOffers($marketplace_id, $item_condition, $asin);
-			// debug($result);
+		// try {
+		// 	$result = $apiInstance->getItemOffers($marketplace_id, $item_condition, $asin);
+		// 	// debug($result);
 
-			// debug($result->getPayload());
+		// 	// debug($result->getPayload());
 
-			debug($result->getPayload()->getOffers());
+		// 	debug($result->getPayload()->getOffers());
 
-			debug($result->getPayload()->getOffers()[0]->getListingPrice()->getAmount());
-		} catch (Exception $e) {
-			echo 'Exception when calling ProductPricingApi->getItemOffers: ', $e->getMessage(), PHP_EOL;
-		}
+		// 	debug($result->getPayload()->getOffers()[0]->getListingPrice()->getAmount());
+		// } catch (Exception $e) {
+		// 	echo 'Exception when calling ProductPricingApi->getItemOffers: ', $e->getMessage(), PHP_EOL;
+		// }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+App::import('Model','SubmitFeed');
+
+$submitFeed = new SubmitFeed();
+
+
+
+$items = array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => array(
+	array('OperationType'=>'Update', 'ViewMatchInv'=>array('SKU'=>'45-87DE-NQ23', 'Quantity'=>'9','FulfillmentLatency'=>'1'))
+));
+
+debug($items);
+
+debug($submitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items));
+
+
+$feedApi = new \ClouSale\AmazonSellingPartnerAPI\Api\FeedsApi($config);
+
+$contentType = 'text/xml; charset=UTF-8'; // please pay attention here, the content_type will be used many time
+
+$feedDocument = $feedApi->createFeedDocument(new \ClouSale\AmazonSellingPartnerAPI\Models\Feeds\CreateFeedDocumentSpecification([
+	'content_type' => $contentType,
+]));
+
+debug($feedDocument);
+
+$feedDocumentId = $feedDocument->getPayload()->getFeedDocumentId();
+$url = $feedDocument->getPayload()->getUrl();
+$key = $feedDocument->getPayload()->getEncryptionDetails()->getKey();
+$key = base64_decode($key);
+
+debug($feedDocumentId);
+debug($url);
+debug($key);
+
+$initializationVector = base64_decode($feedDocument->getPayload()->getEncryptionDetails()->getInitializationVector(), true);
+$encryptedFeedData = openssl_encrypt(utf8_encode($submitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items)), 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $initializationVector);
+
+debug($feedDocument->getPayload()->getEncryptionDetails()->getInitializationVector());
+debug($encryptedFeedData);
+
+$curl = curl_init();
+curl_setopt_array($curl, array(
+	CURLOPT_URL => $url,
+	CURLOPT_SSL_VERIFYHOST => 0,
+	CURLOPT_SSL_VERIFYPEER => 0,
+	CURLOPT_RETURNTRANSFER => true,
+	CURLOPT_ENCODING => '',
+	CURLOPT_MAXREDIRS => 10,
+	CURLOPT_TIMEOUT => 90,
+	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	CURLOPT_FOLLOWLOCATION => true,
+	CURLOPT_CUSTOMREQUEST => 'PUT',
+	CURLOPT_POSTFIELDS => $encryptedFeedData,
+	CURLOPT_HTTPHEADER => [
+		'Accept: application/xml',
+		'Content-Type: ' . $contentType,
+	],
+));
+
+debug($encryptedFeedData);
+
+$response = curl_exec($curl);
+
+$error = curl_error($curl);
+$httpcode = (int)curl_getinfo($curl, CURLINFO_HTTP_CODE);
+
+debug($response);
+debug($httpcode);
+
+if ($httpcode >= 200 && $httpcode <= 299) {
+	// success
+	debug('SSUECCESSSSSSS');
+	// $createFeedParams = [
+    //     "feedType" => "POST_INVENTORY_AVAILABILITY_DATA",
+    //     	"marketplaceIds" => [Configure::read('SPAPI.MerchantIdentifier')],
+    //     	"inputFeedDocumentId" => $feedDocumentId
+    //     ];
+    //     $r = $feedApi->createFeed(json_encode($createFeedParams));
+    //     debug($r);
+} else {
+	// error
+	debug($error);
+}
 	
 
 		

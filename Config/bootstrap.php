@@ -150,6 +150,7 @@ Configure::write('SPAPI', array(
 	'secret_key' => $options['secret_key'], // Secret Key of AWS IAM User
 	'endpoint' => \ClouSale\AmazonSellingPartnerAPI\SellingPartnerEndpoint::$NORTH_AMERICA, // or NORTH_AMERICA / FAR_EAST
 	'role_arn' => $options['role_arn'], // AWS IAM Role ARN for example: arn:aws:iam::123456789:role/Your-Role-Name
+	'MerchantIdentifier' => $options['MerchantIdentifier']
 ));
 
 Configure::write('SPAPI.MARKETPLACE', array(	
