@@ -43,7 +43,11 @@ class ExecuteShell extends AppShell {
 
 	public function inventoryFeed(){
 
-		debug(base64_decode('N3lIWCKhZbOrSqRlPgjAbmwMLIIExZQ+If2fa9kjfs0='));
+		App::import('Model','SubmitFeed');
+
+		$submitFeed = new SubmitFeed();
+
+		$submitFeed->pushInventoryTest();
 
 		// App::import('Model','SubmitFeed');
 
