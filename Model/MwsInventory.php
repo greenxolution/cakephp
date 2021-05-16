@@ -196,13 +196,13 @@ class MwsInventory extends AppModel {
 
 			// debug($result->getPayload());
 
-			// debug($result->getPayload()->getOffers());
+			// debug($result->getPayload()->getSummary()->getLowestPrices()[0]->ListingPrice->Amount);
 
 			// debug($result->getPayload()->getOffers()[0]->getListingPrice()->getAmount());
 
 			// debug($result->getPayload()->getOffers()[0]->getListingPrice());
 
-			return $result->getPayload()->getOffers()[0]->getListingPrice()->getAmount();
+			return $result->getPayload()->getSummary()->getLowestPrices()[0]->ListingPrice->Amount;
 
 		} catch (Exception $e) {
 			echo 'Exception when calling ProductPricingApi->getItemOffers: ', $e->getMessage(), PHP_EOL;
