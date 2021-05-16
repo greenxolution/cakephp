@@ -69,7 +69,7 @@ class ExecuteShell extends AppShell {
 
 		$mwsInventory = new MwsInventory();
 
-		debug($mwsInventory->getItemOffers($submit->configSPAPI(), '1592334253'));
+		debug($mwsInventory->getItemOffers($submit->configSPAPI(), '0062300334'));
 	}
 
 	/**
@@ -88,7 +88,7 @@ class ExecuteShell extends AppShell {
 
 		$mwsInventory = new MwsInventory();
 
-		$mwsInventory->getCompetitivePricing($submit->configSPAPI(), Configure::read('SPAPI.MARKETPLACE.US'), 'Asin', '1592334253', '');
+		$mwsInventory->getCompetitivePricing($submit->configSPAPI(), Configure::read('SPAPI.MARKETPLACE.US'), 'Asin', '0446698598', '');
 	}
 
 	/**
