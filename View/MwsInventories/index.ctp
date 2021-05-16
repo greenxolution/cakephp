@@ -7,7 +7,10 @@
 			<!-- <th><?php echo $this->Paginator->sort('sku'); ?></th> -->
 			<th><?php echo $this->Paginator->sort('asin'); ?></th>
 			<th><?php echo $this->Paginator->sort('price'); ?></th>
-			<th><?php echo $this->Paginator->sort('price'); ?></th>
+			<th><?php echo $this->Paginator->sort('offert'); ?></th>
+			<th><?php echo $this->Paginator->sort('Eprice'); ?></th>
+			<th><?php echo $this->Paginator->sort('MAP'); ?></th>
+			<th><?php echo $this->Paginator->sort('quantity'); ?></th>
 			<th><?php echo $this->Paginator->sort('quantity'); ?></th>
 			<th><?php echo $this->Paginator->sort('tier_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('image'); ?></th>
@@ -17,9 +20,9 @@
 			<th><?php echo $this->Paginator->sort('mpages'); ?></th>
 			<th><?php echo $this->Paginator->sort('epages'); ?></th>
 			<th><?php echo $this->Paginator->sort('entrenue'); ?></th>
-			<!-- <th><?php echo $this->Paginator->sort('created'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('updated'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th> -->
+			<!-- <th class="actions"><?php echo __('Actions'); ?></th> -->
 	</tr>
 	</thead>
 	<tbody>
@@ -35,7 +38,10 @@
 		</td>
 		<!-- <td><?php echo h($mwsInventory['MwsInventory']['asin']); ?>&nbsp;</td> -->
 		<td><?php echo h($mwsInventory['MwsInventory']['price']); ?>&nbsp;</td>
+		<td><?php echo h($mwsInventory['MwsInventory']['item_offer']); ?>&nbsp;</td>
 		<td><?php echo h($mwsInventory['EntrenueProduct']['price']); ?>&nbsp;</td>
+		<td><?php echo h($mwsInventory['EntrenueProduct']['map']); ?>&nbsp;</td>
+		<td><?php echo h($mwsInventory['EntrenueProduct']['quantity']); ?>&nbsp;</td>
 		<td><?php echo h($mwsInventory['MwsInventory']['quantity']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($mwsInventory['Tier']['name'], array('controller' => 'tiers', 'action' => 'view', $mwsInventory['Tier']['id'])); ?>
@@ -52,9 +58,9 @@
 		?>&nbsp;
 				
 	</td>	
-		<!-- <td><?php echo h($mwsInventory['MwsInventory']['created']); ?>&nbsp;</td>
+		<td><?php echo h($mwsInventory['MwsInventory']['created']); ?>&nbsp;</td>
 		<td><?php echo h($mwsInventory['MwsInventory']['updated']); ?>&nbsp;</td>
-		<td class="actions">
+		<!-- <td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $mwsInventory['MwsInventory']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $mwsInventory['MwsInventory']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $mwsInventory['MwsInventory']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $mwsInventory['MwsInventory']['id']))); ?>

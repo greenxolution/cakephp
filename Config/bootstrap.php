@@ -168,4 +168,5 @@ Configure::write('ENTRENUE.API', array(
 	'pagination' => 100
 ));
 
+CakePlugin::load('Highcharts');
 

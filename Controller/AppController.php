@@ -34,6 +34,7 @@ class AppController extends Controller {
 	
 	public $components = array(
 			'DebugKit.Toolbar',
+			'Highcharts.Highcharts',
 			'Session',
 			'Auth' => array(
 					'loginRedirect' => array(

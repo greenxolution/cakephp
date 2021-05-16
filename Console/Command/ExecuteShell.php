@@ -15,6 +15,8 @@ class ExecuteShell extends AppShell {
 		
 	/**
 	 * 
+	 * @date: 2021-05-15
+	 * 
 	 * This is invocked for initial upload
 	 * 
 	 */
@@ -30,7 +32,89 @@ class ExecuteShell extends AppShell {
 		
 	}
 
+	/**
+	 * 
+	 * @date: 2021-05-15
+	 * 
+	 * This load the feed estimated
+	 */
+	public function feedEstimated(){
 
+		App::import('Model','Submit');
+
+		$submit = new Submit();
+
+		// return $submitFeed->configSPAPI();
+
+		App::import('Model','MwsInventory');
+
+		$mwsInventory = new MwsInventory();
+
+		debug($mwsInventory->getFeesEstimated($submit->configSPAPI(), array('45-87DE-NQ23')));
+	}
+
+	/**
+	 * 
+	 * @date: 2021=05-16
+	 * 
+	 * Gets Item Offer
+	 */
+	public function getItemOffers(){
+
+		App::import('Model','Submit');
+
+		$submit = new Submit();
+
+		App::import('Model','MwsInventory');
+
+		$mwsInventory = new MwsInventory();
+
+		debug($mwsInventory->getItemOffers($submit->configSPAPI(), '158005630X'));
+	}
+
+	/**
+	 * 
+	 * @date: 2021-05-16
+	 * 
+	 * Gets Item Offer
+	 */
+	public function getCompetitivePricing(){
+
+		App::import('Model','Submit');
+
+		$submit = new Submit();
+
+		App::import('Model','MwsInventory');
+
+		$mwsInventory = new MwsInventory();
+
+		$mwsInventory->getCompetitivePricing($submit->configSPAPI(), Configure::read('SPAPI.MARKETPLACE.US'), 'Asin', '158005630X', '');
+	}
+
+	/**
+	 * 
+	 * @date: 2021-05-15
+	 * 
+	 * Updates item_offer in MWSInventory
+	 * 
+	 */
+	public function updateItemOffer(){
+
+		App::import('Model','MwsInventory');
+
+		$mwsInventory = new MwsInventory();
+
+		$mwsInventory->updateItemOffer();
+
+	}
+
+
+	/**
+	 * 
+	 * @date: 2021-05-15
+	 * 
+	 * This invokes just one time to load the mws product
+	 */
 	public function initMWSCatalog(){
 
 		App::import('Model','MwsInventory');

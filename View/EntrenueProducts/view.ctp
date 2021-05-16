@@ -1,3 +1,9 @@
+<?php
+
+	echo $this->Html->script(array('https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'));
+
+	echo $this->fetch('script');
+?>
 <div class="entrenueProducts view">
 <h2><?php echo __('Entrenue Product'); ?></h2>
 	<dl>
@@ -27,16 +33,18 @@
 			<?php echo h($entrenueProduct['EntrenueProduct']['categories']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('DESCRIPTION'); ?></dt>
-		<dd>
-			<?php echo h($entrenueProduct['EntrenueProduct']['description']); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Image'); ?></dt>
 		<dd>
 			<?php echo $this->Html->image($entrenueProduct['EntrenueProduct']['image'], array('width'=>'320px')); h($entrenueProduct['EntrenueProduct']['image']); ?>
 			&nbsp;
 		</dd>
+		<!-- <dt><?php echo __('DESCRIPTION'); ?></dt>
+		<dd>
+		<?php echo __('DESCRIPTION'); ?>
+			<?php echo h($entrenueProduct['EntrenueProduct']['description']); ?>
+			&nbsp;
+		</dd> -->
+
 
 		<dt><?php echo __('Created'); ?></dt>
 		<dd>
@@ -49,6 +57,10 @@
 			&nbsp;
 		</dd>
 	</dl>
+	<div>
+	<strong><?php echo __('DESCRIPTION'); ?></strong>
+			<?php echo h($entrenueProduct['EntrenueProduct']['description']); ?>
+	</div>
 
 	<?php debug($entrenueProduct['EntrenueProductsHistory']); ?>
 </div>

@@ -157,12 +157,176 @@ class MwsInventory extends AppModel {
 		return $eProduct->find('all',array(
 			'limit' => $amount, // int
 			'fields' => array('id','upc','SKU','pages'),
+			// 'limit' => 5,
 			'conditions' => array("EntrenueProduct.categories LIKE" => "%book%", 'quantity >'=>0 )
 		));
 
 
 	}
 
+
+	public function getConfig(){
+
+		App::import('Model','Submit');
+
+		$submit = new Submit();
+
+		return $submitFeed->configSPAPI();
+
+	}
+
+	/**
+	 * 
+	 * Date: 2021-05-16
+	 * 
+	 * Returns the lowest priced offers for a single item based on ASIN.
+	 */
+	public function getItemOffers($config = array(), $asin = ''){
+
+		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\ProductPricingApi($config);
+
+
+		// $marketplace_id = Configure::read('SPAPI.MARKETPLACE.US'); // string | A marketplace identifier. Specifies the marketplace for which prices are returned.
+		// $item_condition = "New"; // string | Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
+		// $asin = "1934429953"; // string | The Amazon Standard Identification Number (ASIN) of the item.
+		
+		try {
+			$result = $apiInstance->getItemOffers(Configure::read('SPAPI.MARKETPLACE.US'), 'New', $asin);
+			// debug($result);
+
+			// debug($result->getPayload());
+
+			// debug($result->getPayload()->getOffers());
+
+			// debug($result->getPayload()->getOffers()[0]->getListingPrice()->getAmount());
+
+			// debug($result->getPayload()->getOffers()[0]->getListingPrice());
+
+			return $result->getPayload()->getOffers()[0]->getListingPrice()->getAmount();
+
+		} catch (Exception $e) {
+			echo 'Exception when calling ProductPricingApi->getItemOffers: ', $e->getMessage(), PHP_EOL;
+		}
+
+		return null;
+	}
+
+
+	/**
+	 * 
+	 * @date: 2021-05-16
+	 * 
+	 * Returns competitive pricing information for a seller's offer listings based on seller SKU or ASIN.
+	 * 
+	 * $marketplace_id = "marketplace_id_example"; // string | A marketplace identifier. Specifies the marketplace for which prices are returned.
+	 * $item_type = "item_type_example"; // string | Indicates whether ASIN values or seller SKU values are used to identify items. If you specify Asin, the information in the response will be dependent on the list of Asins you provide in the Asins parameter. If you specify Sku, the information in the response will be dependent on the list of Skus you provide in the Skus parameter. Possible values: Asin, Sku.
+	 * $asins = array("asins_example"); // string[] | A list of up to twenty Amazon Standard Identification Number (ASIN) values used to identify items in the given marketplace.
+	 * $skus = array("skus_example"); // string[] | A list of up to twenty seller SKU values used to identify items in the given marketplace.
+	 * 
+	 */
+	public function getCompetitivePricing($config = array(), $marketplace_id = '', $item_type = '', $asins = '', $skus = ''){
+
+		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\ProductPricingApi($config);
+
+		try {
+			$result = $apiInstance->getCompetitivePricing($marketplace_id, $item_type, $asins, $skus);
+			print_r($result);
+		} catch (Exception $e) {
+			echo 'Exception when calling ProductPricingApi->getCompetitivePricing: ', $e->getMessage(), PHP_EOL;
+		}
+	}
+
+
+	/**
+	 * 
+	 * @date: 2021-05-16
+	 * 
+	 * Updates the price in the ItemOffer in MWSInventory
+	 */
+	public function updateItemOffer(){
+
+		App::import('Model','Submit');
+
+		$submit = new Submit();
+
+		App::import('Model','MwsInventory');
+
+		$config = $submit->configSPAPI();
+
+		$data = $this->find('all');
+
+		foreach($data as $key => $item){
+
+			debug($item);
+
+			$item['MwsInventory']['item_offer'] = $this->getItemOffers($config, $asin = $item['MwsInventory']['asin']);
+
+			$this->save($item);
+		}
+
+
+
+	}
+
+	/**
+	 * @date: 2021-05-15
+	 * 
+	 * Get the Fees Estimated
+	 * 
+	 * NOT WORK
+	 */
+	public function getFeesEstimated($config = array(), $SKUs = array()){
+
+		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\FeesApi($config);
+
+		//C:\Users\pgunt\php\cakephp\app\Vendor\vendor\clousale\amazon-sp-api-php\lib\Models\ProductFees\GetMyFeesEstimateRequest.php
+
+		//C:\Users\pgunt\php\cakephp\app\Vendor\vendor\clousale\amazon-sp-api-php\lib\Api\FeesApi.php
+
+		$body = new \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\GetMyFeesEstimateRequest(); // \Swagger\Client\Models\GetMyFeesEstimateRequest |
+
+		$feesEstimateRequest = new \ClouSale\AmazonSellingPartnerAPI\Models\ProductFees\FeesEstimateRequest(array('marketplace_id'=>Configure::read('SPAPI.MARKETPLACE.US'),
+																		'is_amazon_fulfilled' => false,
+																		'price_to_estimate_fees' => 100,
+																		'identifier' => 'asdf3342sdas3'));
+
+		$return['FeedEstimated'] = array();
+
+		// $this->container['marketplace_id'] = isset($data['marketplace_id']) ? $data['marketplace_id'] : null;
+        // $this->container['is_amazon_fulfilled'] = isset($data['is_amazon_fulfilled']) ? $data['is_amazon_fulfilled'] : null;
+        // $this->container['price_to_estimate_fees'] = isset($data['price_to_estimate_fees']) ? $data['price_to_estimate_fees'] : null;
+        // $this->container['identifier'] = isset($data['identifier']) ? $data['identifier'] : null;
+
+		$feedEstimate = array('marketplace_id'=>Configure::read('SPAPI.MARKETPLACE.US'),
+							'is_amazon_fulfilled' => false,
+							'price_to_estimate_fees' => 100,
+							'identifier' => 'asdf3342sdas3');
+
+		
+
+		$body->setFeesEstimateRequest($feesEstimateRequest);
+
+		debug($body->getFeesEstimateRequest());
+
+		foreach ($SKUs as $key => $seller_sku){
+
+			try {
+				$result = $apiInstance->getMyFeesEstimateForSKU($feesEstimateRequest, '45-87DE-NQ23');
+				print_r($result);
+			} catch (Exception $e) {
+				echo 'Exception when calling FeesApi->getMyFeesEstimateForSKU: ', $e->getMessage(), PHP_EOL;
+			}
+
+		}
+	}
+
+
+	/**
+	 * @date: 2021-05-15
+	 * 
+	 * Insert in MWSInventory from EntrenueProduct calling the Catalog
+	 * 
+	 */
 	public function importMatchingSPAPI($limit = 10){
 
 
@@ -185,8 +349,6 @@ class MwsInventory extends AppModel {
 		$config->setRegion(Configure::read('SPAPI.region'));
 		$config->setSecurityToken($assumedRole->getSessionToken());
 		
-		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
-
 		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
 		
 		$marketplace_id = Configure::read('SPAPI.MARKETPLACE.US');
