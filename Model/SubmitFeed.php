@@ -313,7 +313,7 @@ class SubmitFeed extends Submit {
 
 		if($items == null) return null;
 
-		$myXmlOriginal = '<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+		$myXmlOriginal = '<?xml version="1.0" encoding="utf-8" ?><AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
 		<Header>
 		<DocumentVersion>1.01</DocumentVersion>
 		<MerchantIdentifier>'.$items['MerchantIdentifier'].'</MerchantIdentifier>
@@ -381,6 +381,99 @@ class SubmitFeed extends Submit {
 
 
 		return $xml->asXML();
+
+	}
+
+	
+
+	/**
+	 * @date: 2021-05-15
+	 * This submit the quantity of the products in MWS through SP-API
+	 * 
+	 * @param array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => array(array('OperationType'=>'Update', 'ViewMatchInv'=>array('SKU'=>'45-87DE-NQ23', 'Quantity'=>'9','FulfillmentLatency'=>'1'))))
+	 * 
+	 * @return Bolean 
+	 * 
+	*/
+	public function submitInventoryQuantity($items = array()){
+
+		$config = $this->configSPAPI();
+
+		$feedApi = new \ClouSale\AmazonSellingPartnerAPI\Api\FeedsApi($config);
+
+		$contentType = 'text/xml; charset=UTF-8'; // please pay attention here, the content_type will be used many time
+
+		$feedDocument = $feedApi->createFeedDocument(new \ClouSale\AmazonSellingPartnerAPI\Models\Feeds\CreateFeedDocumentSpecification([
+			'content_type' => $contentType,
+		]));
+
+		$feedDocumentId = $feedDocument->getPayload()->getFeedDocumentId();
+		$url = $feedDocument->getPayload()->getUrl();
+		$key = $feedDocument->getPayload()->getEncryptionDetails()->getKey();
+		$key = base64_decode($key);
+
+		$initializationVector = base64_decode($feedDocument->getPayload()->getEncryptionDetails()->getInitializationVector(), true);
+		$encryptedFeedData = openssl_encrypt(utf8_encode($this->creating_POST_INVENTORY_AVAILABILITY_DATA($items)), 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $initializationVector);
+
+		$curl = curl_init();
+		curl_setopt_array($curl, array(
+			CURLOPT_URL => $url,
+			CURLOPT_SSL_VERIFYHOST => 0,
+			CURLOPT_SSL_VERIFYPEER => 0,
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => '',
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 90,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_FOLLOWLOCATION => true,
+			CURLOPT_CUSTOMREQUEST => 'PUT',
+			CURLOPT_POSTFIELDS => $encryptedFeedData,
+			CURLOPT_HTTPHEADER => [
+				'Accept: application/xml',
+				'Content-Type: ' . $contentType,
+			],
+		));
+
+
+
+		$response = curl_exec($curl);
+
+		$error = curl_error($curl);
+		$httpcode = (int)curl_getinfo($curl, CURLINFO_HTTP_CODE);
+
+		if ($httpcode >= 200 && $httpcode <= 299) {
+			// success
+			$createFeedParams = [
+				"feedType" => "POST_INVENTORY_AVAILABILITY_DATA",
+					"marketplaceIds" => ['ATVPDKIKX0DER'],
+					"inputFeedDocumentId" => $feedDocumentId
+				];
+				// $r = $feedApi->createFeed(json_encode($createFeedParams));
+
+				// $body = new \Swagger\Client\Models\CreateFeedSpecification();
+
+				try {
+					$result = $feedApi->createFeed(json_encode($createFeedParams));
+					debug('SUCCESSSSSSSS');
+
+					return true;
+
+				} catch (Exception $e) {
+
+					debug($e);
+
+					echo 'Exception when calling FeedsApi->createFeed: ', $e->getMessage(), PHP_EOL;
+				}
+
+
+		} else {
+			// error
+			debug($error);
+		}
+
+		return false;
+
+
 
 	}
 

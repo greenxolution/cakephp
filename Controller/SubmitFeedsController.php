@@ -89,43 +89,27 @@ class SubmitFeedsController extends AppController {
 
 		debug(Configure::read('SPAPI.refresh_token'));
 
-		$accessToken = \ClouSale\AmazonSellingPartnerAPI\SellingPartnerOAuth::getAccessTokenFromRefreshToken(
-			Configure::read('SPAPI.refresh_token'),
-			Configure::read('SPAPI.client_id'),
-			Configure::read('SPAPI.client_secret')
-		);
-		$assumedRole = \ClouSale\AmazonSellingPartnerAPI\AssumeRole::assume(
-			Configure::read('SPAPI.region'),
-			Configure::read('SPAPI.access_key'),
-			Configure::read('SPAPI.secret_key'),
-			Configure::read('SPAPI.role_arn')
-		);
-		$config = \ClouSale\AmazonSellingPartnerAPI\Configuration::getDefaultConfiguration();
-		$config->setHost(Configure::read('SPAPI.endpoint') );
-		$config->setAccessToken($accessToken);
-		$config->setAccessKey($assumedRole->getAccessKeyId());
-		$config->setSecretKey($assumedRole->getSecretAccessKey());
-		$config->setRegion(Configure::read('SPAPI.region'));
-		$config->setSecurityToken($assumedRole->getSessionToken());
-		
-		// $apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
-		
+	
 		$marketplace_id = Configure::read('SPAPI.MARKETPLACE.US');
 
-		
+		$config = $this->SubmitFeed->configSPAPI();
+
+		// $apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
+
+
 		// $result = $apiInstance->getCatalogItem($marketplace_id, $asin);
 
 		// debug($result->getPayload()->getAttributeSets()[0]->getTitle());
 		
 		// debug($result->getPayload()->getAttributeSets());
 
-		// $query = ""; // string | Keyword(s) to use to search for items in the catalog. Example: 'harry potter books'.
-		// $query_context_id = ""; // string | An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items.
-		// $seller_sku = ""; // string | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
-		// $upc = ""; // string | A 12-digit bar code used for retail packaging.
-		// $ean = ""; // string | A European article number that uniquely identifies the catalog item, manufacturer, and its attributes.
-		// $isbn = "9781934429952"; // string | The unique commercial book identifier used to identify books internationally.
-		// $jan = ""; // string | A Japanese article number that uniquely identifies the product, manufacturer, and its attributes.
+		$query = ""; // string | Keyword(s) to use to search for items in the catalog. Example: 'harry potter books'.
+		$query_context_id = ""; // string | An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items.
+		$seller_sku = ""; // string | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
+		$upc = ""; // string | A 12-digit bar code used for retail packaging.
+		$ean = ""; // string | A European article number that uniquely identifies the catalog item, manufacturer, and its attributes.
+		$isbn = "9781934429952"; // string | The unique commercial book identifier used to identify books internationally.
+		$jan = ""; // string | A Japanese article number that uniquely identifies the product, manufacturer, and its attributes.
 
 		// try {
 		// 	$results = $apiInstance->listCatalogItems($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
@@ -150,110 +134,43 @@ class SubmitFeedsController extends AppController {
 		// }
 
 
-		// $apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\ProductPricingApi($config);
+		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\ProductPricingApi($config);
 
 
-		// $marketplace_id = $marketplace_id; // string | A marketplace identifier. Specifies the marketplace for which prices are returned.
-		// $item_condition = "New"; // string | Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
-		// $asin = "1934429953"; // string | The Amazon Standard Identification Number (ASIN) of the item.
+		$marketplace_id = $marketplace_id; // string | A marketplace identifier. Specifies the marketplace for which prices are returned.
+		$item_condition = "New"; // string | Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
+		$asin = "1934429953"; // string | The Amazon Standard Identification Number (ASIN) of the item.
 		
-		// try {
-		// 	$result = $apiInstance->getItemOffers($marketplace_id, $item_condition, $asin);
-		// 	// debug($result);
+		try {
+			$result = $apiInstance->getItemOffers($marketplace_id, $item_condition, $asin);
+			// debug($result);
 
-		// 	// debug($result->getPayload());
+			// debug($result->getPayload());
 
-		// 	debug($result->getPayload()->getOffers());
+			debug($result->getPayload()->getOffers());
 
-		// 	debug($result->getPayload()->getOffers()[0]->getListingPrice()->getAmount());
-		// } catch (Exception $e) {
-		// 	echo 'Exception when calling ProductPricingApi->getItemOffers: ', $e->getMessage(), PHP_EOL;
-		// }
+			debug($result->getPayload()->getOffers()[0]->getListingPrice()->getAmount());
+		} catch (Exception $e) {
+			echo 'Exception when calling ProductPricingApi->getItemOffers: ', $e->getMessage(), PHP_EOL;
+		}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-App::import('Model','SubmitFeed');
-
-$submitFeed = new SubmitFeed();
 
 
+	// $items = array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => array(
+	// 	array('OperationType'=>'Update', 'ViewMatchInv'=>array('SKU'=>'45-87DE-NQ23', 'Quantity'=>'11','FulfillmentLatency'=>'1'))
+	// ));
 
-$items = array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => array(
-	array('OperationType'=>'Update', 'ViewMatchInv'=>array('SKU'=>'45-87DE-NQ23', 'Quantity'=>'9','FulfillmentLatency'=>'1'))
-));
+	// debug($items);
 
-debug($items);
-
-debug($submitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items));
+	// debug($this->SubmitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items));
 
 
-$feedApi = new \ClouSale\AmazonSellingPartnerAPI\Api\FeedsApi($config);
+	// $this->SubmitFeed->submitInventoryQuantity($items);
 
-$contentType = 'text/xml; charset=UTF-8'; // please pay attention here, the content_type will be used many time
+	// exit();
 
-$feedDocument = $feedApi->createFeedDocument(new \ClouSale\AmazonSellingPartnerAPI\Models\Feeds\CreateFeedDocumentSpecification([
-	'content_type' => $contentType,
-]));
 
-debug($feedDocument);
-
-$feedDocumentId = $feedDocument->getPayload()->getFeedDocumentId();
-$url = $feedDocument->getPayload()->getUrl();
-$key = $feedDocument->getPayload()->getEncryptionDetails()->getKey();
-$key = base64_decode($key);
-
-debug($feedDocumentId);
-debug($url);
-debug($key);
-
-$initializationVector = base64_decode($feedDocument->getPayload()->getEncryptionDetails()->getInitializationVector(), true);
-$encryptedFeedData = openssl_encrypt(utf8_encode($submitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items)), 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $initializationVector);
-
-debug($feedDocument->getPayload()->getEncryptionDetails()->getInitializationVector());
-debug($encryptedFeedData);
-
-$curl = curl_init();
-curl_setopt_array($curl, array(
-	CURLOPT_URL => $url,
-	CURLOPT_SSL_VERIFYHOST => 0,
-	CURLOPT_SSL_VERIFYPEER => 0,
-	CURLOPT_RETURNTRANSFER => true,
-	CURLOPT_ENCODING => '',
-	CURLOPT_MAXREDIRS => 10,
-	CURLOPT_TIMEOUT => 90,
-	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	CURLOPT_FOLLOWLOCATION => true,
-	CURLOPT_CUSTOMREQUEST => 'PUT',
-	CURLOPT_POSTFIELDS => $encryptedFeedData,
-	CURLOPT_HTTPHEADER => [
-		'Accept: application/xml',
-		'Content-Type: ' . $contentType,
-	],
-));
-
-debug($encryptedFeedData);
-
-$response = curl_exec($curl);
-
-$error = curl_error($curl);
-$httpcode = (int)curl_getinfo($curl, CURLINFO_HTTP_CODE);
-
-debug($response);
-debug($httpcode);
-
-if ($httpcode >= 200 && $httpcode <= 299) {
-	// success
-	debug('SSUECCESSSSSSS');
-	// $createFeedParams = [
-    //     "feedType" => "POST_INVENTORY_AVAILABILITY_DATA",
-    //     	"marketplaceIds" => [Configure::read('SPAPI.MerchantIdentifier')],
-    //     	"inputFeedDocumentId" => $feedDocumentId
-    //     ];
-    //     $r = $feedApi->createFeed(json_encode($createFeedParams));
-    //     debug($r);
-} else {
-	// error
-	debug($error);
-}
 	
 
 		

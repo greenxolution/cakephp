@@ -29,5 +29,29 @@ App::import('Vendor', 'MarketplaceWebService_Client', array('file' => 'Marketpla
  */
 class Submit extends AppModel {
 
+    public function configSPAPI(){
+		
+		$accessToken = \ClouSale\AmazonSellingPartnerAPI\SellingPartnerOAuth::getAccessTokenFromRefreshToken(
+			Configure::read('SPAPI.refresh_token'),
+			Configure::read('SPAPI.client_id'),
+			Configure::read('SPAPI.client_secret')
+		);
+		$assumedRole = \ClouSale\AmazonSellingPartnerAPI\AssumeRole::assume(
+			Configure::read('SPAPI.region'),
+			Configure::read('SPAPI.access_key'),
+			Configure::read('SPAPI.secret_key'),
+			Configure::read('SPAPI.role_arn')
+		);
+		$config = \ClouSale\AmazonSellingPartnerAPI\Configuration::getDefaultConfiguration();
+		$config->setHost(Configure::read('SPAPI.endpoint') );
+		$config->setAccessToken($accessToken);
+		$config->setAccessKey($assumedRole->getAccessKeyId());
+		$config->setSecretKey($assumedRole->getSecretAccessKey());
+		$config->setRegion(Configure::read('SPAPI.region'));
+		$config->setSecurityToken($assumedRole->getSessionToken());
+
+		return $config;
+	}
+
 	
 }	

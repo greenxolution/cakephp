@@ -15,6 +15,8 @@ class ExecuteShell extends AppShell {
 		
 	/**
 	 * 
+	 * @date: 2021-05-15
+	 * 
 	 * This is invocked for initial upload
 	 * 
 	 */
@@ -30,7 +32,141 @@ class ExecuteShell extends AppShell {
 		
 	}
 
+	/**
+	 * 
+	 * @date: 2021-05-15
+	 * 
+	 * This load the feed estimated
+	 */
+	public function feedEstimated(){
 
+		App::import('Model','Submit');
+
+		$submit = new Submit();
+
+		// return $submitFeed->configSPAPI();
+
+		App::import('Model','MwsInventory');
+
+		$mwsInventory = new MwsInventory();
+
+		debug($mwsInventory->getFeesEstimated($submit->configSPAPI(), array('45-87DE-NQ23')));
+	}
+
+	/**
+	 * 
+	 * @date: 2021=05-16
+	 * 
+	 * Gets Item Offer
+	 */
+	public function getItemOffers(){
+
+		App::import('Model','Submit');
+
+		$submit = new Submit();
+
+		App::import('Model','MwsInventory');
+
+		$mwsInventory = new MwsInventory();
+
+		debug($mwsInventory->getItemOffers($submit->configSPAPI(), '0062300334'));
+	}
+
+	/**
+	 * 
+	 * @date: 2021-05-16
+	 * 
+	 * Gets Item Offer
+	 */
+	public function getCompetitivePricing(){
+
+		App::import('Model','Submit');
+
+		$submit = new Submit();
+
+		App::import('Model','MwsInventory');
+
+		$mwsInventory = new MwsInventory();
+
+		$mwsInventory->getCompetitivePricing($submit->configSPAPI(), Configure::read('SPAPI.MARKETPLACE.US'), 'Asin', '0446698598', '');
+	}
+
+	/**
+	 * 
+	 * @date: 2021-05-15
+	 * 
+	 * Updates item_offer in MWSInventory
+	 * 
+	 */
+	public function updateItemOffer(){
+
+		App::import('Model','MwsInventory');
+
+		$mwsInventory = new MwsInventory();
+
+		$mwsInventory->updateItemOffer();
+
+	}
+
+	public function getListCatalogItems(){
+
+
+		App::import('Model','Submit');
+
+		$submit = new Submit();
+
+		App::import('Model','MwsInventory');
+
+		$mwsInventory = new MwsInventory();
+
+		$param = array('query' => '', 'query_context_id' => '', 'seller_sku' => '', 'upc' => '', 'ean' => '4251460606424', 'isbn' => '', 'jan' => '');
+
+		debug($mwsInventory->getListCatalogItems($submit->configSPAPI(), $param ));
+
+
+	}
+
+	/**
+	 * 
+	 * @date: 2021-05-16
+	 * 
+	 */
+	public function pullEntrenueRecordsByConditions(){
+
+
+
+		App::import('Model','MwsInventory');
+
+		$mwsinventory = new MwsInventory();
+
+		debug($mwsinventory->pullEntrenueRecordsByConditions(array("EntrenueProduct.categories LIKE" => "%Intimacy Devices%", 'quantity >'=>0, 'upc !=' => null  )));
+
+	}
+
+	public function importFromCatalogBasedOnEntrenueCategory(){
+
+		App::import('Model','Submit');
+
+		$submit = new Submit();
+
+
+
+		App::import('Model','MwsInventory');
+
+		$mwsinventory = new MwsInventory();
+
+		$mwsinventory->importFromCatalogBasedOnEntrenueCategory($submit->configSPAPI());
+	}
+
+	
+
+
+	/**
+	 * 
+	 * @date: 2021-05-15
+	 * 
+	 * This invokes just one time to load the mws product
+	 */
 	public function initMWSCatalog(){
 
 		App::import('Model','MwsInventory');
@@ -43,7 +179,11 @@ class ExecuteShell extends AppShell {
 
 	public function inventoryFeed(){
 
-		debug(base64_decode('N3lIWCKhZbOrSqRlPgjAbmwMLIIExZQ+If2fa9kjfs0='));
+		App::import('Model','SubmitFeed');
+
+		$submitFeed = new SubmitFeed();
+
+		$submitFeed->pushInventoryTest();
 
 		// App::import('Model','SubmitFeed');
 
