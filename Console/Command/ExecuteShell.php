@@ -108,6 +108,58 @@ class ExecuteShell extends AppShell {
 
 	}
 
+	public function getListCatalogItems(){
+
+
+		App::import('Model','Submit');
+
+		$submit = new Submit();
+
+		App::import('Model','MwsInventory');
+
+		$mwsInventory = new MwsInventory();
+
+		$param = array('query' => '', 'query_context_id' => '', 'seller_sku' => '', 'upc' => '', 'ean' => '4251460606424', 'isbn' => '', 'jan' => '');
+
+		debug($mwsInventory->getListCatalogItems($submit->configSPAPI(), $param ));
+
+
+	}
+
+	/**
+	 * 
+	 * @date: 2021-05-16
+	 * 
+	 */
+	public function pullEntrenueRecordsByConditions(){
+
+
+
+		App::import('Model','MwsInventory');
+
+		$mwsinventory = new MwsInventory();
+
+		debug($mwsinventory->pullEntrenueRecordsByConditions(array("EntrenueProduct.categories LIKE" => "%Intimacy Devices%", 'quantity >'=>0, 'upc !=' => null  )));
+
+	}
+
+	public function importFromCatalogBasedOnEntrenueCategory(){
+
+		App::import('Model','Submit');
+
+		$submit = new Submit();
+
+
+
+		App::import('Model','MwsInventory');
+
+		$mwsinventory = new MwsInventory();
+
+		$mwsinventory->importFromCatalogBasedOnEntrenueCategory($submit->configSPAPI());
+	}
+
+	
+
 
 	/**
 	 * 

@@ -148,6 +148,33 @@ class MwsInventory extends AppModel {
 
 	}
 
+	/**
+	 * 
+	 * @date: 2021-05-16
+	 * 
+	 * Returns Entrenue products based on conditions
+	 */
+	public function pullEntrenueRecordsByConditions($conditions = array(), $limit = 0){
+
+		App::import('Model','EntrenueProduct');
+
+		$eProduct = new EntrenueProduct();
+
+		return $eProduct->find('all',array(
+			'fields' => array('id','upc','SKU','pages'),
+			'conditions' => $conditions
+		));
+
+
+	}
+
+
+	/**
+	 * 
+	 * @date: 2021-05-16
+	 * 
+	 * Pull Entrenue category %book%
+	 */
 	public function pullEntrenueRecords($amount = 10){
 
 		App::import('Model','EntrenueProduct');
@@ -345,10 +372,117 @@ class MwsInventory extends AppModel {
 	}
 
 
+
+
+	/**
+	 * 
+	 * @date: 2021-05-16
+	 * 
+	 * 
+	 */
+	public function getListCatalogItems($config = array(), $param = array()){
+
+		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
+		
+		$marketplace_id = Configure::read('SPAPI.MARKETPLACE.US');
+
+		// $query = ""; // string | Keyword(s) to use to search for items in the catalog. Example: 'harry potter books'.
+		// $query_context_id = ""; // string | An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items.
+		// $seller_sku = ""; // string | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
+		// $upc = ""; // string | A 12-digit bar code used for retail packaging.
+		// $ean = ""; // string | A European article number that uniquely identifies the catalog item, manufacturer, and its attributes.
+		// $isbn = $entrenueProduct['EntrenueProduct']['upc']; // string | The unique commercial book identifier used to identify books internationally.
+		// $jan = ""; // string | A Japanese article number that uniquely identifies the product, manufacturer, and its attributes.
+
+		try {
+			$results = $apiInstance->listCatalogItems($marketplace_id, $param['query'], $param['query_context_id'], $param['seller_sku'], $param['upc'], $param['ean'], $param['isbn'], $param['jan']);
+			// debug($results,2);
+
+			return $results->getPayload();
+		} catch (\Exception $e) {
+			echo 'Exception when calling CatalogApi->listCatalogItems: ', $e->getMessage(), PHP_EOL;
+		}
+
+
+		return null;
+
+	}
+
+
+	/**
+	 * 
+	 * @date: 2021-05-16
+	 * 
+	 * 
+	 */
+	public function importFromCatalogBasedOnEntrenueCategory($config = array()){
+
+		$data = $this->pullEntrenueRecordsByConditions(array("EntrenueProduct.categories LIKE" => "%Intimacy Devices%", 'quantity >'=>0 ));
+
+		// debug($data);
+
+		foreach($data as $key => $item){
+
+			$param = array('query' => '', 'query_context_id' => '', 'seller_sku' => '', 'upc' => '', 'ean' => $item['EntrenueProduct']['upc'], 'isbn' => '', 'jan' => '');
+
+
+			// if($item['EntrenueProduct']['upc'] == null) continue;
+
+			debug($item);
+
+			debug($param);
+
+			try {
+				$playLoad = $this->getListCatalogItems($config, $param );
+			} catch (\Throwable $th) {
+				continue;
+				
+			}
+			finally{
+				// print_r($results);
+				
+			}
+
+
+			
+
+			foreach ($playLoad->getItems() as $value) {
+
+				debug($value);
+	
+				try{
+	
+						$this->create();
+						$this->save(array('MwsInventory'=>array('MarketplaceId'=>$value->Identifiers->MarketplaceASIN->MarketplaceId,
+																'asin'=>$value->Identifiers->MarketplaceASIN->ASIN,
+																'Title'=>$value->AttributeSets[0]->Title,
+																'price'=>$value->AttributeSets[0]->ListPrice->Amount,
+																'image'=>$value->AttributeSets[0]->SmallImage->URL,
+																'provider'=>$item['EntrenueProduct']['SKU'],
+																'entrenue_products_id'=>$item['EntrenueProduct']['id'] )));
+	
+	
+	
+				}
+				catch (\Exception $emysql) {
+					print  'ERROR MYSQL-'.$emysql->getMessage();
+	
+				}
+	
+			
+			}
+
+
+		}
+
+	}
+
+
 	/**
 	 * @date: 2021-05-15
 	 * 
 	 * Insert in MWSInventory from EntrenueProduct calling the Catalog
+	 * Category: books
 	 * 
 	 */
 	public function importMatchingSPAPI($limit = 10){
