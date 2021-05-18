@@ -183,21 +183,41 @@ class ExecuteShell extends AppShell {
 
 		$submitFeed = new SubmitFeed();
 
-		$submitFeed->pushInventoryTest();
+			
+		// $items = array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => array(
+		// 		array('OperationType'=>'Update', 'ViewMatchInv'=>array('SKU'=>'45-87DE-NQ23', 'Quantity'=>'0','FulfillmentLatency'=>'1'))
+		// 	));
+
+		// 	debug($items);
+
+		// 	debug($submitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items));
+
+
+		// 	$submitFeed->submitInventoryQuantity($submitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items));
+
+		// $submitFeed->pushInventoryTest();
 
 		// App::import('Model','SubmitFeed');
 
 		// $submitFeed = new SubmitFeed();
 
 		
-
+		//Update amount
 		// $items = array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => array(
 		// 	array('OperationType'=>'Update', 'ViewMatchInv'=>array('SKU'=>'45-87DE-NQ23', 'Quantity'=>'9','FulfillmentLatency'=>'1'))
 		// ));
+
+		//Update price
+		$items = array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => array(
+			array('SKU'=>'45-87DE-NQ23', 'Estimated'=>200.30)
+		));
 	
 		// debug($items);
 
-		// debug($submitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items));
+		debug($submitFeed->creating_POST_PRODUCT_PRICING_DATA($items ));
+
+
+		$submitFeed->submitInventoryQuantity($submitFeed->creating_POST_PRODUCT_PRICING_DATA($items ));
 
 
 	}
