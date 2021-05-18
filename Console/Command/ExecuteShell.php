@@ -184,16 +184,23 @@ class ExecuteShell extends AppShell {
 		$submitFeed = new SubmitFeed();
 
 			
-		// $items = array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => array(
-		// 		array('OperationType'=>'Update', 'ViewMatchInv'=>array('SKU'=>'45-87DE-NQ23', 'Quantity'=>'0','FulfillmentLatency'=>'1'))
-		// 	));
+		$items = array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => array(
+				array('OperationType'=>'Update', 'ViewMatchInv'=>array('SKU'=>'45-87DE-NQ23', 'Quantity'=>'9','FulfillmentLatency'=>'1'))
+			));
 
-		// 	debug($items);
+			debug($items);
 
-		// 	debug($submitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items));
+			debug($submitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items));
+
+			$pushArray['xml'] = $submitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items);
+			$pushArray['feedType'] = 'POST_INVENTORY_AVAILABILITY_DATA';
+			$pushArray['marketplaceIds'] = array(Configure::read('SPAPI.MARKETPLACE.US'));
 
 
-		// 	$submitFeed->submitInventoryQuantity($submitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items));
+			debug($pushArray);
+
+
+			$submitFeed->submitInventoryQuantity($pushArray);
 
 		// $submitFeed->pushInventoryTest();
 
@@ -207,17 +214,17 @@ class ExecuteShell extends AppShell {
 		// 	array('OperationType'=>'Update', 'ViewMatchInv'=>array('SKU'=>'45-87DE-NQ23', 'Quantity'=>'9','FulfillmentLatency'=>'1'))
 		// ));
 
-		//Update price
-		$items = array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => array(
-			array('SKU'=>'45-87DE-NQ23', 'Estimated'=>200.30)
-		));
+		// //Update price
+		// $items = array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => array(
+		// 	array('SKU'=>'45-87DE-NQ23', 'Estimated'=>200.30)
+		// ));
 	
-		// debug($items);
+		// // debug($items);
 
-		debug($submitFeed->creating_POST_PRODUCT_PRICING_DATA($items ));
+		// debug($submitFeed->creating_POST_PRODUCT_PRICING_DATA($items ));
 
 
-		$submitFeed->submitInventoryQuantity($submitFeed->creating_POST_PRODUCT_PRICING_DATA($items ));
+		// $submitFeed->submitInventoryQuantity($submitFeed->creating_POST_PRODUCT_PRICING_DATA($items ));
 
 
 	}

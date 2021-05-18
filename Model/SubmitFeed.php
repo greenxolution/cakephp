@@ -416,7 +416,7 @@ class SubmitFeed extends Submit {
 		$key = base64_decode($key);
 
 		$initializationVector = base64_decode($feedDocument->getPayload()->getEncryptionDetails()->getInitializationVector(), true);
-		$encryptedFeedData = openssl_encrypt(utf8_encode($xmlFeed), 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $initializationVector);
+		$encryptedFeedData = openssl_encrypt(utf8_encode($xmlFeed['xml']), 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $initializationVector);
 
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
@@ -447,8 +447,8 @@ class SubmitFeed extends Submit {
 		if ($httpcode >= 200 && $httpcode <= 299) {
 			// success
 			$createFeedParams = [
-				"feedType" => "POST_PRODUCT_PRICING_DATA",
-					"marketplaceIds" => ['ATVPDKIKX0DER'],
+				"feedType" => $xmlFeed['feedType'],
+					"marketplaceIds" => $xmlFeed['marketplaceIds'],
 					"inputFeedDocumentId" => $feedDocumentId
 				];
 				// $r = $feedApi->createFeed(json_encode($createFeedParams));
