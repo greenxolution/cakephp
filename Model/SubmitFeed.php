@@ -304,6 +304,8 @@ class SubmitFeed extends Submit {
 	}
 
 	/**
+	 * 
+	 * @update 2021-05-18
 	 * Create the Inventory Availability XML
 	 *
 	 * @param unknown_type $items
@@ -344,6 +346,8 @@ class SubmitFeed extends Submit {
 
 
 	/**
+	 * 
+	 * @update: 2021-05-18
 	 * Create the PRODUCT PRICING XML
 	 *
 	 * @param unknown_type $items ('SKU'=>sku, 'Estimated'=>$$$)
@@ -352,11 +356,10 @@ class SubmitFeed extends Submit {
 
 		if($items == null) return null;
 
-		$myXmlOriginal = '<?xml version="1.0" encoding="UTF-8"?>
-		<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+		$myXmlOriginal = '<?xml version="1.0" encoding="utf-8" ?><AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
 		<Header>
 		<DocumentVersion>1.01</DocumentVersion>
-		<MerchantIdentifier>A3G8ZVYPBH7BMB</MerchantIdentifier>
+		<MerchantIdentifier>'.$items['MerchantIdentifier'].'</MerchantIdentifier>
 		</Header>
 		<MessageType>Price</MessageType>
 		</AmazonEnvelope>';
@@ -366,7 +369,7 @@ class SubmitFeed extends Submit {
 
 		$i = 1;
 
-		foreach ($items as $item) {
+		foreach ($items['Messages'] as $item) {
 
 			// 			debug($item);
 			$message = $xml->addChild('Message');
@@ -395,7 +398,7 @@ class SubmitFeed extends Submit {
 	 * @return Bolean 
 	 * 
 	*/
-	public function submitInventoryQuantity($items = array()){
+	public function submitInventoryQuantity($xmlFeed = ''){
 
 		$config = $this->configSPAPI();
 
@@ -413,7 +416,7 @@ class SubmitFeed extends Submit {
 		$key = base64_decode($key);
 
 		$initializationVector = base64_decode($feedDocument->getPayload()->getEncryptionDetails()->getInitializationVector(), true);
-		$encryptedFeedData = openssl_encrypt(utf8_encode($this->creating_POST_INVENTORY_AVAILABILITY_DATA($items)), 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $initializationVector);
+		$encryptedFeedData = openssl_encrypt(utf8_encode($xmlFeed['xml']), 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $initializationVector);
 
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
@@ -444,8 +447,8 @@ class SubmitFeed extends Submit {
 		if ($httpcode >= 200 && $httpcode <= 299) {
 			// success
 			$createFeedParams = [
-				"feedType" => "POST_INVENTORY_AVAILABILITY_DATA",
-					"marketplaceIds" => ['ATVPDKIKX0DER'],
+				"feedType" => $xmlFeed['feedType'],
+					"marketplaceIds" => $xmlFeed['marketplaceIds'],
 					"inputFeedDocumentId" => $feedDocumentId
 				];
 				// $r = $feedApi->createFeed(json_encode($createFeedParams));
