@@ -223,7 +223,7 @@ class MwsInventory extends AppModel {
 
 			// debug($result->getPayload());
 
-			debug($result->getPayload()->getSummary()->getLowestPrices());
+			// debug($result->getPayload()->getSummary()->getLowestPrices());
 
 			// debug($result->getPayload()->getOffers()[0]->getListingPrice()->getAmount());
 
@@ -308,7 +308,6 @@ class MwsInventory extends AppModel {
 
 		foreach($data as $key => $item){
 
-			debug($item);
 
 			$item['MwsInventory']['item_offer'] = $this->getItemOffers($config, $asin = $item['MwsInventory']['asin']);
 
@@ -417,7 +416,7 @@ class MwsInventory extends AppModel {
 	 */
 	public function importFromCatalogBasedOnEntrenueCategory($config = array()){
 
-		$data = $this->pullEntrenueRecordsByConditions(array("EntrenueProduct.categories LIKE" => "%Intimacy Devices%", 'quantity >'=>0 ));
+		$data = $this->pullEntrenueRecordsByConditions(array("EntrenueProduct.categories LIKE" => "%Intimacy Devices%", 'quantity >'=>0, 'penalized' => false ));
 
 		// debug($data);
 
@@ -434,9 +433,28 @@ class MwsInventory extends AppModel {
 
 			try {
 				$playLoad = $this->getListCatalogItems($config, $param );
+
+				foreach ($playLoad->getItems() as $value) {
+
+					debug($value);
+		
+							$this->create();
+							$this->save(array('MwsInventory'=>array('MarketplaceId'=>$value->Identifiers->MarketplaceASIN->MarketplaceId,
+																	'asin'=>$value->Identifiers->MarketplaceASIN->ASIN,
+																	'Title'=>$value->AttributeSets[0]->Title,
+																	'price'=>$value->AttributeSets[0]->ListPrice->Amount,
+																	'image'=>$value->AttributeSets[0]->SmallImage->URL,
+																	'provider'=>$item['EntrenueProduct']['SKU'],
+																	'entrenue_products_id'=>$item['EntrenueProduct']['id'] )));
+				
+				}
 			} catch (\Throwable $th) {
 				continue;
 				
+			}
+			catch (\Exception $emysql) {
+				print  'ERROR MYSQL-'.$emysql->getMessage();
+
 			}
 			finally{
 				// print_r($results);
@@ -446,31 +464,7 @@ class MwsInventory extends AppModel {
 
 			
 
-			foreach ($playLoad->getItems() as $value) {
 
-				debug($value);
-	
-				try{
-	
-						$this->create();
-						$this->save(array('MwsInventory'=>array('MarketplaceId'=>$value->Identifiers->MarketplaceASIN->MarketplaceId,
-																'asin'=>$value->Identifiers->MarketplaceASIN->ASIN,
-																'Title'=>$value->AttributeSets[0]->Title,
-																'price'=>$value->AttributeSets[0]->ListPrice->Amount,
-																'image'=>$value->AttributeSets[0]->SmallImage->URL,
-																'provider'=>$item['EntrenueProduct']['SKU'],
-																'entrenue_products_id'=>$item['EntrenueProduct']['id'] )));
-	
-	
-	
-				}
-				catch (\Exception $emysql) {
-					print  'ERROR MYSQL-'.$emysql->getMessage();
-	
-				}
-	
-			
-			}
 
 
 		}
