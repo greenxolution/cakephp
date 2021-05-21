@@ -538,17 +538,9 @@ class MwsInventory extends AppModel {
 			try {
 				$results = $apiInstance->listCatalogItems($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
 				// debug($results,2);
-			} catch (\Exception $e) {
-				echo 'Exception when calling CatalogApi->listCatalogItems: ', $e->getMessage(), PHP_EOL;
-			}
-			finally{
-				// print_r($results);
-			}
 
-				
-			foreach ($results->getPayload()->getItems() as $value) {
+				foreach ($results->getPayload()->getItems() as $value) {
 
-				try{
 
 					if($value->AttributeSets[0]->NumberOfPages == $entrenueProduct['EntrenueProduct']['pages']){
 
@@ -563,28 +555,25 @@ class MwsInventory extends AppModel {
 																'entrenue_products_id'=>$entrenueProduct['EntrenueProduct']['id'] )));
 
 					}
-
-
-				}
-				catch (\Exception $emysql) {
-					print  'ERROR MYSQL-'.$emysql->getMessage();
-					// $this->save(array('MwsInventory'=>array('MarketplaceId'=>$value->Identifiers->MarketplaceASIN->MarketplaceId,
-					// 'asin'=>$value->Identifiers->MarketplaceASIN->ASIN,
-					// 'Title'=>$value->AttributeSets[0]->Title,
-					// 'NumberOfPages'=>0,
-					// 'price'=>0,
-					// 'image'=>$value->AttributeSets[0]->SmallImage->URL,
-					// 'provider'=>$entrenueProduct['EntrenueProduct']['SKU'],
-					// 'entrenue_products_id'=>$entrenueProduct['EntrenueProduct']['id'])));
-				}
-				finally{
-					// print  'ERROR MYSQL-'.$emysql->getMessage();
-
-
-
-				}
-			
 			}
+			
+			} catch (\Exception $e) {
+				echo 'Exception when calling CatalogApi->listCatalogItems: ', $e->getMessage(), PHP_EOL;
+			}
+			catch (\Exception $emysql) {
+				print  'ERROR MYSQL-'.$emysql->getMessage();
+				// $this->save(array('MwsInventory'=>array('MarketplaceId'=>$value->Identifiers->MarketplaceASIN->MarketplaceId,
+				// 'asin'=>$value->Identifiers->MarketplaceASIN->ASIN,
+				// 'Title'=>$value->AttributeSets[0]->Title,
+				// 'NumberOfPages'=>0,
+				// 'price'=>0,
+				// 'image'=>$value->AttributeSets[0]->SmallImage->URL,
+				// 'provider'=>$entrenueProduct['EntrenueProduct']['SKU'],
+				// 'entrenue_products_id'=>$entrenueProduct['EntrenueProduct']['id'])));
+			}
+
+				
+			
 		
 		}
 		
