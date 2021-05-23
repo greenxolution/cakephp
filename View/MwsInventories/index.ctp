@@ -10,15 +10,15 @@
 			<th><?php echo $this->Paginator->sort('offert'); ?></th>
 			<th><?php echo $this->Paginator->sort('Eprice'); ?></th>
 			<th><?php echo $this->Paginator->sort('MAP'); ?></th>
-			<th><?php echo $this->Paginator->sort('quantity'); ?></th>
-			<th><?php echo $this->Paginator->sort('quantity'); ?></th>
+			<th><?php echo $this->Paginator->sort('eQuantity'); ?></th>
+			<th><?php echo $this->Paginator->sort('MwsQuantity'); ?></th>
 			<th><?php echo $this->Paginator->sort('tier_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('image'); ?></th>
 			<th><?php echo $this->Paginator->sort('image'); ?></th>
-			<th><?php echo $this->Paginator->sort('providername'); ?></th>
-			<th><?php echo $this->Paginator->sort('title'); ?></th>
-			<th><?php echo $this->Paginator->sort('mpages'); ?></th>
-			<th><?php echo $this->Paginator->sort('epages'); ?></th>
+			<th><?php echo $this->Paginator->sort('MwsTitle'); ?></th>
+			<th><?php echo $this->Paginator->sort('eTitle'); ?></th>
+			<th><?php echo $this->Paginator->sort('MwsPages'); ?></th>
+			<th><?php echo $this->Paginator->sort('ePages'); ?></th>
 			<th><?php echo $this->Paginator->sort('entrenue'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('updated'); ?></th>
@@ -48,8 +48,15 @@
 		</td>
 		<td><?php echo $this->Html->image($mwsInventory['MwsInventory']['image']); ?>&nbsp;</td>
 		<td><?php echo $this->Html->image($mwsInventory['EntrenueProduct']['image'], array('width'=>'110px')); ?>&nbsp;</td>
+		
 		<td><?php echo h($mwsInventory['MwsInventory']['Title']); ?>&nbsp;</td>
-		<td><?php echo h($mwsInventory['EntrenueProduct']['name']); ?>&nbsp;</td>
+		<td>
+		<?php 
+		
+		echo $this->Html->link($mwsInventory['EntrenueProduct']['name'], '/EntrenueProducts/view//'.$mwsInventory['EntrenueProduct']['id'],array('class' => 'button', 'target' => '_blank'));
+		?>
+		</td>
+		<!-- <td><?php echo h($mwsInventory['EntrenueProduct']['name']); ?>&nbsp;</td> -->
 		<td><?php echo h($mwsInventory['MwsInventory']['NumberOfPages']); ?>&nbsp;</td>
 		<td><?php echo h($mwsInventory['EntrenueProduct']['pages']); ?>&nbsp;</td>
 		<td><?php 

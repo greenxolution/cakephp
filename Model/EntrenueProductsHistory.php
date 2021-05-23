@@ -22,11 +22,20 @@ class EntrenueProductsHistory extends AppModel {
  */
 	public $displayField = 'id';
 
+	/**
+	 * 
+	 * @date: 2021-05-23
+	 * 
+	 * Returns updated & activated EntrenueProduct list
+	 * 
+	 */
 	public function insertRecord($newValue =  array(), $oldValue = array()){
 
 		App::import('Model','EntrenueProduct');
 
 		$entrenueProduct = new EntrenueProduct();
+
+		$data = array();
 
 
 		foreach ($entrenueProduct->history_fields as $key => $field) {
@@ -45,9 +54,21 @@ class EntrenueProductsHistory extends AppModel {
 
 				$this->save($entrenueHistory);
 
+				if($oldValue['EntrenueProduct']['activated'] == true){
+
+					$newValue['EntrenueProduct']['activated'] = $oldValue['EntrenueProduct']['activated'];
+
+
+					$data = $newValue;
+
+				}
+				
+
 
 			}
 		}
+
+		return count($data)>0?$data:null;
 	}
 
 }

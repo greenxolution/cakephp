@@ -33,6 +33,28 @@
 			<?php echo h($entrenueProduct['EntrenueProduct']['categories']); ?>
 			&nbsp;
 		</dd>
+
+		<dt><?php echo __('Penalized'); ?></dt>
+		<dd>
+			<?php echo h($entrenueProduct['EntrenueProduct']['penalized']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Quantity'); ?></dt>
+		<dd>
+			<?php echo h($entrenueProduct['EntrenueProduct']['quantity']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Price'); ?></dt>
+		<dd>
+			<?php echo h($entrenueProduct['EntrenueProduct']['price']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('MAP'); ?></dt>
+		<dd>
+			<?php echo h($entrenueProduct['EntrenueProduct']['map']); ?>
+			&nbsp;
+		</dd>
+
 		<dt><?php echo __('Image'); ?></dt>
 		<dd>
 			<?php echo $this->Html->image($entrenueProduct['EntrenueProduct']['image'], array('width'=>'320px')); h($entrenueProduct['EntrenueProduct']['image']); ?>

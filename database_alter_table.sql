@@ -1,0 +1,1 @@
+ALTER TABLE `entrenue_products` ADD `activated` BOOLEAN NOT NULL DEFAULT FALSE AFTER `penalized`;

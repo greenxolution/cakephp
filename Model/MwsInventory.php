@@ -22,7 +22,7 @@ class MwsInventory extends AppModel {
 			),
 			'EntrenueProduct' => array(
 				'className' => 'EntrenueProduct',
-				'foreignKey' => 'entrenue_products_id'
+				'foreignKey' => 'entrenue_product_id'
 		)
 	);
 
@@ -49,6 +49,7 @@ class MwsInventory extends AppModel {
 				'OR' => array(
 						$this->alias . '.sku LIKE' => '%' . trim($filter) . '%',
 						$this->alias . '.asin LIKE' => '%' . trim($filter) . '%',
+						$this->alias . '.title LIKE' => '%' . trim($filter) . '%',
 				)
 		);
 		return $condition;
@@ -74,35 +75,35 @@ class MwsInventory extends AppModel {
 		
 	}
 
-	public function beforeSave($options = array()){
-		//@TODO: this should not be in beforesave method...
+// 	public function beforeSave($options = array()){
+// 		//@TODO: this should not be in beforesave method...
 
-// 		if (!empty($this->data['MwsInventory']['sku'])){
+// // 		if (!empty($this->data['MwsInventory']['sku'])){
 				
-// 			App::import('Model','SubmitFeed');
+// // 			App::import('Model','SubmitFeed');
 
-// 			$submitFeed = new SubmitFeed();
+// // 			$submitFeed = new SubmitFeed();
 
-// 			$_this = $this->findById($this->data['MwsInventory']['id']);
+// // 			$_this = $this->findById($this->data['MwsInventory']['id']);
 
-// 			if($_this['MwsInventory']['price'] != $this->data['MwsInventory']['price']){
+// // 			if($_this['MwsInventory']['price'] != $this->data['MwsInventory']['price']){
 					
-// 				$submitFeed->flushFeed(
-// 						array(array(	'SKU'		=> $this->data['MwsInventory']['sku'],
-// 								'Estimated' => $this->data['MwsInventory']['price'])),
-// 						'repricing');
+// // 				$submitFeed->flushFeed(
+// // 						array(array(	'SKU'		=> $this->data['MwsInventory']['sku'],
+// // 								'Estimated' => $this->data['MwsInventory']['price'])),
+// // 						'repricing');
 					
-// 			}
+// // 			}
 
-// 			if($_this['MwsInventory']['quantity'] != $this->data['MwsInventory']['quantity']){
+// // 			if($_this['MwsInventory']['quantity'] != $this->data['MwsInventory']['quantity']){
 				
-// 				$submitFeed->flushFeed(array(array('ViewMatchInv' => array(	'SKU'		=> $this->data['MwsInventory']['sku'],
-// 								'Quantity' => $this->data['MwsInventory']['quantity']))) ,
-// 						'inventory');
+// // 				$submitFeed->flushFeed(array(array('ViewMatchInv' => array(	'SKU'		=> $this->data['MwsInventory']['sku'],
+// // 								'Quantity' => $this->data['MwsInventory']['quantity']))) ,
+// // 						'inventory');
 					
-// 			}
-// 		}
-	}
+// // 			}
+// // 		}
+// 	}
 
 
 	public function updatePricesWhenSubmit($items){
@@ -231,6 +232,7 @@ class MwsInventory extends AppModel {
 
 			$amount = 0;
 
+			if('NoBuyableOffers' != $result->getPayload()->getStatus())
 			foreach($result->getPayload()->getSummary()->getLowestPrices() as $key => $lowerprice){
 
 				if($lowerprice->condition == 'new'){
@@ -288,6 +290,7 @@ class MwsInventory extends AppModel {
 	}
 
 
+
 	/**
 	 * 
 	 * @date: 2021-05-16
@@ -300,21 +303,23 @@ class MwsInventory extends AppModel {
 
 		$submit = new Submit();
 
-		App::import('Model','MwsInventory');
-
 		$config = $submit->configSPAPI();
 
-		$data = $this->find('all');
+		$data = $this->find('all', array('fields' => array('id', 'asin')));
 
 		foreach($data as $key => $item){
 
-
 			$item['MwsInventory']['item_offer'] = $this->getItemOffers($config, $asin = $item['MwsInventory']['asin']);
 
-			$this->save($item);
+			$this->clear();
+
+			if($this->save($item)){
+
+				debug('updated.: '.$item['MwsInventory']['asin'].'-:.'.$item['MwsInventory']['item_offer']);
+
+			}
+
 		}
-
-
 
 	}
 
@@ -407,6 +412,33 @@ class MwsInventory extends AppModel {
 
 	}
 
+	/**
+	 * 
+	 * @date: 2021-05-21
+	 * 
+	 * Returns activated MWS and Entrenue.Id
+	 * 
+	 */
+	public function activatedProductArray(){
+
+		$query = "SELECT `MwsInventory`.`sku`, `EntrenueProduct`.`id` FROM `greencloud`.`mws_inventory` AS `MwsInventory` LEFT JOIN `greencloud`.`entrenue_products` AS `EntrenueProduct` ON (`MwsInventory`.`entrenue_products_id` = `EntrenueProduct`.`id`) where `MwsInventory`.`activated` = true";
+
+		App::import('Model','SubmitFeed');
+
+		$submitFeed = new SubmitFeed();
+
+		$data = array();
+
+		foreach($submitFeed->query($query) as $key => $value){
+
+			$data[$value['EntrenueProduct']['id']] = $value['MwsInventory']['sku'];
+
+
+		}
+
+		return $data;
+
+	}
 
 	/**
 	 * 

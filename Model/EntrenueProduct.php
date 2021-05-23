@@ -9,13 +9,19 @@ class EntrenueProduct extends AppModel {
 
 	public $xml = '';
 
+	public $_MIN_ALLOW_QUANTITY = 3;
+
 	public $history_fields = array('quantity');
 
 	public $hasMany = array(
         'EntrenueProductsHistory' => array(
             'className' => 'EntrenueProductsHistory'
+		),
+		'MwsInventory' => array(
+            'className' => 'MwsInventory',
         )
     );
+
 
 	public $SKU_PREFIX = 'ENT';
 	/**
@@ -131,7 +137,58 @@ class EntrenueProduct extends AppModel {
 
 	}
 
+	/**
+	 * 
+	 * @date: 2021-0522
+	 * Returns 0 if the value is <= MIN_QUANTITY
+	 * 
+	 */
+	public function minQuantityAllow($item){
 
+		$item['EntrenueProduct']['quantity']  = ($item['EntrenueProduct']['quantity'] <= $this->_MIN_ALLOW_QUANTITY )? 0 : $item['EntrenueProduct']['quantity'];
+
+		return $item;
+
+	}
+
+	/**
+	 * 
+	 * @date: 2021-05023
+	 * 
+	 * Returns only the actived product of the array
+	 */
+	public function removeNotActive($item){
+
+	}
+
+
+	/**
+	 * @date: 2022-05-22
+	 * 
+	 * Inserts/Updates Entrenue products
+	 * Feed the MWS quantity
+	 * If quantity is <= 3 feeds to 0
+	 * 
+	 */
+	public function initUploadEntrenueAndFeedMWS(){
+
+		$data = $this->initUploadEntrenue();
+
+		// $data = array(array('EntrenueProduct'=> array('id'=>22, 'quantity' => 3),array('EntrenueProduct'=> array('id'=>2, 'quantity' => 8) )));
+
+		debug($data);
+
+		$data = array_map(array($this, 'minQuantityAllow'), $data);
+
+
+		///SUBMIT INVENTORY QUANTITY
+		App::import('Model','SubmitFeed');
+
+		$submitFeed = new SubmitFeed();
+
+		return $submitFeed->submitInventoryQuantity($data);
+
+	}
 
 	
 	/**
@@ -143,6 +200,8 @@ class EntrenueProduct extends AppModel {
 	public function initUploadEntrenue(){
 
 		$data = $this->pullAllProductEntrenue();
+
+		$updatedProduct = array();
 
 
 		foreach($data['EntrenueAPIProduct'] as $item){
@@ -178,7 +237,7 @@ class EntrenueProduct extends AppModel {
 
 					if($this->save($entrenueProductArray)){
 						
-						$this->EntrenueProductsHistory->insertRecord($entrenueProductArray, $oldRecord );
+						$updatedProduct[] = $this->EntrenueProductsHistory->insertRecord($entrenueProductArray, $oldRecord );
 					}
 
 					debug('updated.: '.$entrenueProductArray['EntrenueProduct']['model']);
@@ -191,6 +250,8 @@ class EntrenueProduct extends AppModel {
 			}
 
 		}
+
+		return array_filter($updatedProduct);
 
 	}
 	

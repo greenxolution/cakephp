@@ -12,6 +12,111 @@ class ExecuteShell extends AppShell {
 		debug(gettype($a));
 	}
 
+	public function unit_test(){
+
+		$data = array(
+			(int) 4061 => array(
+				'EntrenueProduct' => array(
+					'model' => '18613',
+					'upc' => '9781934429952',
+					'name' => 'Suicide Girls: Hard Girls, Soft Light',
+					'secondary_title' => null,
+					'option_name' => null,
+					'tags' => 'Hardcover',
+					'categories' => 'Books &amp; Media,Novelty,Art &amp; Pictorials',
+					'category_ids' => '60,68,110',
+					'quantity' => (int) 10,
+					'image' => 'https://entrenue.com/webimages/18613-SuicideGirlsHardGirlsSoftLight-MAIN.jpg',
+					'manufacturer' => 'Ammo Books',
+					'price' => '21.50',
+					'saleprice' => null,
+					'msrp' => '39.95',
+					'map' => null,
+					'weight' => '3lb 5.8oz',
+					'package_weight_lbs' => '3.3625',
+					'packaging_type' => null,
+					'case_quantity' => null,
+					'shipping_restrictions' => null,
+					'length' => '0.87500000',
+					'width' => '11.375',
+					'height' => '11.375',
+					'depth' => '.875',
+					'diameter' => null,
+					'volume' => null,
+					'materials' => null,
+					'insertable_length' => null,
+					'country_of_origin' => 'China',
+					'designed_in' => null,
+					'batteries' => null,
+					'power_source' => null,
+					'water_resistance' => null,
+					'author' => null,
+					'pages' => '204',
+					'runtime' => null,
+					'game_type' => null,
+					'game_genre' => null,
+					'isbn' => null,
+					'book_binding' => 'Hardbound',
+					'SKU' => 'ENT18613',
+					'id' => '18368'
+				)
+				),
+				(int) 4061 => array(
+					'EntrenueProduct' => array(
+						'model' => '111',
+						'upc' => '9781934429952',
+						'name' => 'Suicide Girls: Hard Girls, Soft Light',
+						'secondary_title' => null,
+						'option_name' => null,
+						'tags' => 'Hardcover',
+						'categories' => 'Books &amp; Media,Novelty,Art &amp; Pictorials',
+						'category_ids' => '60,68,110',
+						'quantity' => (int) 10,
+						'image' => 'https://entrenue.com/webimages/18613-SuicideGirlsHardGirlsSoftLight-MAIN.jpg',
+						'manufacturer' => 'Ammo Books',
+						'price' => '21.50',
+						'saleprice' => null,
+						'msrp' => '39.95',
+						'map' => null,
+						'weight' => '3lb 5.8oz',
+						'package_weight_lbs' => '3.3625',
+						'packaging_type' => null,
+						'case_quantity' => null,
+						'shipping_restrictions' => null,
+						'length' => '0.87500000',
+						'width' => '11.375',
+						'height' => '11.375',
+						'depth' => '.875',
+						'diameter' => null,
+						'volume' => null,
+						'materials' => null,
+						'insertable_length' => null,
+						'country_of_origin' => 'China',
+						'designed_in' => null,
+						'batteries' => null,
+						'power_source' => null,
+						'water_resistance' => null,
+						'author' => null,
+						'pages' => '204',
+						'runtime' => null,
+						'game_type' => null,
+						'game_genre' => null,
+						'isbn' => null,
+						'book_binding' => 'Hardbound',
+						'SKU' => '11111',
+						'id' => '183261'
+					)
+				)				
+		);
+
+		App::import('Model','SubmitFeed');
+		
+		// debug("Entrenue Product Model: FTP");
+		
+		$SubmitFeed = new SubmitFeed();
+
+		debug($SubmitFeed->submitInventoryQuantity($data));
+	}
 		
 	/**
 	 * 
@@ -28,8 +133,13 @@ class ExecuteShell extends AppShell {
 		
 		$entrenue = new EntrenueProduct();
 		
-		$entrenue->initUploadEntrenue();
-		
+		// debug($entrenue->initUploadEntrenue());
+
+		debug($entrenue->initUploadEntrenueAndFeedMWS());
+
+		// debug($entrenue->find('all', array('conditions' => array('EntrenueProduct.id' => array(14340)))));
+
+
 	}
 
 	/**
@@ -177,6 +287,31 @@ class ExecuteShell extends AppShell {
 
 	}
 
+	public function activatedProduct(){
+
+		$query = "SELECT `MwsInventory`.`sku`, `EntrenueProduct`.`id` FROM `greencloud`.`mws_inventory` AS `MwsInventory` LEFT JOIN `greencloud`.`entrenue_products` AS `EntrenueProduct` ON (`MwsInventory`.`entrenue_products_id` = `EntrenueProduct`.`id`) where `MwsInventory`.`activated` = true";
+
+		App::import('Model','EntrenueProductsHistory');
+
+		$EntrenueProductsHistory = new EntrenueProductsHistory();
+
+		$EntrenueProductsHistory->insertRecord($newValue =  array(), $oldValue = array());
+
+
+
+		debug($submitFeed->activatedProduct());
+
+		
+
+
+	}
+
+	/**
+	 * 
+	 * @date: 2021-05-23
+	 * 
+	 * Feeds the MWS inventory
+	 */
 	public function inventoryFeed(){
 
 		App::import('Model','SubmitFeed');
@@ -200,7 +335,7 @@ class ExecuteShell extends AppShell {
 			debug($pushArray);
 
 
-			$submitFeed->submitInventoryQuantity($pushArray);
+			$submitFeed->submitInventory($pushArray);
 
 		// $submitFeed->pushInventoryTest();
 

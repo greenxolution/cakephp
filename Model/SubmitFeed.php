@@ -387,7 +387,46 @@ class SubmitFeed extends Submit {
 
 	}
 
-	
+	/**
+	 * 
+	 * @date: 2021-05-23
+	 * 
+	 * Submits the inventory based on the inventory type
+	 */
+	public function submitInventoryQuantity($data = array()){
+
+		if($data == null || count($data) == 0) return null;
+
+		$viewMatchInv = array();
+
+		$messages = array();
+
+		foreach($data as $key => $item){
+
+			// $viewMatchInv[] = array('SKU' => $item['EntrenueProduct']['SKU'], 'Quantity' => $item['EntrenueProduct']['quantity'], 'FulfillmentLatency'=>'1');
+
+			$messages[] = array('OperationType'=>'Update', 'ViewMatchInv'=> array('SKU' => $item['EntrenueProduct']['SKU'], 'Quantity' => $item['EntrenueProduct']['quantity'], 'FulfillmentLatency'=>'1'));
+
+		}
+
+			
+		$items = array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => $messages);
+
+		debug($items);
+
+			// debug($submitFeed->creating_POST_INVENTORY_AVAILABILITY_DATA($items));
+
+		$pushArray['xml'] = $this->creating_POST_INVENTORY_AVAILABILITY_DATA($items);
+		$pushArray['feedType'] = 'POST_INVENTORY_AVAILABILITY_DATA';
+		$pushArray['marketplaceIds'] = array(Configure::read('SPAPI.MARKETPLACE.US'));
+
+
+		$this->submitInventory($pushArray);
+
+		return $pushArray;
+
+
+	}
 
 	/**
 	 * @date: 2021-05-15
@@ -398,7 +437,7 @@ class SubmitFeed extends Submit {
 	 * @return Bolean 
 	 * 
 	*/
-	public function submitInventoryQuantity($xmlFeed = ''){
+	public function submitInventory($xmlFeed = ''){
 
 		$config = $this->configSPAPI();
 
