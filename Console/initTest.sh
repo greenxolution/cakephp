@@ -1,1 +1,1 @@
-cake -app /var/www/html/greencloud/app Execute abc > /home/ec2-user/myfridaylove/logs/initTest_$(date --utc +\%Y\%m\%d_\%H\%M\%S).log 2>&1
+/var/www/html/greencloud/app/Console/cake -app /var/www/html/greencloud/app Execute abc > /home/ec2-user/myfridaylove/logs/initTest_$(date --utc +\%Y\%m\%d_\%H\%M\%S).log 2>&1

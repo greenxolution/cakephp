@@ -75,4 +75,18 @@ Retrieve/update orders from Amazon to our database and our database to Amazon.
 
 (https://github.com/amzn/selling-partner-api-models "SP-API")
 
+# Process
+
+## Import/Update Entrenue products && feeds MWS quantity in Amazon of activated products.
+0. cake -app C:\Users\pgunt\php\cakephp\app Execute initUploadEntrenue
+
+## Import the catalog base on Category (book)
+1. cake -app C:\Users\pgunt\php\cakephp\app Execute initMWSCatalog
+
+## Import the catalog based on category (%Intimacy Devices%)
+2. cake -app C:\Users\pgunt\php\cakephp\app Execute importFromCatalogBasedOnEntrenueCategory
+
+## Update the offer price every hours
+3. cake -app C:\Users\pgunt\php\cakephp\app Execute updateItemOffer
+
 
