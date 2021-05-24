@@ -184,7 +184,7 @@ class EntrenueProduct extends AppModel {
 		///SUBMIT INVENTORY QUANTITY
 		App::import('Model','SubmitFeed');
 
-		$submitFeed = new SubmitFeed();
+		// $submitFeed = new SubmitFeed();
 
 		return $submitFeed->submitInventoryQuantity($data);
 
