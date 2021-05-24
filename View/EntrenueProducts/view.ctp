@@ -39,6 +39,11 @@
 			<?php echo h($entrenueProduct['EntrenueProduct']['penalized']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Activated'); ?></dt>
+		<dd>
+			<?php echo h($entrenueProduct['EntrenueProduct']['activated']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Quantity'); ?></dt>
 		<dd>
 			<?php echo h($entrenueProduct['EntrenueProduct']['quantity']); ?>
