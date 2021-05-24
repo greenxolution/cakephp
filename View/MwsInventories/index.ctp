@@ -20,6 +20,8 @@
 			<th><?php echo $this->Paginator->sort('MwsPages'); ?></th>
 			<th><?php echo $this->Paginator->sort('ePages'); ?></th>
 			<th><?php echo $this->Paginator->sort('entrenue'); ?></th>
+			<th><?php echo $this->Paginator->sort('mBinding'); ?></th>
+			<th><?php echo $this->Paginator->sort('eBinding'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('updated'); ?></th>
 			<!-- <th class="actions"><?php echo __('Actions'); ?></th> -->
@@ -65,6 +67,8 @@
 		?>&nbsp;
 				
 	</td>	
+	<td><?php echo h($mwsInventory['MwsInventory']['Binding']); ?>&nbsp;</td>
+	<td><?php echo h($mwsInventory['EntrenueProduct']['book_binding']); ?>&nbsp;</td>
 		<td><?php echo h($mwsInventory['MwsInventory']['created']); ?>&nbsp;</td>
 		<td><?php echo h($mwsInventory['MwsInventory']['updated']); ?>&nbsp;</td>
 		<!-- <td class="actions">
