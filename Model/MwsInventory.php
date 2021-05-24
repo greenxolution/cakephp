@@ -546,7 +546,7 @@ class MwsInventory extends AppModel {
 
 		$pulledEntrenue = $this->pullEntrenueRecords($limit);
 
-		debug($pulledEntrenue);
+		// debug($pulledEntrenue);
 		$count=0;
 
 
@@ -569,7 +569,7 @@ class MwsInventory extends AppModel {
 	
 			try {
 				$results = $apiInstance->listCatalogItems($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
-				// debug($results,2);
+				debug($results,2);
 
 				foreach ($results->getPayload()->getItems() as $value) {
 
