@@ -26,6 +26,11 @@
 			<?php echo h($mwsInventory['MwsInventory']['quantity']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Activated'); ?></dt>
+		<dd>
+			<?php echo h($mwsInventory['MwsInventory']['activated']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Tier'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($mwsInventory['Tier']['name'], array('controller' => 'tiers', 'action' => 'view', $mwsInventory['Tier']['id'])); ?>
