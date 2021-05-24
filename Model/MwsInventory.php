@@ -584,7 +584,7 @@ class MwsInventory extends AppModel {
 																'price'=>$value->AttributeSets[0]->ListPrice->Amount,
 																'image'=>$value->AttributeSets[0]->SmallImage->URL,
 																'provider'=>$entrenueProduct['EntrenueProduct']['SKU'],
-																'entrenue_products_id'=>$entrenueProduct['EntrenueProduct']['id'] )));
+																'entrenue_product_id'=>$entrenueProduct['EntrenueProduct']['id'] )));
 
 					}
 			}
