@@ -15,6 +15,8 @@ class MwsInventory extends AppModel {
 	
 	public $name = 'MwsInventory';
 
+	public $history_fields = array('item_offer');
+
 	public $belongsTo = array(
 			'Tier' => array(
 					'className' => 'Tier',
@@ -23,9 +25,14 @@ class MwsInventory extends AppModel {
 			'EntrenueProduct' => array(
 				'className' => 'EntrenueProduct',
 				'foreignKey' => 'entrenue_product_id'
-		)
+			),
 	);
 
+	public $hasMany = array(
+        'MwsInventoryHistory' => array(
+            'className' => 'MwsInventoryHistory'
+		)
+    );
 
 	public $min_quantity = 2;
 	
@@ -305,21 +312,38 @@ class MwsInventory extends AppModel {
 
 		$config = $submit->configSPAPI();
 
-		$data = $this->find('all', array('fields' => array('id', 'asin')));
+		$data = $this->find('all', array('fields' => array('id', 'asin', 'item_offer')));
 
 		foreach($data as $key => $item){
 
+			$item_offer_old = $item['MwsInventory']['item_offer'];
+
 			$item['MwsInventory']['item_offer'] = $this->getItemOffers($config, $asin = $item['MwsInventory']['asin']);
 
-			$this->clear();
+			try {
+				//debug($item);exit();
+				$this->clear();
 
-			if($this->save($item)){
+				if($this->save($item)){
 
-				debug('updated.: '.$item['MwsInventory']['asin'].'-:.'.$item['MwsInventory']['item_offer']);
+					debug('updated MwsInventory.: '.$item['MwsInventory']['asin'].'-: '.$item['MwsInventory']['item_offer']);
 
+					$oldRecord = $item;
+					
+					$oldRecord['MwsInventory']['item_offer'] = $item_offer_old;
+					
+					$updatedProduct[] = $this->MwsInventoryHistory->insertRecord($item, $oldRecord );
+				}
+
+			}catch (Exception $e) {
+				
+					echo 'Caught MwsInventoryAPI exception: '.$e->getFile().  $e->getMessage(). "\n";
+				
 			}
 
 		}
+
+		return $updatedProduct;
 
 	}
 
