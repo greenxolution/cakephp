@@ -375,8 +375,8 @@ class SubmitFeed extends Submit {
 			$message = $xml->addChild('Message');
 			$message->addChild('MessageID',$i);
 			$price = $message->addChild('Price');
-			$price->addChild('SKU',$item['SKU']);
-			$standardPrice = $price->addChild('StandardPrice',$item['Estimated']);
+			$price->addChild('SKU',$item['ViewMatchInv']['SKU']);
+			$standardPrice = $price->addChild('StandardPrice',$item['ViewMatchInv']['Estimated']);
 			$standardPrice->addAttribute('currency','USD');
 
 			++$i;
@@ -384,6 +384,39 @@ class SubmitFeed extends Submit {
 
 
 		return $xml->asXML();
+
+	}
+
+	/**
+	 * 
+	 * @date: 2021-05-30
+	 * 
+	 * Repricing 
+	 * 
+	 */
+	public function submitPrice($data = array()){
+
+		if($data == null || count($data) == 0) return null;
+
+		foreach($data as $key => $item){
+
+			$messages[] = array('OperationType'=>'Update', 'ViewMatchInv'=> array('SKU' => $item['MwsInventory']['sku'], 'Estimated' => $item['MwsInventory']['listing_price'], 'FulfillmentLatency'=>'1'));
+
+		}
+
+		$items = array('MerchantIdentifier'=>Configure::read('SPAPI.MerchantIdentifier'), 'Messages' => $messages);
+
+		debug($items);
+
+		
+		$pushArray['xml'] = $this->creating_POST_PRODUCT_PRICING_DATA($items);
+		$pushArray['feedType'] = 'POST_PRODUCT_PRICING_DATA';
+		$pushArray['marketplaceIds'] = array(Configure::read('SPAPI.MARKETPLACE.US'));
+
+
+		$this->submitInventory($pushArray);
+
+		return $pushArray;
 
 	}
 

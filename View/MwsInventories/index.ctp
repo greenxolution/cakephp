@@ -9,10 +9,10 @@
 			<th><?php echo $this->Paginator->sort('price'); ?></th>
 			<th><?php echo $this->Paginator->sort('offert'); ?></th>
 			<th><?php echo $this->Paginator->sort('Eprice'); ?></th>
-			<th><?php echo $this->Paginator->sort('MAP'); ?></th>
+			<th><?php echo $this->Paginator->sort('ListingPrice'); ?></th>
 			<th><?php echo $this->Paginator->sort('eQuantity'); ?></th>
-			<th><?php echo $this->Paginator->sort('MwsQuantity'); ?></th>
-			<th><?php echo $this->Paginator->sort('tier_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('MinPrice'); ?></th>
+			<th><?php echo $this->Paginator->sort('SKU'); ?></th>
 			<th><?php echo $this->Paginator->sort('image'); ?></th>
 			<th><?php echo $this->Paginator->sort('image'); ?></th>
 			<th><?php echo $this->Paginator->sort('MwsTitle'); ?></th>
@@ -42,12 +42,10 @@
 		<td><?php echo h($mwsInventory['MwsInventory']['price']); ?>&nbsp;</td>
 		<td><?php echo h($mwsInventory['MwsInventory']['item_offer']); ?>&nbsp;</td>
 		<td><?php echo h($mwsInventory['EntrenueProduct']['price']); ?>&nbsp;</td>
-		<td><?php echo h($mwsInventory['EntrenueProduct']['map']); ?>&nbsp;</td>
+		<td><?php echo h($mwsInventory['MwsInventory']['listing_price']); ?>&nbsp;</td>
 		<td><?php echo h($mwsInventory['EntrenueProduct']['quantity']); ?>&nbsp;</td>
-		<td><?php echo h($mwsInventory['MwsInventory']['quantity']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($mwsInventory['Tier']['name'], array('controller' => 'tiers', 'action' => 'view', $mwsInventory['Tier']['id'])); ?>
-		</td>
+		<td><?php echo h($mwsInventory['MwsInventory']['min_price']); ?>&nbsp;</td>
+		<td><?php echo h($mwsInventory['EntrenueProduct']['SKU']); ?>&nbsp;</td>
 		<td><?php echo $this->Html->image($mwsInventory['MwsInventory']['image']); ?>&nbsp;</td>
 		<td><?php echo $this->Html->image($mwsInventory['EntrenueProduct']['image'], array('width'=>'110px')); ?>&nbsp;</td>
 		

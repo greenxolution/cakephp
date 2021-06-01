@@ -12,6 +12,75 @@ class ExecuteShell extends AppShell {
 		debug(gettype($a));
 	}
 
+	public function unit_test_pricing(){
+
+		$data = array(
+			(int) 0 => array(
+				'MwsInventory' => array(
+					'id' => '411',
+					'sku' => 'ENTB00009',
+					'asin' => '1592335438',
+					'item_offer' => (float) 11.66,
+					'min_price' => '15.80',
+					'price' => '21.99',
+					'listing_price' => '15.80'
+				),
+				'MwsInventoryHistory' => array(
+					(int) 0 => array(
+						'id' => '113',
+						'oldvalue' => '11.68',
+						'newvalue' => '11.66',
+						'field' => 'item_offer',
+						'mws_inventory_id' => '411',
+						'field_type' => 'double',
+						'created' => '2021-05-30 15:19:30',
+						'updated' => '2021-05-30 15:19:30'
+					),
+					(int) 1 => array(
+						'id' => '162',
+						'oldvalue' => '88.00',
+						'newvalue' => '11.66',
+						'field' => 'item_offer',
+						'mws_inventory_id' => '411',
+						'field_type' => 'double',
+						'created' => '2021-05-30 20:35:12',
+						'updated' => '2021-05-30 20:35:12'
+					)
+				)
+			),
+			(int) 1 => array(
+				'MwsInventory' => array(
+					'id' => '412',
+					'sku' => 'ENTB00012',
+					'asin' => '383653214X',
+					'item_offer' => (int) 0,
+					'min_price' => '9.80',
+					'price' => '10.00',
+					'listing_price' => (float) 9.95
+				),
+				'MwsInventoryHistory' => array(
+					(int) 0 => array(
+						'id' => '163',
+						'oldvalue' => '88.00',
+						'newvalue' => '0',
+						'field' => 'item_offer',
+						'mws_inventory_id' => '412',
+						'field_type' => 'integer',
+						'created' => '2021-05-30 20:35:12',
+						'updated' => '2021-05-30 20:35:12'
+					)
+				)
+			)
+					);
+
+					App::import('Model','SubmitFeed');
+		
+					// debug("Entrenue Product Model: FTP");
+					
+					$SubmitFeed = new SubmitFeed();
+			
+					debug($SubmitFeed->submitPrice($data));
+	}
 	public function unit_test(){
 
 		$data = array(
@@ -214,7 +283,7 @@ class ExecuteShell extends AppShell {
 
 		$mwsInventory = new MwsInventory();
 
-		$mwsInventory->updateItemOffer();
+		debug($mwsInventory->updateItemOffer());
 
 	}
 

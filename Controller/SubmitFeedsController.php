@@ -94,7 +94,7 @@ class SubmitFeedsController extends AppController {
 
 		$config = $this->SubmitFeed->configSPAPI();
 
-		// $apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
+		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
 
 
 		// $result = $apiInstance->getCatalogItem($marketplace_id, $asin);
@@ -108,51 +108,51 @@ class SubmitFeedsController extends AppController {
 		$seller_sku = ""; // string | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
 		$upc = ""; // string | A 12-digit bar code used for retail packaging.
 		$ean = ""; // string | A European article number that uniquely identifies the catalog item, manufacturer, and its attributes.
-		$isbn = "9781934429952"; // string | The unique commercial book identifier used to identify books internationally.
+		$isbn = "383653214X"; // string | The unique commercial book identifier used to identify books internationally.
 		$jan = ""; // string | A Japanese article number that uniquely identifies the product, manufacturer, and its attributes.
 
-		// try {
-		// 	$results = $apiInstance->listCatalogItems($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
-		// 	debug($results,2);
-
-		// 	foreach ($results->getPayload()->getItems() as $value) {
-
-		// 		// debug($value);
-
-		// 		// debug($value->Identifiers->MarketplaceASIN->MarketplaceId  );
-		// 		// debug($value->Identifiers->MarketplaceASIN->MarketplaceId->ASIN  );
-
-		// 		// debug($value->AttributeSets[0]->Title );
-		// 		// debug($value->AttributeSets[0]->ListPrice->Amount );
-		// 		// debug($value->AttributeSets[0]->NumberOfPages );
-		// 		// debug($value->AttributeSets[0]->PublicationDate  );
-		// 		# code...
-		// 	}
-		// 	debug('algo nuevo');
-		// } catch (Exception $e) {
-		// 	echo 'Exception when calling CatalogApi->listCatalogItems: ', $e->getMessage(), PHP_EOL;
-		// }
-
-
-		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\ProductPricingApi($config);
-
-
-		$marketplace_id = $marketplace_id; // string | A marketplace identifier. Specifies the marketplace for which prices are returned.
-		$item_condition = "New"; // string | Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
-		$asin = "1934429953"; // string | The Amazon Standard Identification Number (ASIN) of the item.
-		
 		try {
-			$result = $apiInstance->getItemOffers($marketplace_id, $item_condition, $asin);
-			// debug($result);
+			$results = $apiInstance->listCatalogItems($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
+			debug($results,2);
 
-			// debug($result->getPayload());
+			foreach ($results->getPayload()->getItems() as $value) {
 
-			debug($result->getPayload()->getOffers());
+				// debug($value);
 
-			debug($result->getPayload()->getOffers()[0]->getListingPrice()->getAmount());
+				// debug($value->Identifiers->MarketplaceASIN->MarketplaceId  );
+				// debug($value->Identifiers->MarketplaceASIN->MarketplaceId->ASIN  );
+
+				// debug($value->AttributeSets[0]->Title );
+				// debug($value->AttributeSets[0]->ListPrice->Amount );
+				// debug($value->AttributeSets[0]->NumberOfPages );
+				// debug($value->AttributeSets[0]->PublicationDate  );
+				# code...
+			}
+			debug('algo nuevo');
 		} catch (Exception $e) {
-			echo 'Exception when calling ProductPricingApi->getItemOffers: ', $e->getMessage(), PHP_EOL;
+			echo 'Exception when calling CatalogApi->listCatalogItems: ', $e->getMessage(), PHP_EOL;
 		}
+
+
+		// $apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\ProductPricingApi($config);
+
+
+		// $marketplace_id = $marketplace_id; // string | A marketplace identifier. Specifies the marketplace for which prices are returned.
+		// $item_condition = "New"; // string | Filters the offer listings to be considered based on item condition. Possible values: New, Used, Collectible, Refurbished, Club.
+		// $asin = "1934429953"; // string | The Amazon Standard Identification Number (ASIN) of the item.
+		
+		// try {
+		// 	$result = $apiInstance->getItemOffers($marketplace_id, $item_condition, $asin);
+		// 	// debug($result);
+
+		// 	// debug($result->getPayload());
+
+		// 	debug($result->getPayload()->getOffers());
+
+		// 	debug($result->getPayload()->getOffers()[0]->getListingPrice()->getAmount());
+		// } catch (Exception $e) {
+		// 	echo 'Exception when calling ProductPricingApi->getItemOffers: ', $e->getMessage(), PHP_EOL;
+		// }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

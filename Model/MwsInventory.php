@@ -17,6 +17,8 @@ class MwsInventory extends AppModel {
 
 	public $history_fields = array('item_offer');
 
+	public $_MWS_FEE_PERCENT_NOMINAL = 0.2;
+
 	public $belongsTo = array(
 			'Tier' => array(
 					'className' => 'Tier',
@@ -47,6 +49,7 @@ class MwsInventory extends AppModel {
 			),
 	
 	);
+	
 	
 	
 	// Or conditions with like
@@ -296,7 +299,44 @@ class MwsInventory extends AppModel {
 		}
 	}
 
+	/**
+	 * @date: 2021-05-29
+	 * 
+	 * Fee min price
+	 * Entrenue: $2
+	 * MWS: 20%
+	 */
+	public function minPrice($price = 0){
 
+		return $price + ($price * $_MWS_FEE_PERCENT_NOMINAL) + 2;
+	}
+
+	public function updateItemOfferAndFeedMWS(){
+
+		$data = $this->updateItemOffer();
+	}
+
+	/**
+	 * 
+	 * @date: 2021-0530
+	 * 
+	 * returns the best price for listing
+	 * 
+	 */
+	public function listingPrice($item = array()){
+
+		$reference_price = ($item['MwsInventory']['item_offer'] == 0)?$item['MwsInventory']['price']:$item['MwsInventory']['item_offer'];
+
+		$min_price = $item['MwsInventory']['min_price'];
+
+		if($min_price < ($reference_price - 0.05 )){
+
+			return ($reference_price - 0.05 );
+		}
+
+		return $min_price;
+
+	}
 
 	/**
 	 * 
@@ -312,13 +352,15 @@ class MwsInventory extends AppModel {
 
 		$config = $submit->configSPAPI();
 
-		$data = $this->find('all', array('fields' => array('id', 'asin', 'item_offer')));
+		$data = $this->find('all', array('fields' => array('id', 'sku', 'asin', 'item_offer', 'min_price', 'price')));
 
 		foreach($data as $key => $item){
 
 			$item_offer_old = $item['MwsInventory']['item_offer'];
 
 			$item['MwsInventory']['item_offer'] = $this->getItemOffers($config, $asin = $item['MwsInventory']['asin']);
+
+			$item['MwsInventory']['listing_price'] = $this->listingPrice($item);
 
 			try {
 				//debug($item);exit();
@@ -343,7 +385,7 @@ class MwsInventory extends AppModel {
 
 		}
 
-		return $updatedProduct;
+		return array_filter($updatedProduct);
 
 	}
 
