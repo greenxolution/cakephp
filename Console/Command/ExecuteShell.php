@@ -283,7 +283,7 @@ class ExecuteShell extends AppShell {
 
 		$mwsInventory = new MwsInventory();
 
-		debug($mwsInventory->updateItemOffer());
+		debug($mwsInventory->updateItemOfferAndFeedMWS());
 
 	}
 

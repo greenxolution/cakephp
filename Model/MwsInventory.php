@@ -316,6 +316,17 @@ class MwsInventory extends AppModel {
 	public function updateItemOfferAndFeedMWS(){
 
 		$data = $this->updateItemOffer();
+
+		
+		debug($data);
+
+		///SUBMIT INVENTORY QUANTITY
+		App::import('Model','SubmitFeed');
+
+		$submitFeed = new SubmitFeed();
+
+		return $submitFeed->submitPrice($data);
+
 	}
 
 	/**
