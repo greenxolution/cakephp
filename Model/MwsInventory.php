@@ -19,6 +19,8 @@ class MwsInventory extends AppModel {
 
 	public $_MWS_FEE_PERCENT_NOMINAL = 0.2;
 
+	public $_SLEEP_TIME = 5;
+
 	public $belongsTo = array(
 			'Tier' => array(
 					'className' => 'Tier',
@@ -354,7 +356,16 @@ class MwsInventory extends AppModel {
 
 		$data = $this->find('all', array('fields' => array('id', 'sku', 'asin', 'item_offer', 'min_price', 'price')));
 
+		$count=0;
+
 		foreach($data as $key => $item){
+
+			$count++;
+		
+			if(($count%10)==0)
+			{
+				sleep($this->_SLEEP_TIME);
+			}
 
 			$item_offer_old = $item['MwsInventory']['item_offer'];
 
