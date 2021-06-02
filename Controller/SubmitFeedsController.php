@@ -94,44 +94,108 @@ class SubmitFeedsController extends AppController {
 
 		$config = $this->SubmitFeed->configSPAPI();
 
-		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
-
-
-		// $result = $apiInstance->getCatalogItem($marketplace_id, $asin);
-
-		// debug($result->getPayload()->getAttributeSets()[0]->getTitle());
-		
-		// debug($result->getPayload()->getAttributeSets());
-
-		$query = ""; // string | Keyword(s) to use to search for items in the catalog. Example: 'harry potter books'.
-		$query_context_id = ""; // string | An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items.
-		$seller_sku = ""; // string | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
-		$upc = ""; // string | A 12-digit bar code used for retail packaging.
-		$ean = ""; // string | A European article number that uniquely identifies the catalog item, manufacturer, and its attributes.
-		$isbn = "383653214X"; // string | The unique commercial book identifier used to identify books internationally.
-		$jan = ""; // string | A Japanese article number that uniquely identifies the product, manufacturer, and its attributes.
+		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\ProductPricingApi($config);
 
 		try {
-			$results = $apiInstance->listCatalogItems($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
-			debug($results,2);
+			// $result = $apiInstance->getItemOffers(Configure::read('SPAPI.MARKETPLACE.US'), 'New', 'ENT18613');
+			$result = $apiInstance->getListingOffers(Configure::read('SPAPI.MARKETPLACE.US'), 'New', 'ENT18613');
 
-			foreach ($results->getPayload()->getItems() as $value) {
+			// debug($result);
+			
 
-				// debug($value);
+			// debug($result->getPayload()->getOffers());
 
-				// debug($value->Identifiers->MarketplaceASIN->MarketplaceId  );
-				// debug($value->Identifiers->MarketplaceASIN->MarketplaceId->ASIN  );
+			debug($result->getPayload()->getOffers()[0]->getMyOffer());
 
-				// debug($value->AttributeSets[0]->Title );
-				// debug($value->AttributeSets[0]->ListPrice->Amount );
-				// debug($value->AttributeSets[0]->NumberOfPages );
-				// debug($value->AttributeSets[0]->PublicationDate  );
-				# code...
+			debug($result->getPayload()->getOffers()[0]->getListingPrice());
+
+
+			debug($result->getPayload()->getOffers()[1]->getMyOffer());
+			debug($result->getPayload()->getOffers()[2]->getMyOffer());
+
+			// debug($result->getPayload()->getOffers());
+
+			foreach($result->getPayload()->getOffers() as $key => $offer){
+
+				if($offer->getMyOffer() == true){
+
+					debug($offer->getListingPrice()->getAmount());
+				}
+
 			}
-			debug('algo nuevo');
-		} catch (Exception $e) {
-			echo 'Exception when calling CatalogApi->listCatalogItems: ', $e->getMessage(), PHP_EOL;
+
+			$amount = 0;
+
+			foreach($result->getPayload()->getSummary()->getLowestPrices() as $key => $lowerprice){
+
+				if($lowerprice->condition == 'new'){
+
+					if($amount == 0){
+
+						$amount = $lowerprice->LandedPrice->Amount;
+
+
+					}
+					else {
+
+						if( $amount > $lowerprice->LandedPrice->Amount){
+
+							$amount = $lowerprice->LandedPrice->Amount;
+						}
+
+					}
+				}
+			}
+
+			debug($amount);
+
+			// debug($result->getPayload()->getOffers()[1]->getMyOffer());
+
+			debug($result);
+
+			
+		} catch (\Throwable $th) {
+			echo 'Exception when calling ProductPricingApi->getItemOffers: ', $e->getMessage(), PHP_EOL;
 		}
+
+		// $apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\CatalogApi($config);
+
+
+		// // $result = $apiInstance->getCatalogItem($marketplace_id, $asin);
+
+		// // debug($result->getPayload()->getAttributeSets()[0]->getTitle());
+		
+		// // debug($result->getPayload()->getAttributeSets());
+
+		// $query = ""; // string | Keyword(s) to use to search for items in the catalog. Example: 'harry potter books'.
+		// $query_context_id = ""; // string | An identifier for the context within which the given search will be performed. A marketplace might provide mechanisms for constraining a search to a subset of potential items. For example, the retail marketplace allows queries to be constrained to a specific category. The QueryContextId parameter specifies such a subset. If it is omitted, the search will be performed using the default context for the marketplace, which will typically contain the largest set of items.
+		// $seller_sku = ""; // string | Used to identify an item in the given marketplace. SellerSKU is qualified by the seller's SellerId, which is included with every operation that you submit.
+		// $upc = ""; // string | A 12-digit bar code used for retail packaging.
+		// $ean = ""; // string | A European article number that uniquely identifies the catalog item, manufacturer, and its attributes.
+		// $isbn = "1934429953"; // string | The unique commercial book identifier used to identify books internationally.
+		// $jan = ""; // string | A Japanese article number that uniquely identifies the product, manufacturer, and its attributes.
+
+		// try {
+		// 	$results = $apiInstance->listCatalogItems($marketplace_id, $query, $query_context_id, $seller_sku, $upc, $ean, $isbn, $jan);
+		// 	debug($results,2);
+
+		// 	foreach ($results->getPayload()->getItems() as $value) {
+
+		// 		// debug($value);
+
+		// 		// debug($value->Identifiers->MarketplaceASIN->MarketplaceId  );
+		// 		// debug($value->Identifiers->MarketplaceASIN->MarketplaceId->ASIN  );
+
+		// 		// debug($value->AttributeSets[0]->Title );
+		// 		// debug($value->AttributeSets[0]->ListPrice->Amount );
+		// 		// debug($value->AttributeSets[0]->NumberOfPages );
+		// 		// debug($value->AttributeSets[0]->PublicationDate  );
+		// 		# code...
+		// 	}
+		// 	debug('algo nuevo');
+		// } catch (Exception $e) {
+		// 	echo 'Exception when calling CatalogApi->listCatalogItems: ', $e->getMessage(), PHP_EOL;
+		// }
 
 
 		// $apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\ProductPricingApi($config);

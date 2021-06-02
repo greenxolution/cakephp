@@ -217,11 +217,74 @@ class MwsInventory extends AppModel {
 
 	/**
 	 * 
+	 * @date: 2021-06-01
+	 * 
+	 * Returns the lowest priced offers for a single item based on SKU.
+	 */
+	public function getItemOfferLowestPriceBySku($result = null){
+
+		if($result == null) return 0;
+
+		$amount = 0;
+
+		if('NoBuyableOffers' != $result->getPayload()->getStatus())
+		foreach($result->getPayload()->getSummary()->getLowestPrices() as $key => $lowerprice){
+
+			if($lowerprice->condition == 'new'){
+
+				if($amount == 0){
+
+					$amount = $lowerprice->LandedPrice->Amount;
+
+
+				}
+				else {
+
+					if( $amount > $lowerprice->LandedPrice->Amount){
+
+						$amount = $lowerprice->LandedPrice->Amount;
+					}
+
+				}
+			}
+		}
+
+
+		return $amount;
+	}
+
+	/**
+	 * 
+	 * @date: 2021-06-01
+	 * 
+	 * Returns my offer
+	 */
+	public function getMyOfferBySku($result = null){
+
+		if($result == null) return 0;
+
+		$amount = 0;
+
+		foreach($result->getPayload()->getOffers() as $key => $offer){
+
+			if($offer->getMyOffer() == true){
+
+				$amount = $offer->getListingPrice()->getAmount();
+
+			}
+
+		}
+
+		return $amount;
+	}
+
+	/**
+	 * 
 	 * Date: 2021-05-16
 	 * 
 	 * Returns the lowest priced offers for a single item based on ASIN.
 	 */
-	public function getItemOffers($config = array(), $asin = ''){
+	public function getItemOffers($config = array(), $sku = ''){
 
 		$apiInstance = new \ClouSale\AmazonSellingPartnerAPI\Api\ProductPricingApi($config);
 
@@ -231,7 +294,7 @@ class MwsInventory extends AppModel {
 		// $asin = "1934429953"; // string | The Amazon Standard Identification Number (ASIN) of the item.
 		
 		try {
-			$result = $apiInstance->getItemOffers(Configure::read('SPAPI.MARKETPLACE.US'), 'New', $asin);
+			$result = $apiInstance->getListingOffers(Configure::read('SPAPI.MARKETPLACE.US'), 'New', $sku);
 			// debug($result);
 
 			// debug($result->getPayload());
@@ -242,38 +305,14 @@ class MwsInventory extends AppModel {
 
 			// debug($result->getPayload()->getOffers()[0]->getListingPrice());
 
-			$amount = 0;
-
-			if('NoBuyableOffers' != $result->getPayload()->getStatus())
-			foreach($result->getPayload()->getSummary()->getLowestPrices() as $key => $lowerprice){
-
-				if($lowerprice->condition == 'new'){
-
-					if($amount == 0){
-
-						$amount = $lowerprice->LandedPrice->Amount;
-
-
-					}
-					else {
-
-						if( $amount > $lowerprice->LandedPrice->Amount){
-
-							$amount = $lowerprice->LandedPrice->Amount;
-						}
-
-					}
-				}
-			}
-
-
-			return $amount;
 
 		} catch (Exception $e) {
-			echo 'Exception when calling ProductPricingApi->getItemOffers: ', $e->getMessage(), PHP_EOL;
+			debug('Exception when calling ProductPricingApi->getItemOffers: '. $e->getMessage()) ;
+
+			return null;
 		}
 
-		return null;
+		return $result;
 	}
 
 
@@ -338,6 +377,11 @@ class MwsInventory extends AppModel {
 	 */
 	public function listingPrice($item = array()){
 
+		if($item['MwsInventory']['my_offer'] == $item['MwsInventory']['item_offer'] && $item['MwsInventory']['my_offer'] > $item['MwsInventory']['min_price']  ) {
+
+			return $item['MwsInventory']['my_offer'];
+		}
+
 		$reference_price = ($item['MwsInventory']['item_offer'] == 0)?$item['MwsInventory']['price']:$item['MwsInventory']['item_offer'];
 
 		$min_price = $item['MwsInventory']['min_price'];
@@ -365,7 +409,9 @@ class MwsInventory extends AppModel {
 
 		$config = $submit->configSPAPI();
 
-		$data = $this->find('all', array('fields' => array('id', 'sku', 'asin', 'item_offer', 'min_price', 'price')));
+		$conditions = array( 'MwsInventory.activated' => 1);
+
+		$data = $this->find('all', array('fields' => array('id', 'sku', 'asin', 'item_offer', 'min_price', 'price'),'conditions' => $conditions));
 
 		$count=0;
 
@@ -380,11 +426,16 @@ class MwsInventory extends AppModel {
 
 			$item_offer_old = $item['MwsInventory']['item_offer'];
 
-			$item['MwsInventory']['item_offer'] = $this->getItemOffers($config, $asin = $item['MwsInventory']['asin']);
-
-			$item['MwsInventory']['listing_price'] = $this->listingPrice($item);
-
 			try {
+
+				$result = $this->getItemOffers($config, $asin = $item['MwsInventory']['sku']);
+
+				$item['MwsInventory']['item_offer'] = $this->getItemOfferLowestPriceBySku($result);
+	
+				$item['MwsInventory']['my_offer'] = $this->getMyOfferBySku($result);
+	
+				$item['MwsInventory']['listing_price'] = $this->listingPrice($item);
+
 				//debug($item);exit();
 				$this->clear();
 
