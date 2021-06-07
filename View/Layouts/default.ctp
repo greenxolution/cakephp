@@ -60,7 +60,7 @@ echo $this->fetch('script');
 		echo " | ";
 		echo $this->Html->link('Marketplaces','/Marketplaces') ;
 		echo " | ";
-		echo $this->Html->link('ListOrders','/ListOrders/listIndex') ;
+		echo $this->Html->link('Orders','/Orders/Index') ;
 		echo " | ";
 		echo $this->Html->link('Entrenue Products','/EntrenueProducts') ;
 		echo " | ";
