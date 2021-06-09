@@ -17,9 +17,13 @@ class MwsInventory extends AppModel {
 
 	public $history_fields = array('item_offer');
 
-	public $_MWS_FEE_PERCENT_NOMINAL = 0.2;
+	public $_MWS_FEE_PERCENT_NOMINAL = 0.25;
 
 	public $_SLEEP_TIME = 5;
+
+	public $_ENTRENUE_FEE = 2;
+
+	public $_ENTRENUE_FLET = 4;
 
 	public $belongsTo = array(
 			'Tier' => array(
@@ -345,11 +349,12 @@ class MwsInventory extends AppModel {
 	 * 
 	 * Fee min price
 	 * Entrenue: $2
-	 * MWS: 20%
+	 * Entrenue shipping $4
+	 * MWS: 25%
 	 */
 	public function minPrice($price = 0){
 
-		return $price + ($price * $_MWS_FEE_PERCENT_NOMINAL) + 2;
+		return $price + ($price * $this->_MWS_FEE_PERCENT_NOMINAL) + $this->_ENTRENUE_FEE + $this->_ENTRENUE_FLET;
 	}
 
 	public function updateItemOfferAndFeedMWS(){
@@ -370,7 +375,7 @@ class MwsInventory extends AppModel {
 
 	/**
 	 * 
-	 * @date: 2021-0530
+	 * @date: 2021-05-30
 	 * 
 	 * returns the best price for listing
 	 * 
