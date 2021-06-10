@@ -47,6 +47,7 @@
 			&nbsp;
 		</dd>
 	</dl>
+	<?php debug($mwsInventory['MwsInventoryHistory']); ?>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
