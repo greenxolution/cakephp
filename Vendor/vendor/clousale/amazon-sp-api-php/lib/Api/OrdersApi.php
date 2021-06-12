@@ -847,4 +847,48 @@ class OrdersApi
 
         return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'GET', $httpBody);
     }
+
+    public function getRDTRequest($order_id)
+    {
+        // verify the required parameter 'order_id' is set
+        if (null === $order_id || (is_array($order_id) && 0 === count($order_id))) {
+            throw new \InvalidArgumentException('Missing the required parameter $order_id when calling getOrder');
+        }
+
+        $resourcePath = '/tokens/2021-03-01/restrictedDataToken';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '{
+            restrictedResources: [
+              {
+                method: "GET",
+                path: "/orders/v0/orders/'.$order_id.'/address"
+              },
+              {
+                method: "GET",
+                path: "/orders/v0/orders/'.$order_id.'/buyerInfo"
+              }
+            ]
+          }
+          ';
+        $multipart = false;
+
+        return $this->generateRequest($multipart, $formParams, $queryParams, $resourcePath, $headerParams, 'POST', $httpBody);
+    }
+
+    public function getRDTAsyncWithHttpInfo($order_id)
+    {
+        //$returnType = '\ClouSale\AmazonSellingPartnerAPI\Models\Orders\GetOrdersResponse';
+        $request = $this->getRDTRequest($order_id);
+        
+        return $this->sendRequest($request, '');
+    }
+
+    public function getRDT($order_id)
+    {
+        $response = $this->getRDTAsyncWithHttpInfo($order_id);
+
+        return $response;
+    }
 }

@@ -130,14 +130,22 @@ trait SellingPartnerApiRequest
                     // debug($content); pedrop
                 }
             }
+//            debug($content);
 //            var_dump($content);
 //            exit();
 
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders(),
-            ];
+            if('' == $returnType){
+                //return json_decode($content);
+                return json_decode(json_encode($content), true);
+
+            }else{
+                return [
+                    ObjectSerializer::deserialize($content, $returnType, []),
+                    $response->getStatusCode(),
+                    $response->getHeaders(),
+                ];
+            }
+            
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 503:
