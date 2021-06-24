@@ -27,6 +27,19 @@ class Order extends AppModel {
         )
     );
 
+	public $validate = array(
+		'AmazonOrderId'    => array(
+				'notBlank' => array(
+						'rule' => array('notBlank'),
+						'message' => 'The AmazonOrderId is require'
+				),
+				'unique' => array(
+						'rule' => array('isUnique'),
+						'message' => 'The AmazonOrderId is unique'
+				)
+		)
+);
+
 	/**
 	 * 
 	 * @date: 2021-06-03
@@ -87,5 +100,57 @@ class Order extends AppModel {
 
 	}
 
+
+	public function insertRecord($orderId, $arr_order_detall){
+
+		$arr_orden = array();
+		$arr_orden['Order']['AmazonOrderId'] = $orderId;
+		$arr_orden['Order']['SellerOrderId'] = $arr_order_detall->getPayload()->getSellerOrderId();
+		$arr_orden['Order']['PurchaseDate'] = $arr_order_detall->getPayload()->getPurchaseDate();
+		$arr_orden['Order']['LastUpdateDate'] = $arr_order_detall->getPayload()->getLastUpdateDate();
+		$arr_orden['Order']['OrderStatus'] = $arr_order_detall->getPayload()->getOrderStatus();
+		$arr_orden['Order']['FulfillmentChannel	'] = $arr_order_detall->getPayload()->getFulfillmentChannel();
+		$arr_orden['Order']['SalesChannel'] = $arr_order_detall->getPayload()->getSalesChannel();
+		$arr_orden['Order']['OrderChannel'] = $arr_order_detall->getPayload()->getOrderChannel();
+		$arr_orden['Order']['ShipServiceLevel'] = $arr_order_detall->getPayload()->getShipServiceLevel();
+		$arr_orden['Order']['OrderTotal'] = $arr_order_detall->getPayload()->getOrderTotal()->getAmount();
+		$arr_orden['Order']['NumberOfItemsShipped'] = $arr_order_detall->getPayload()->getNumberOfItemsShipped();
+		$arr_orden['Order']['NumberOfItemsUnshipped'] = $arr_order_detall->getPayload()->getNumberOfItemsUnshipped();
+		$arr_orden['Order']['PaymentExecutionDetail'] = $arr_order_detall->getPayload()->getPaymentExecutionDetail();
+		$arr_orden['Order']['PaymentMethod'] = $arr_order_detall->getPayload()->getPaymentMethod();
+		$arr_orden['Order']['PaymentMethodDetails'] = $arr_order_detall->getPayload()->getPaymentMethodDetails()[0];
+		$arr_orden['Order']['MarketplaceId'] = $arr_order_detall->getPayload()->getMarketplaceId();
+		$arr_orden['Order']['ShipmentServiceLevelCategory'] = $arr_order_detall->getPayload()->getShipmentServiceLevelCategory();
+		$arr_orden['Order']['EasyShipShipmentStatus'] = $arr_order_detall->getPayload()->getEasyShipShipmentStatus();
+		$arr_orden['Order']['CbaDisplayableShippingLabel'] = $arr_order_detall->getPayload()->getCbaDisplayableShippingLabel();
+		$arr_orden['Order']['OrderType'] = $arr_order_detall->getPayload()->getOrderType();
+		$arr_orden['Order']['EarliestShipDate'] = $arr_order_detall->getPayload()->getEarliestShipDate();
+		$arr_orden['Order']['LatestShipDate'] = $arr_order_detall->getPayload()->getLatestShipDate();
+		$arr_orden['Order']['EarliestDeliveryDate'] = date("Y-m-d H:i:s", strtotime($arr_order_detall->getPayload()->getEarliestDeliveryDate()));
+		$arr_orden['Order']['LatestDeliveryDate'] = date("Y-m-d H:i:s", strtotime($arr_order_detall->getPayload()->getLatestDeliveryDate()));
+		$arr_orden['Order']['IsBusinessOrder'] = $arr_order_detall->getPayload()->getIsBusinessOrder();
+		$arr_orden['Order']['IsPrime'] = $arr_order_detall->getPayload()->getIsPrime();
+		$arr_orden['Order']['IsPremiumOrder'] = $arr_order_detall->getPayload()->getIsPremiumOrder();
+		$arr_orden['Order']['IsGlobalExpressEnabled'] = $arr_order_detall->getPayload()->getIsGlobalExpressEnabled();
+		$arr_orden['Order']['ReplacedOrderId'] = $arr_order_detall->getPayload()->getReplacedOrderId();
+		$arr_orden['Order']['IsReplacementOrder'] = $arr_order_detall->getPayload()->getIsReplacementOrder();
+		$arr_orden['Order']['PromiseResponseDueDate'] = date("Y-m-d H:i:s", strtotime($arr_order_detall->getPayload()->getPromiseResponseDueDate()));
+		$arr_orden['Order']['IsEstimatedShipDateSet'] = date("Y-m-d H:i:s", strtotime($arr_order_detall->getPayload()->getIsEstimatedShipDateSet()));
+		$arr_orden['Order']['IsSoldByAB'] = $arr_order_detall->getPayload()->getIsSoldByAB();
+		//$arr_orden['Order']['DefaultShipFromLocationAddress'] = $arr_order_detall->getPayload()->getDefaultShipFromLocationAddress();
+		$arr_orden['Order']['FulfillmentInstruction'] = $arr_order_detall->getPayload()->getFulfillmentInstruction();
+		//$arr_orden['Order']['IsISPU'] = $arr_order_detall->getPayload()->getIsISPU();
+		
+		//debug($arr_orden);
+		
+		$this->create();
+		
+		if($this->save($arr_orden)){
+			return $this->id;
+		}
+
+		return false;
+		
+	}
 
 }

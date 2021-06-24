@@ -87,8 +87,7 @@ class SubmitFeedsController extends AppController {
 
 		Cache::clear();
 
-		debug(Configure::read('SPAPI.refresh_token'));
-
+		//debug(Configure::read('SPAPI.refresh_token'));
 	
 		$marketplace_id = Configure::read('SPAPI.MARKETPLACE.US');
 
@@ -130,126 +129,28 @@ class SubmitFeedsController extends AppController {
 				$orderId = $order->getAmazonOrderId();
 
 				$arr_order_detall = $apiInstance->getOrder($orderId);
-				//debug($arr_order_detall);
-
-				$resultAddress = $apiInstance->getOrderAddress($orderId);
-				debug($resultAddress);
-				$resultBuyerInfo = $apiInstance->getOrderBuyerInfo($orderId);
-				debug($resultBuyerInfo);
-
-				$resultBuyer = $apiInstance->getOrderAddress($orderId);
-	
+				
 				$arr_order_item_detall = $apiInstance->getOrderItems($orderId, null);
-				//debug($arr_order_item_detall);
-
-				//debug($arr_order_item_detall->getPayload()->getOrderItems()[0]->getSellerSku());
-
-				//debug($arr_order_item_detall->getPayload()->getOrderItems()[0]->getOrderItemId());
-
-
-
-
-
-
-
-				$resultRDT = $apiInstance->getRDT($orderId);
-				debug($resultRDT);
-				debug($resultRDT['restrictedDataToken']);
-
-				$config = \ClouSale\AmazonSellingPartnerAPI\Configuration::getDefaultConfiguration();
-				$config->setAccessToken($resultRDT['restrictedDataToken']);
-
-				$resultAddress = $apiInstance->getOrderAddress($orderId);
-				debug($resultAddress);
-
-
-
-
-
 				
 
-				$arr_orden = array();
-				$arr_orden['Order']['AmazonOrderId'] = $orderId;
-				$arr_orden['Order']['SellerOrderId'] = $arr_order_detall->getPayload()->getSellerOrderId();
-				$arr_orden['Order']['PurchaseDate'] = $arr_order_detall->getPayload()->getPurchaseDate();
-				$arr_orden['Order']['LastUpdateDate'] = $arr_order_detall->getPayload()->getLastUpdateDate();
-				$arr_orden['Order']['OrderStatus'] = $arr_order_detall->getPayload()->getOrderStatus();
-				$arr_orden['Order']['FulfillmentChannel	'] = $arr_order_detall->getPayload()->getFulfillmentChannel();
-				$arr_orden['Order']['SalesChannel'] = $arr_order_detall->getPayload()->getSalesChannel();
-				$arr_orden['Order']['OrderChannel'] = $arr_order_detall->getPayload()->getOrderChannel();
-				$arr_orden['Order']['ShipServiceLevel'] = $arr_order_detall->getPayload()->getShipServiceLevel();
-				$arr_orden['Order']['OrderTotal'] = $arr_order_detall->getPayload()->getOrderTotal()->getAmount();
-				$arr_orden['Order']['NumberOfItemsShipped'] = $arr_order_detall->getPayload()->getNumberOfItemsShipped();
-				$arr_orden['Order']['NumberOfItemsUnshipped'] = $arr_order_detall->getPayload()->getNumberOfItemsUnshipped();
-				$arr_orden['Order']['PaymentExecutionDetail'] = $arr_order_detall->getPayload()->getPaymentExecutionDetail();
-				$arr_orden['Order']['PaymentMethod'] = $arr_order_detall->getPayload()->getPaymentMethod();
-				$arr_orden['Order']['PaymentMethodDetails'] = $arr_order_detall->getPayload()->getPaymentMethodDetails()[0];
-				$arr_orden['Order']['MarketplaceId'] = $arr_order_detall->getPayload()->getMarketplaceId();
-				$arr_orden['Order']['ShipmentServiceLevelCategory'] = $arr_order_detall->getPayload()->getShipmentServiceLevelCategory();
-				$arr_orden['Order']['EasyShipShipmentStatus'] = $arr_order_detall->getPayload()->getEasyShipShipmentStatus();
-				$arr_orden['Order']['CbaDisplayableShippingLabel'] = $arr_order_detall->getPayload()->getCbaDisplayableShippingLabel();
-				$arr_orden['Order']['OrderType'] = $arr_order_detall->getPayload()->getOrderType();
-				$arr_orden['Order']['EarliestShipDate'] = $arr_order_detall->getPayload()->getEarliestShipDate();
-				$arr_orden['Order']['LatestShipDate'] = $arr_order_detall->getPayload()->getLatestShipDate();
-				$arr_orden['Order']['EarliestDeliveryDate'] = date("Y-m-d H:i:s", strtotime($arr_order_detall->getPayload()->getEarliestDeliveryDate()));
-				$arr_orden['Order']['LatestDeliveryDate'] = date("Y-m-d H:i:s", strtotime($arr_order_detall->getPayload()->getLatestDeliveryDate()));
-				$arr_orden['Order']['IsBusinessOrder'] = $arr_order_detall->getPayload()->getIsBusinessOrder();
-				$arr_orden['Order']['IsPrime'] = $arr_order_detall->getPayload()->getIsPrime();
-				$arr_orden['Order']['IsPremiumOrder'] = $arr_order_detall->getPayload()->getIsPremiumOrder();
-				$arr_orden['Order']['IsGlobalExpressEnabled'] = $arr_order_detall->getPayload()->getIsGlobalExpressEnabled();
-				$arr_orden['Order']['ReplacedOrderId'] = $arr_order_detall->getPayload()->getReplacedOrderId();
-				$arr_orden['Order']['IsReplacementOrder'] = $arr_order_detall->getPayload()->getIsReplacementOrder();
-				$arr_orden['Order']['PromiseResponseDueDate'] = date("Y-m-d H:i:s", strtotime($arr_order_detall->getPayload()->getPromiseResponseDueDate()));
-				$arr_orden['Order']['IsEstimatedShipDateSet'] = date("Y-m-d H:i:s", strtotime($arr_order_detall->getPayload()->getIsEstimatedShipDateSet()));
-				$arr_orden['Order']['IsSoldByAB'] = $arr_order_detall->getPayload()->getIsSoldByAB();
-				//$arr_orden['Order']['DefaultShipFromLocationAddress'] = $arr_order_detall->getPayload()->getDefaultShipFromLocationAddress();
-				$arr_orden['Order']['FulfillmentInstruction'] = $arr_order_detall->getPayload()->getFulfillmentInstruction();
-				//$arr_orden['Order']['IsISPU'] = $arr_order_detall->getPayload()->getIsISPU();
-				
-				debug($arr_orden);
-				App::import('Model','Order');
-				$order = new Order();
-				$order->save($arr_orden);
+				//$resultRDT = $apiInstance->getRDT($orderId);
+				//debug($resultRDT);
+				//debug($resultRDT['restrictedDataToken']);
 
-				//debug($resultItem->getPayload()->getOrderItems()[0]->getSellerSku());
+				//$config = \ClouSale\AmazonSellingPartnerAPI\Configuration::getDefaultConfiguration();
+				//$config->setAccessToken($resultRDT['restrictedDataToken']);
 
-				$arr_orden_item = array();
-				//debug($arr_order_item_detall->getPayload()->getOrderItems());
-				foreach($arr_order_item_detall->getPayload()->getOrderItems() as $key => $orderitem){	
-					$arr_orden_item['OrderItem'][$key]['order_id'] = $orderId;
-					$arr_orden_item['OrderItem'][$key]['SellerSKU'] = $orderitem->getSellerSku();
-					$arr_orden_item['OrderItem'][$key]['OrderItemId'] = $orderitem->getOrderItemId();
-					$arr_orden_item['OrderItem'][$key]['Title'] = $orderitem->getTitle();
-					$arr_orden_item['OrderItem'][$key]['QuantityOrdered'] = $orderitem->getQuantityOrdered();
-					$arr_orden_item['OrderItem'][$key]['QuantityShipped'] = $orderitem->getQuantityShipped();
-					$arr_orden_item['OrderItem'][$key]['ProductInfo'] = $orderitem->getProductInfo()->getNumberOfItems();
-					$arr_orden_item['OrderItem'][$key]['PointsGranted'] = $orderitem->getPointsGranted();
-					$arr_orden_item['OrderItem'][$key]['ItemPrice'] = $orderitem->getItemPrice()->getAmount();
-					$arr_orden_item['OrderItem'][$key]['ShippingPrice'] = $orderitem->getShippingPrice();
-					$arr_orden_item['OrderItem'][$key]['ItemTax'] = $orderitem->getItemTax()->getAmount();
-					$arr_orden_item['OrderItem'][$key]['ShippingTax'] = $orderitem->getShippingTax();
-					$arr_orden_item['OrderItem'][$key]['ShippingDiscount'] = $orderitem->getShippingDiscount();
-					$arr_orden_item['OrderItem'][$key]['ShippingDiscountTax'] = $orderitem->getShippingDiscountTax();
-					$arr_orden_item['OrderItem'][$key]['PromotionDiscount'] = $orderitem->getPromotionDiscount()->getAmount();
-					$arr_orden_item['OrderItem'][$key]['PromotionDiscountTax'] = $orderitem->getPromotionDiscountTax()->getAmount();
-					$arr_orden_item['OrderItem'][$key]['PromotionIds'] = $orderitem->getPromotionIds();
-					$arr_orden_item['OrderItem'][$key]['CODFee'] = $orderitem->getCODFee();
-					$arr_orden_item['OrderItem'][$key]['CODFeeDiscount'] = $orderitem->getCODFeeDiscount();
-					$arr_orden_item['OrderItem'][$key]['IsGift'] = $orderitem->getIsGift();
-					$arr_orden_item['OrderItem'][$key]['ConditionNote'] = $orderitem->getConditionNote();
-					$arr_orden_item['OrderItem'][$key]['ConditionSubtypeId'] = $orderitem->getConditionSubtypeId();
-					$arr_orden_item['OrderItem'][$key]['ScheduledDeliveryStartDate'] = $orderitem->getScheduledDeliveryStartDate();
-					$arr_orden_item['OrderItem'][$key]['ScheduledDeliveryEndDate'] = $orderitem->getScheduledDeliveryEndDate();
-					$arr_orden_item['OrderItem'][$key]['PriceDesignation'] = $orderitem->getPriceDesignation();
-					$arr_orden_item['OrderItem'][$key]['TaxCollection'] = $orderitem->getTaxCollection()->getResponsibleParty();
-					$arr_orden_item['OrderItem'][$key]['SerialNumberRequired'] = $orderitem->getSerialNumberRequired();
-					$arr_orden_item['OrderItem'][$key]['IsTransparency'] = $orderitem->getIsTransparency();
-					$arr_orden_item['OrderItem'][$key]['IossNumber'] = $orderitem->getIossNumber();
-					//$arr_orden_item['OrderItem'][$key]['StoreChainStoreId'] = $orderitem->getStoreChainStoreId();
-					$arr_orden_item['OrderItem'][$key]['DeemedResellerCategory'] = $orderitem->getDeemedResellerCategory();
+				//$resultAddress = $apiInstance->getOrderAddress($orderId);
+				//debug($resultAddress);
+
+
+				$this->loadModel('Order');
+				$new_order_id = $this->Order->insertRecord($orderId, $arr_order_detall);
+
+				if($new_order_id && $new_order_id != 0){
+					$this->loadModel('OrderItem');
+					$this->OrderItem->insertRecord($new_order_id, $arr_order_item_detall);
 				}
-
-				debug($arr_orden_item);
 
 			}
 
